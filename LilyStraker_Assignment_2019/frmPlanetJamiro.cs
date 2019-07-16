@@ -19,11 +19,16 @@ namespace LilyStraker_Assignment_2019
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //test
+            //test1
             
         }
 
         private void pnlTopBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pnlBG_Paint(object sender, PaintEventArgs e)
         {
 
         }

@@ -111,6 +111,7 @@
             this.pnlBG.Name = "pnlBG";
             this.pnlBG.Size = new System.Drawing.Size(984, 444);
             this.pnlBG.TabIndex = 3;
+            this.pnlBG.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBG_Paint);
             // 
             // frmPlanetJamiro
             // 
