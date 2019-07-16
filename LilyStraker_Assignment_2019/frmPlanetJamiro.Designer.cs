@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.mnuStrip = new System.Windows.Forms.MenuStrip();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuStart = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStop = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pnlTopBar = new System.Windows.Forms.Panel();
+            this.pnlTitle = new System.Windows.Forms.Panel();
             this.pnlBottomBar = new System.Windows.Forms.Panel();
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.pnlTitle = new System.Windows.Forms.Panel();
             this.pnlBG = new System.Windows.Forms.Panel();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
@@ -55,11 +55,6 @@
             this.mnuStrip.TabIndex = 0;
             this.mnuStrip.Text = "menuStrip1";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // mnuStart
             // 
             this.mnuStart.Name = "mnuStart";
@@ -72,6 +67,11 @@
             this.mnuStop.Size = new System.Drawing.Size(43, 20);
             this.mnuStop.Text = "Stop";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // pnlTopBar
             // 
             this.pnlTopBar.BackColor = System.Drawing.Color.Navy;
@@ -80,6 +80,16 @@
             this.pnlTopBar.Name = "pnlTopBar";
             this.pnlTopBar.Size = new System.Drawing.Size(984, 90);
             this.pnlTopBar.TabIndex = 2;
+            this.pnlTopBar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTopBar_Paint);
+            // 
+            // pnlTitle
+            // 
+            this.pnlTitle.BackColor = System.Drawing.Color.Transparent;
+            this.pnlTitle.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.PlanetJamiro_Logo_Dark_Blue;
+            this.pnlTitle.Location = new System.Drawing.Point(328, 0);
+            this.pnlTitle.Name = "pnlTitle";
+            this.pnlTitle.Size = new System.Drawing.Size(326, 90);
+            this.pnlTitle.TabIndex = 5;
             // 
             // pnlBottomBar
             // 
@@ -94,15 +104,6 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // pnlTitle
-            // 
-            this.pnlTitle.BackColor = System.Drawing.Color.Transparent;
-            this.pnlTitle.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.PlanetJamiro_Logo_Dark_Blue;
-            this.pnlTitle.Location = new System.Drawing.Point(328, 0);
-            this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(326, 90);
-            this.pnlTitle.TabIndex = 5;
-            // 
             // pnlBG
             // 
             this.pnlBG.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.space;
@@ -111,7 +112,7 @@
             this.pnlBG.Size = new System.Drawing.Size(984, 444);
             this.pnlBG.TabIndex = 3;
             // 
-            // Form1
+            // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -121,7 +122,7 @@
             this.Controls.Add(this.pnlTopBar);
             this.Controls.Add(this.mnuStrip);
             this.MainMenuStrip = this.mnuStrip;
-            this.Name = "Form1";
+            this.Name = "frmPlanetJamiro";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.mnuStrip.ResumeLayout(false);

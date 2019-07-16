@@ -22,5 +22,10 @@ namespace LilyStraker_Assignment_2019
             //test
             
         }
+
+        private void pnlTopBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
