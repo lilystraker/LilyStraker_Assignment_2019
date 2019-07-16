@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LilyStraker_Assignment_2019
 {
-    public partial class Form1 : Form
+    public partial class frmPlanetJamiro : Form
     {
-        public Form1()
+        public frmPlanetJamiro()
         {
             InitializeComponent();
         }
