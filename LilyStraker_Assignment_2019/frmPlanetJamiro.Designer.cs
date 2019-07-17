@@ -116,6 +116,7 @@
             // pnlBG
             // 
             this.pnlBG.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pnlBG.AutoSize = true;
             this.pnlBG.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.space;
             this.pnlBG.Location = new System.Drawing.Point(0, 120);
             this.pnlBG.Name = "pnlBG";
@@ -141,6 +142,7 @@
             this.mnuStrip.PerformLayout();
             this.pnlTopBar.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
