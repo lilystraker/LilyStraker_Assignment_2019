@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlanetJamiro));
             this.mnuStrip = new System.Windows.Forms.MenuStrip();
             this.mnuStart = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStop = new System.Windows.Forms.ToolStripMenuItem();
@@ -131,6 +132,7 @@
             this.Controls.Add(this.pnlBG);
             this.Controls.Add(this.pnlTopBar);
             this.Controls.Add(this.mnuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuStrip;
             this.Name = "frmPlanetJamiro";
             this.Text = "Form1";
