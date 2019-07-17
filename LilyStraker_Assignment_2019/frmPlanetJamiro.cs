@@ -32,5 +32,20 @@ namespace LilyStraker_Assignment_2019
         {
 
         }
+
+        private void pnlTitle_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void mnuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void pnlBottomBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
