@@ -16,5 +16,15 @@ namespace LilyStraker_Assignment_2019
         {
             InitializeComponent();
         }
+
+        private void BtnInstructions_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnPlay_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
