@@ -22,7 +22,21 @@ namespace LilyStraker_Assignment_2019
 
         }
 
+
+     
+   //   frmPlanetJamiro playForm = new frmPlanetJamiro();
+    //  frmHome homeForm = new frmHome();
         private void BtnPlay_Click(object sender, EventArgs e)
+        {
+          
+        //   playForm.Show();
+        //   homeForm.Close();
+           
+        }
+
+  
+
+        private void PnlHomeBG_Paint(object sender, PaintEventArgs e)
         {
 
         }

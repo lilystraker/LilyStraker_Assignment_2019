@@ -28,16 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPlanetJamiro));
             this.mnuStrip = new System.Windows.Forms.MenuStrip();
             this.mnuStart = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStop = new System.Windows.Forms.ToolStripMenuItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.pnlBottomBar = new System.Windows.Forms.Panel();
-            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pnlBG = new System.Windows.Forms.Panel();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
@@ -71,11 +67,6 @@
             this.mnuStop.Size = new System.Drawing.Size(43, 20);
             this.mnuStop.Text = "Stop";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
             // pnlTopBar
             // 
             this.pnlTopBar.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -108,11 +99,6 @@
             this.pnlBottomBar.TabIndex = 3;
             this.pnlBottomBar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBottomBar_Paint);
             // 
-            // contextMenuStrip2
-            // 
-            this.contextMenuStrip2.Name = "contextMenuStrip2";
-            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
-            // 
             // pnlBG
             // 
             this.pnlBG.Anchor = System.Windows.Forms.AnchorStyles.Left;
@@ -133,7 +119,6 @@
             this.Controls.Add(this.pnlBG);
             this.Controls.Add(this.pnlTopBar);
             this.Controls.Add(this.mnuStrip);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuStrip;
             this.Name = "frmPlanetJamiro";
             this.Text = "Form1";
@@ -151,11 +136,9 @@
         private System.Windows.Forms.MenuStrip mnuStrip;
         private System.Windows.Forms.ToolStripMenuItem mnuStart;
         private System.Windows.Forms.ToolStripMenuItem mnuStop;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.Panel pnlBG;
         private System.Windows.Forms.Panel pnlBottomBar;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.Panel pnlTitle;
     }
 }
