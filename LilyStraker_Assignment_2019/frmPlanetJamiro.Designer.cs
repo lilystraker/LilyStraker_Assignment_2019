@@ -35,8 +35,26 @@
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.pnlBottomBar = new System.Windows.Forms.Panel();
             this.pnlBG = new System.Windows.Forms.Panel();
+            this.labelName1 = new System.Windows.Forms.Label();
+            this.labelName2 = new System.Windows.Forms.Label();
+            this.labelScore1 = new System.Windows.Forms.Label();
+            this.labelScore2 = new System.Windows.Forms.Label();
+            this.labelLives1 = new System.Windows.Forms.Label();
+            this.labelLives2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtName1 = new System.Windows.Forms.TextBox();
+            this.lblScore1 = new System.Windows.Forms.Label();
+            this.txtLives1 = new System.Windows.Forms.TextBox();
+            this.txtName2 = new System.Windows.Forms.TextBox();
+            this.lblScore2 = new System.Windows.Forms.Label();
+            this.txtLives2 = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuStrip
@@ -71,7 +89,8 @@
             // 
             this.pnlTopBar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pnlTopBar.BackColor = System.Drawing.Color.Navy;
-            this.pnlTopBar.Controls.Add(this.pnlTitle);
+            this.pnlTopBar.Controls.Add(this.panel1);
+            this.pnlTopBar.Controls.Add(this.panel2);
             this.pnlTopBar.Location = new System.Drawing.Point(0, 27);
             this.pnlTopBar.Name = "pnlTopBar";
             this.pnlTopBar.Size = new System.Drawing.Size(2000, 90);
@@ -83,7 +102,7 @@
             this.pnlTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlTitle.BackColor = System.Drawing.Color.Transparent;
             this.pnlTitle.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.PlanetJamiro_Logo_Dark_Blue;
-            this.pnlTitle.Location = new System.Drawing.Point(836, 0);
+            this.pnlTitle.Location = new System.Drawing.Point(336, 27);
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(326, 90);
             this.pnlTitle.TabIndex = 5;
@@ -110,15 +129,192 @@
             this.pnlBG.TabIndex = 3;
             this.pnlBG.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBG_Paint);
             // 
+            // labelName1
+            // 
+            this.labelName1.AutoSize = true;
+            this.labelName1.BackColor = System.Drawing.Color.Transparent;
+            this.labelName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName1.ForeColor = System.Drawing.Color.White;
+            this.labelName1.Location = new System.Drawing.Point(3, 1);
+            this.labelName1.Name = "labelName1";
+            this.labelName1.Size = new System.Drawing.Size(51, 20);
+            this.labelName1.TabIndex = 0;
+            this.labelName1.Text = "Name";
+            // 
+            // labelName2
+            // 
+            this.labelName2.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.labelName2.AutoSize = true;
+            this.labelName2.BackColor = System.Drawing.Color.Transparent;
+            this.labelName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName2.ForeColor = System.Drawing.Color.White;
+            this.labelName2.Location = new System.Drawing.Point(149, 1);
+            this.labelName2.Name = "labelName2";
+            this.labelName2.Size = new System.Drawing.Size(51, 20);
+            this.labelName2.TabIndex = 1;
+            this.labelName2.Text = "Name";
+            // 
+            // labelScore1
+            // 
+            this.labelScore1.AutoSize = true;
+            this.labelScore1.BackColor = System.Drawing.Color.Transparent;
+            this.labelScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore1.ForeColor = System.Drawing.Color.White;
+            this.labelScore1.Location = new System.Drawing.Point(3, 30);
+            this.labelScore1.Name = "labelScore1";
+            this.labelScore1.Size = new System.Drawing.Size(51, 20);
+            this.labelScore1.TabIndex = 2;
+            this.labelScore1.Text = "Score";
+            // 
+            // labelScore2
+            // 
+            this.labelScore2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelScore2.AutoSize = true;
+            this.labelScore2.BackColor = System.Drawing.Color.Transparent;
+            this.labelScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore2.ForeColor = System.Drawing.Color.White;
+            this.labelScore2.Location = new System.Drawing.Point(149, 30);
+            this.labelScore2.Name = "labelScore2";
+            this.labelScore2.Size = new System.Drawing.Size(51, 20);
+            this.labelScore2.TabIndex = 3;
+            this.labelScore2.Text = "Score";
+            // 
+            // labelLives1
+            // 
+            this.labelLives1.AutoSize = true;
+            this.labelLives1.BackColor = System.Drawing.Color.Transparent;
+            this.labelLives1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLives1.ForeColor = System.Drawing.Color.White;
+            this.labelLives1.Location = new System.Drawing.Point(3, 60);
+            this.labelLives1.Name = "labelLives1";
+            this.labelLives1.Size = new System.Drawing.Size(45, 20);
+            this.labelLives1.TabIndex = 4;
+            this.labelLives1.Text = "Lives";
+            // 
+            // labelLives2
+            // 
+            this.labelLives2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelLives2.AutoSize = true;
+            this.labelLives2.BackColor = System.Drawing.Color.Transparent;
+            this.labelLives2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLives2.ForeColor = System.Drawing.Color.White;
+            this.labelLives2.Location = new System.Drawing.Point(152, 60);
+            this.labelLives2.Name = "labelLives2";
+            this.labelLives2.Size = new System.Drawing.Size(45, 20);
+            this.labelLives2.TabIndex = 5;
+            this.labelLives2.Text = "Lives";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.txtLives1);
+            this.panel1.Controls.Add(this.lblScore1);
+            this.panel1.Controls.Add(this.txtName1);
+            this.panel1.Controls.Add(this.labelName1);
+            this.panel1.Controls.Add(this.labelLives1);
+            this.panel1.Controls.Add(this.labelScore1);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 84);
+            this.panel1.TabIndex = 6;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.txtLives2);
+            this.panel2.Controls.Add(this.lblScore2);
+            this.panel2.Controls.Add(this.txtName2);
+            this.panel2.Controls.Add(this.labelLives2);
+            this.panel2.Controls.Add(this.labelName2);
+            this.panel2.Controls.Add(this.labelScore2);
+            this.panel2.Location = new System.Drawing.Point(782, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(200, 84);
+            this.panel2.TabIndex = 7;
+            // 
+            // txtName1
+            // 
+            this.txtName1.Location = new System.Drawing.Point(67, 3);
+            this.txtName1.Name = "txtName1";
+            this.txtName1.Size = new System.Drawing.Size(122, 20);
+            this.txtName1.TabIndex = 8;
+            // 
+            // lblScore1
+            // 
+            this.lblScore1.AutoSize = true;
+            this.lblScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore1.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblScore1.Location = new System.Drawing.Point(65, 32);
+            this.lblScore1.Name = "lblScore1";
+            this.lblScore1.Size = new System.Drawing.Size(16, 18);
+            this.lblScore1.TabIndex = 9;
+            this.lblScore1.Text = "0";
+            // 
+            // txtLives1
+            // 
+            this.txtLives1.Location = new System.Drawing.Point(67, 61);
+            this.txtLives1.Name = "txtLives1";
+            this.txtLives1.Size = new System.Drawing.Size(33, 20);
+            this.txtLives1.TabIndex = 10;
+            // 
+            // txtName2
+            // 
+            this.txtName2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtName2.Location = new System.Drawing.Point(12, 3);
+            this.txtName2.Name = "txtName2";
+            this.txtName2.Size = new System.Drawing.Size(122, 20);
+            this.txtName2.TabIndex = 11;
+            // 
+            // lblScore2
+            // 
+            this.lblScore2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblScore2.AutoSize = true;
+            this.lblScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore2.ForeColor = System.Drawing.Color.LemonChiffon;
+            this.lblScore2.Location = new System.Drawing.Point(118, 32);
+            this.lblScore2.Name = "lblScore2";
+            this.lblScore2.Size = new System.Drawing.Size(16, 18);
+            this.lblScore2.TabIndex = 11;
+            this.lblScore2.Text = "0";
+            // 
+            // txtLives2
+            // 
+            this.txtLives2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLives2.Location = new System.Drawing.Point(101, 60);
+            this.txtLives2.Name = "txtLives2";
+            this.txtLives2.Size = new System.Drawing.Size(33, 20);
+            this.txtLives2.TabIndex = 11;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Silver;
+            this.panel3.Location = new System.Drawing.Point(58, 1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1, 90);
+            this.panel3.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel4.BackColor = System.Drawing.Color.Silver;
+            this.panel4.Location = new System.Drawing.Point(145, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1, 90);
+            this.panel4.TabIndex = 2;
+            // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlBottomBar);
             this.Controls.Add(this.pnlBG);
-            this.Controls.Add(this.pnlTopBar);
             this.Controls.Add(this.mnuStrip);
+            this.Controls.Add(this.pnlTopBar);
             this.MainMenuStrip = this.mnuStrip;
             this.Name = "frmPlanetJamiro";
             this.Text = "Form1";
@@ -126,6 +322,10 @@
             this.mnuStrip.ResumeLayout(false);
             this.mnuStrip.PerformLayout();
             this.pnlTopBar.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,6 +340,22 @@
         private System.Windows.Forms.Panel pnlBG;
         private System.Windows.Forms.Panel pnlBottomBar;
         private System.Windows.Forms.Panel pnlTitle;
+        private System.Windows.Forms.Label labelName1;
+        private System.Windows.Forms.Label labelName2;
+        private System.Windows.Forms.Label labelLives1;
+        private System.Windows.Forms.Label labelScore2;
+        private System.Windows.Forms.Label labelScore1;
+        private System.Windows.Forms.Label labelLives2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtLives1;
+        private System.Windows.Forms.Label lblScore1;
+        private System.Windows.Forms.TextBox txtName1;
+        private System.Windows.Forms.TextBox txtLives2;
+        private System.Windows.Forms.Label lblScore2;
+        private System.Windows.Forms.TextBox txtName2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
     }
 }
 
