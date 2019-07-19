@@ -471,6 +471,7 @@
             // tmrEnemy
             // 
             this.tmrEnemy.Enabled = true;
+            this.tmrEnemy.Tick += new System.EventHandler(this.TmrEnemy_Tick);
             // 
             // frmPlanetJamiro
             // 
@@ -483,6 +484,7 @@
             this.Controls.Add(this.pnlBG);
             this.Controls.Add(this.mnuStrip);
             this.Controls.Add(this.pnlTopBar);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuStrip;
             this.Name = "frmPlanetJamiro";

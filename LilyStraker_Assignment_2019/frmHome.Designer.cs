@@ -139,6 +139,7 @@
             this.Controls.Add(this.pnlHomeBG);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlTopBar);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuHome;
             this.Name = "frmHome";

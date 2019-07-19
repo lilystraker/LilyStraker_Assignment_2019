@@ -14,7 +14,8 @@ namespace LilyStraker_Assignment_2019
     {
         Graphics g;
         Enemy[] enemy = new Enemy[7];
-       // Jf1 jf1 = new Jf1();
+        Random yspeed = new Random();
+       Jf1 jf1 = new Jf1();
 
         public frmPlanetJamiro()
         {
@@ -22,7 +23,7 @@ namespace LilyStraker_Assignment_2019
           
             for (int i = 0; i < 7; i++)
             {
-                int x = 10 + (i * (pnlBG.Width / 7)); ;
+                int x = 70 + (i * (pnlBG.Width / 7)); ;
                 enemy[i] = new Enemy(x);
             }
         }
@@ -43,10 +44,15 @@ namespace LilyStraker_Assignment_2019
         private void pnlBG_Paint(object sender, PaintEventArgs e)
         {
             g = e.Graphics;
+
             for (int i = 0; i <7; i++)
             {
+                int rndmspeed = yspeed.Next(5, 20);
+                enemy[i].y += rndmspeed;
                 enemy[i].drawEnemy(g);
+
             }
+     
         }
 
         private void pnlTitle_Paint(object sender, PaintEventArgs e)
@@ -82,6 +88,16 @@ namespace LilyStraker_Assignment_2019
         private void Label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TmrEnemy_Tick(object sender, EventArgs e)
+        {
+            for (int i = 0; i < 7; i++)
+            {
+                enemy[i].moveEnemy();
+            }
+
+            pnlBG.Invalidate();
         }
     }
 }

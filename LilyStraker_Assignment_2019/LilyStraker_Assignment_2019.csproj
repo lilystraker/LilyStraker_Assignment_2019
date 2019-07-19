@@ -61,6 +61,7 @@
     <Compile Include="frmPlanetJamiro.Designer.cs">
       <DependentUpon>frmPlanetJamiro.cs</DependentUpon>
     </Compile>
+    <Compile Include="Jf1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmHome.resx">
@@ -112,6 +113,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Planet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jellyfish.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jellyfish2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

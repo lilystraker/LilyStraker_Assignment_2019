@@ -36,7 +36,14 @@ namespace LilyStraker_Assignment_2019
 
         public void moveEnemy()
         {
+          
+            enemyRec.Location = new Point(x, y);
 
+            if (enemyRec.Location.Y > 444)
+            {
+                y = 20;
+                enemyRec.Location = new Point(x, y);
+            }
         }
     }
 }

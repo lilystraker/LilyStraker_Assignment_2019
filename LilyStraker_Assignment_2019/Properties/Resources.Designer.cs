@@ -73,6 +73,26 @@ namespace LilyStraker_Assignment_2019.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap jellyfish1 {
+            get {
+                object obj = ResourceManager.GetObject("jellyfish1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jellyfish2 {
+            get {
+                object obj = ResourceManager.GetObject("jellyfish2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Planet {
             get {
                 object obj = ResourceManager.GetObject("Planet", resourceCulture);
