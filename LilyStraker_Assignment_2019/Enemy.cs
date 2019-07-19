@@ -17,14 +17,25 @@ namespace LilyStraker_Assignment_2019
         public int score1;
         public int score2;
 
-        public Enemy()
+        public Enemy(int spacing)
         {
-            x = 10;
+            x = spacing;
             y = 10;
             width = 50;
             height = 50;
-            enemyImage = Image.FromFile("planet.png");
+            enemyImage = Image.FromFile("Planet.png");
             enemyRec = new Rectangle(x, y, width, height);
+
+        }
+
+        public void drawEnemy(Graphics g)
+        {
+            enemyRec = new Rectangle(x,y, width, height);
+            g.DrawImage(enemyImage, enemyRec);
+        }
+
+        public void moveEnemy()
+        {
 
         }
     }

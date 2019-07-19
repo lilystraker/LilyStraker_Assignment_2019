@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHome));
             this.pnlBG = new System.Windows.Forms.Panel();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.pnlTitle = new System.Windows.Forms.Panel();
@@ -138,6 +139,7 @@
             this.Controls.Add(this.pnlHomeBG);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlTopBar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuHome;
             this.Name = "frmHome";
             this.Text = "frmHome";
