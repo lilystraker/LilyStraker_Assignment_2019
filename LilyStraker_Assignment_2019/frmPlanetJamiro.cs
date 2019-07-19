@@ -12,9 +12,13 @@ namespace LilyStraker_Assignment_2019
 {
     public partial class frmPlanetJamiro : Form
     {
+        Graphics g;
+        Enemy[] enemy = new Enemy[7];
+        Jf1 jf1 = new Jf1();
         public frmPlanetJamiro()
         {
             InitializeComponent();
+          
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,6 +48,26 @@ namespace LilyStraker_Assignment_2019
         }
 
         private void pnlBottomBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Panel8_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
         {
 
         }

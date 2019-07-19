@@ -51,10 +51,25 @@
             this.txtLives2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.lblAmmo1 = new System.Windows.Forms.Label();
+            this.labelAmmo1 = new System.Windows.Forms.Label();
+            this.labelCharged1 = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lblCharged1 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.lblCharged2 = new System.Windows.Forms.Label();
+            this.lblAmmo2 = new System.Windows.Forms.Label();
+            this.labelAmmo2 = new System.Windows.Forms.Label();
+            this.labelCharged2 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
+            this.pnlBottomBar.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuStrip
@@ -112,6 +127,8 @@
             // 
             this.pnlBottomBar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.pnlBottomBar.BackColor = System.Drawing.Color.PowderBlue;
+            this.pnlBottomBar.Controls.Add(this.panel8);
+            this.pnlBottomBar.Controls.Add(this.panel6);
             this.pnlBottomBar.Location = new System.Drawing.Point(0, 570);
             this.pnlBottomBar.Name = "pnlBottomBar";
             this.pnlBottomBar.Size = new System.Drawing.Size(2000, 91);
@@ -133,11 +150,11 @@
             // 
             this.labelName1.AutoSize = true;
             this.labelName1.BackColor = System.Drawing.Color.Transparent;
-            this.labelName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName1.ForeColor = System.Drawing.Color.White;
             this.labelName1.Location = new System.Drawing.Point(3, 1);
             this.labelName1.Name = "labelName1";
-            this.labelName1.Size = new System.Drawing.Size(51, 20);
+            this.labelName1.Size = new System.Drawing.Size(55, 20);
             this.labelName1.TabIndex = 0;
             this.labelName1.Text = "Name";
             // 
@@ -146,11 +163,11 @@
             this.labelName2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.labelName2.AutoSize = true;
             this.labelName2.BackColor = System.Drawing.Color.Transparent;
-            this.labelName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName2.ForeColor = System.Drawing.Color.White;
-            this.labelName2.Location = new System.Drawing.Point(149, 1);
+            this.labelName2.Location = new System.Drawing.Point(147, 1);
             this.labelName2.Name = "labelName2";
-            this.labelName2.Size = new System.Drawing.Size(51, 20);
+            this.labelName2.Size = new System.Drawing.Size(55, 20);
             this.labelName2.TabIndex = 1;
             this.labelName2.Text = "Name";
             // 
@@ -158,11 +175,11 @@
             // 
             this.labelScore1.AutoSize = true;
             this.labelScore1.BackColor = System.Drawing.Color.Transparent;
-            this.labelScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScore1.ForeColor = System.Drawing.Color.White;
             this.labelScore1.Location = new System.Drawing.Point(3, 30);
             this.labelScore1.Name = "labelScore1";
-            this.labelScore1.Size = new System.Drawing.Size(51, 20);
+            this.labelScore1.Size = new System.Drawing.Size(56, 20);
             this.labelScore1.TabIndex = 2;
             this.labelScore1.Text = "Score";
             // 
@@ -171,11 +188,11 @@
             this.labelScore2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelScore2.AutoSize = true;
             this.labelScore2.BackColor = System.Drawing.Color.Transparent;
-            this.labelScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScore2.ForeColor = System.Drawing.Color.White;
-            this.labelScore2.Location = new System.Drawing.Point(149, 30);
+            this.labelScore2.Location = new System.Drawing.Point(147, 30);
             this.labelScore2.Name = "labelScore2";
-            this.labelScore2.Size = new System.Drawing.Size(51, 20);
+            this.labelScore2.Size = new System.Drawing.Size(56, 20);
             this.labelScore2.TabIndex = 3;
             this.labelScore2.Text = "Score";
             // 
@@ -183,11 +200,11 @@
             // 
             this.labelLives1.AutoSize = true;
             this.labelLives1.BackColor = System.Drawing.Color.Transparent;
-            this.labelLives1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLives1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLives1.ForeColor = System.Drawing.Color.White;
             this.labelLives1.Location = new System.Drawing.Point(3, 60);
             this.labelLives1.Name = "labelLives1";
-            this.labelLives1.Size = new System.Drawing.Size(45, 20);
+            this.labelLives1.Size = new System.Drawing.Size(50, 20);
             this.labelLives1.TabIndex = 4;
             this.labelLives1.Text = "Lives";
             // 
@@ -196,11 +213,11 @@
             this.labelLives2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelLives2.AutoSize = true;
             this.labelLives2.BackColor = System.Drawing.Color.Transparent;
-            this.labelLives2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLives2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLives2.ForeColor = System.Drawing.Color.White;
-            this.labelLives2.Location = new System.Drawing.Point(152, 60);
+            this.labelLives2.Location = new System.Drawing.Point(150, 60);
             this.labelLives2.Name = "labelLives2";
-            this.labelLives2.Size = new System.Drawing.Size(45, 20);
+            this.labelLives2.Size = new System.Drawing.Size(50, 20);
             this.labelLives2.TabIndex = 5;
             this.labelLives2.Text = "Lives";
             // 
@@ -263,7 +280,7 @@
             // txtName2
             // 
             this.txtName2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtName2.Location = new System.Drawing.Point(12, 3);
+            this.txtName2.Location = new System.Drawing.Point(10, 3);
             this.txtName2.Name = "txtName2";
             this.txtName2.Size = new System.Drawing.Size(122, 20);
             this.txtName2.TabIndex = 11;
@@ -274,7 +291,7 @@
             this.lblScore2.AutoSize = true;
             this.lblScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore2.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.lblScore2.Location = new System.Drawing.Point(118, 32);
+            this.lblScore2.Location = new System.Drawing.Point(116, 32);
             this.lblScore2.Name = "lblScore2";
             this.lblScore2.Size = new System.Drawing.Size(16, 18);
             this.lblScore2.TabIndex = 11;
@@ -283,7 +300,7 @@
             // txtLives2
             // 
             this.txtLives2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLives2.Location = new System.Drawing.Point(101, 60);
+            this.txtLives2.Location = new System.Drawing.Point(99, 60);
             this.txtLives2.Name = "txtLives2";
             this.txtLives2.Size = new System.Drawing.Size(33, 20);
             this.txtLives2.TabIndex = 11;
@@ -300,16 +317,160 @@
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.Silver;
-            this.panel4.Location = new System.Drawing.Point(145, 3);
+            this.panel4.Location = new System.Drawing.Point(143, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1, 90);
             this.panel4.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Silver;
+            this.panel5.Location = new System.Drawing.Point(82, 1);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1, 90);
+            this.panel5.TabIndex = 1;
+            // 
+            // lblAmmo1
+            // 
+            this.lblAmmo1.AutoSize = true;
+            this.lblAmmo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmmo1.ForeColor = System.Drawing.Color.White;
+            this.lblAmmo1.Location = new System.Drawing.Point(90, 15);
+            this.lblAmmo1.Name = "lblAmmo1";
+            this.lblAmmo1.Size = new System.Drawing.Size(24, 18);
+            this.lblAmmo1.TabIndex = 9;
+            this.lblAmmo1.Text = "10";
+            // 
+            // labelAmmo1
+            // 
+            this.labelAmmo1.AutoSize = true;
+            this.labelAmmo1.BackColor = System.Drawing.Color.Transparent;
+            this.labelAmmo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAmmo1.ForeColor = System.Drawing.Color.White;
+            this.labelAmmo1.Location = new System.Drawing.Point(3, 11);
+            this.labelAmmo1.Name = "labelAmmo1";
+            this.labelAmmo1.Size = new System.Drawing.Size(59, 20);
+            this.labelAmmo1.TabIndex = 0;
+            this.labelAmmo1.Text = "Ammo";
+            this.labelAmmo1.Click += new System.EventHandler(this.Label2_Click);
+            // 
+            // labelCharged1
+            // 
+            this.labelCharged1.AutoSize = true;
+            this.labelCharged1.BackColor = System.Drawing.Color.Transparent;
+            this.labelCharged1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCharged1.ForeColor = System.Drawing.Color.White;
+            this.labelCharged1.Location = new System.Drawing.Point(3, 45);
+            this.labelCharged1.Name = "labelCharged1";
+            this.labelCharged1.Size = new System.Drawing.Size(77, 20);
+            this.labelCharged1.TabIndex = 2;
+            this.labelCharged1.Text = "Charged";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel6.Controls.Add(this.panel5);
+            this.panel6.Controls.Add(this.lblCharged1);
+            this.panel6.Controls.Add(this.lblAmmo1);
+            this.panel6.Controls.Add(this.labelAmmo1);
+            this.panel6.Controls.Add(this.labelCharged1);
+            this.panel6.Location = new System.Drawing.Point(3, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 84);
+            this.panel6.TabIndex = 11;
+            // 
+            // lblCharged1
+            // 
+            this.lblCharged1.AutoSize = true;
+            this.lblCharged1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCharged1.ForeColor = System.Drawing.Color.White;
+            this.lblCharged1.Location = new System.Drawing.Point(92, 47);
+            this.lblCharged1.Name = "lblCharged1";
+            this.lblCharged1.Size = new System.Drawing.Size(16, 18);
+            this.lblCharged1.TabIndex = 10;
+            this.lblCharged1.Text = "3";
+            // 
+            // panel7
+            // 
+            this.panel7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel7.BackColor = System.Drawing.Color.Silver;
+            this.panel7.Location = new System.Drawing.Point(901, 570);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(1, 90);
+            this.panel7.TabIndex = 1;
+            // 
+            // lblCharged2
+            // 
+            this.lblCharged2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblCharged2.AutoSize = true;
+            this.lblCharged2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCharged2.ForeColor = System.Drawing.Color.White;
+            this.lblCharged2.Location = new System.Drawing.Point(94, 46);
+            this.lblCharged2.Name = "lblCharged2";
+            this.lblCharged2.Size = new System.Drawing.Size(16, 18);
+            this.lblCharged2.TabIndex = 10;
+            this.lblCharged2.Text = "3";
+            this.lblCharged2.Click += new System.EventHandler(this.Label1_Click);
+            // 
+            // lblAmmo2
+            // 
+            this.lblAmmo2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblAmmo2.AutoSize = true;
+            this.lblAmmo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAmmo2.ForeColor = System.Drawing.Color.White;
+            this.lblAmmo2.Location = new System.Drawing.Point(89, 11);
+            this.lblAmmo2.Name = "lblAmmo2";
+            this.lblAmmo2.Size = new System.Drawing.Size(24, 18);
+            this.lblAmmo2.TabIndex = 9;
+            this.lblAmmo2.Text = "10";
+            // 
+            // labelAmmo2
+            // 
+            this.labelAmmo2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelAmmo2.AutoSize = true;
+            this.labelAmmo2.BackColor = System.Drawing.Color.Transparent;
+            this.labelAmmo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAmmo2.ForeColor = System.Drawing.Color.White;
+            this.labelAmmo2.Location = new System.Drawing.Point(138, 13);
+            this.labelAmmo2.Name = "labelAmmo2";
+            this.labelAmmo2.Size = new System.Drawing.Size(59, 20);
+            this.labelAmmo2.TabIndex = 0;
+            this.labelAmmo2.Text = "Ammo";
+            this.labelAmmo2.Click += new System.EventHandler(this.Label3_Click);
+            // 
+            // labelCharged2
+            // 
+            this.labelCharged2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelCharged2.AutoSize = true;
+            this.labelCharged2.BackColor = System.Drawing.Color.Transparent;
+            this.labelCharged2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCharged2.ForeColor = System.Drawing.Color.White;
+            this.labelCharged2.Location = new System.Drawing.Point(120, 44);
+            this.labelCharged2.Name = "labelCharged2";
+            this.labelCharged2.Size = new System.Drawing.Size(77, 20);
+            this.labelCharged2.TabIndex = 2;
+            this.labelCharged2.Text = "Charged";
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel8.BackColor = System.Drawing.Color.CadetBlue;
+            this.panel8.Controls.Add(this.lblCharged2);
+            this.panel8.Controls.Add(this.lblAmmo2);
+            this.panel8.Controls.Add(this.labelAmmo2);
+            this.panel8.Controls.Add(this.labelCharged2);
+            this.panel8.Location = new System.Drawing.Point(782, 4);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(200, 84);
+            this.panel8.TabIndex = 12;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel8_Paint);
             // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.panel7);
             this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlBottomBar);
             this.Controls.Add(this.pnlBG);
@@ -322,10 +483,15 @@
             this.mnuStrip.ResumeLayout(false);
             this.mnuStrip.PerformLayout();
             this.pnlTopBar.ResumeLayout(false);
+            this.pnlBottomBar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,6 +522,18 @@
         private System.Windows.Forms.TextBox txtName2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label lblAmmo1;
+        private System.Windows.Forms.Label labelAmmo1;
+        private System.Windows.Forms.Label labelCharged1;
+        private System.Windows.Forms.Label lblCharged1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label lblCharged2;
+        private System.Windows.Forms.Label lblAmmo2;
+        private System.Windows.Forms.Label labelAmmo2;
+        private System.Windows.Forms.Label labelCharged2;
     }
 }
 
