@@ -11,9 +11,9 @@ namespace LilyStraker_Assignment_2019
     {
 
         public int x, y, width, height;
-        public Image jf;
+        public Image jf1;
 
-        public Rectangle jfRec;
+        public Rectangle jf1Rec;
 
         public Jf1()
         {
@@ -21,8 +21,29 @@ namespace LilyStraker_Assignment_2019
             y = 360;
             width = 50;
             height = 50;
-            jf = Image.FromFile("jellyfish.png");
-            jfRec = new Rectangle(x, y, width, height);
+            jf1 = Image.FromFile("jellyfish.png");
+            jf1Rec = new Rectangle(x, y, width, height);
+        }
+
+        public void drawJf1(Graphics g)
+        {
+            jf1Rec = new Rectangle(x, y, width, height);
+            g.DrawImage(jf1, jf1Rec);
+        }
+
+        public void moveJf1(string move1)
+        {
+            jf1Rec.Location = new Point(x, y);
+            if (move1 =="right")
+            {
+                x += 5;
+                jf1Rec.Location = new Point(x, y);
+            }
+            if (move1 == "left")
+            {
+                x -= 5;
+                jf1Rec.Location = new Point(x, y);
+            }
         }
 
     }

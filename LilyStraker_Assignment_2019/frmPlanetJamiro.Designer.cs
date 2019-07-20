@@ -36,17 +36,13 @@
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtLives1 = new System.Windows.Forms.TextBox();
             this.lblScore1 = new System.Windows.Forms.Label();
-            this.txtName1 = new System.Windows.Forms.TextBox();
             this.labelName1 = new System.Windows.Forms.Label();
             this.labelLives1 = new System.Windows.Forms.Label();
             this.labelScore1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtLives2 = new System.Windows.Forms.TextBox();
             this.lblScore2 = new System.Windows.Forms.Label();
-            this.txtName2 = new System.Windows.Forms.TextBox();
             this.labelLives2 = new System.Windows.Forms.Label();
             this.labelName2 = new System.Windows.Forms.Label();
             this.labelScore2 = new System.Windows.Forms.Label();
@@ -66,6 +62,11 @@
             this.pnlBG = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tmrEnemy = new System.Windows.Forms.Timer(this.components);
+            this.tmrJf1 = new System.Windows.Forms.Timer(this.components);
+            this.txtLives2 = new System.Windows.Forms.TextBox();
+            this.txtName2 = new System.Windows.Forms.TextBox();
+            this.txtLives1 = new System.Windows.Forms.TextBox();
+            this.txtName1 = new System.Windows.Forms.TextBox();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -138,13 +139,6 @@
             this.panel3.Size = new System.Drawing.Size(1, 90);
             this.panel3.TabIndex = 1;
             // 
-            // txtLives1
-            // 
-            this.txtLives1.Location = new System.Drawing.Point(67, 61);
-            this.txtLives1.Name = "txtLives1";
-            this.txtLives1.Size = new System.Drawing.Size(33, 20);
-            this.txtLives1.TabIndex = 10;
-            // 
             // lblScore1
             // 
             this.lblScore1.AutoSize = true;
@@ -155,13 +149,6 @@
             this.lblScore1.Size = new System.Drawing.Size(16, 18);
             this.lblScore1.TabIndex = 9;
             this.lblScore1.Text = "0";
-            // 
-            // txtName1
-            // 
-            this.txtName1.Location = new System.Drawing.Point(67, 3);
-            this.txtName1.Name = "txtName1";
-            this.txtName1.Size = new System.Drawing.Size(122, 20);
-            this.txtName1.TabIndex = 8;
             // 
             // labelName1
             // 
@@ -224,14 +211,6 @@
             this.panel4.Size = new System.Drawing.Size(1, 90);
             this.panel4.TabIndex = 2;
             // 
-            // txtLives2
-            // 
-            this.txtLives2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLives2.Location = new System.Drawing.Point(99, 60);
-            this.txtLives2.Name = "txtLives2";
-            this.txtLives2.Size = new System.Drawing.Size(33, 20);
-            this.txtLives2.TabIndex = 11;
-            // 
             // lblScore2
             // 
             this.lblScore2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -243,14 +222,6 @@
             this.lblScore2.Size = new System.Drawing.Size(16, 18);
             this.lblScore2.TabIndex = 11;
             this.lblScore2.Text = "0";
-            // 
-            // txtName2
-            // 
-            this.txtName2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtName2.Location = new System.Drawing.Point(10, 3);
-            this.txtName2.Name = "txtName2";
-            this.txtName2.Size = new System.Drawing.Size(122, 20);
-            this.txtName2.TabIndex = 11;
             // 
             // labelLives2
             // 
@@ -473,6 +444,42 @@
             this.tmrEnemy.Enabled = true;
             this.tmrEnemy.Tick += new System.EventHandler(this.TmrEnemy_Tick);
             // 
+            // tmrJf1
+            // 
+            this.tmrJf1.Enabled = true;
+            this.tmrJf1.Interval = 50;
+            this.tmrJf1.Tick += new System.EventHandler(this.TmrJf1_Tick);
+            // 
+            // txtLives2
+            // 
+            this.txtLives2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLives2.Location = new System.Drawing.Point(99, 60);
+            this.txtLives2.Name = "txtLives2";
+            this.txtLives2.Size = new System.Drawing.Size(33, 20);
+            this.txtLives2.TabIndex = 11;
+            // 
+            // txtName2
+            // 
+            this.txtName2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtName2.Location = new System.Drawing.Point(10, 3);
+            this.txtName2.Name = "txtName2";
+            this.txtName2.Size = new System.Drawing.Size(122, 20);
+            this.txtName2.TabIndex = 11;
+            // 
+            // txtLives1
+            // 
+            this.txtLives1.Location = new System.Drawing.Point(67, 61);
+            this.txtLives1.Name = "txtLives1";
+            this.txtLives1.Size = new System.Drawing.Size(33, 20);
+            this.txtLives1.TabIndex = 10;
+            // 
+            // txtName1
+            // 
+            this.txtName1.Location = new System.Drawing.Point(67, 3);
+            this.txtName1.Name = "txtName1";
+            this.txtName1.Size = new System.Drawing.Size(122, 20);
+            this.txtName1.TabIndex = 8;
+            // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -490,6 +497,8 @@
             this.Name = "frmPlanetJamiro";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmPlanetJamiro_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmPlanetJamiro_KeyUp);
             this.mnuStrip.ResumeLayout(false);
             this.mnuStrip.PerformLayout();
             this.pnlTopBar.ResumeLayout(false);
@@ -524,12 +533,8 @@
         private System.Windows.Forms.Label labelLives2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txtLives1;
         private System.Windows.Forms.Label lblScore1;
-        private System.Windows.Forms.TextBox txtName1;
-        private System.Windows.Forms.TextBox txtLives2;
         private System.Windows.Forms.Label lblScore2;
-        private System.Windows.Forms.TextBox txtName2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
@@ -545,6 +550,11 @@
         private System.Windows.Forms.Label labelAmmo2;
         private System.Windows.Forms.Label labelCharged2;
         private System.Windows.Forms.Timer tmrEnemy;
+        private System.Windows.Forms.Timer tmrJf1;
+        private System.Windows.Forms.TextBox txtLives1;
+        private System.Windows.Forms.TextBox txtName1;
+        private System.Windows.Forms.TextBox txtLives2;
+        private System.Windows.Forms.TextBox txtName2;
     }
 }
 

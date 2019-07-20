@@ -17,6 +17,9 @@ namespace LilyStraker_Assignment_2019
         Random yspeed = new Random();
        Jf1 jf1 = new Jf1();
 
+        bool left, right;
+        string move1;
+
         public frmPlanetJamiro()
         {
             InitializeComponent();
@@ -29,10 +32,9 @@ namespace LilyStraker_Assignment_2019
         }
 
    
-
         private void Form1_Load(object sender, EventArgs e)
         {
-            //test2
+            pnlBG.Focus();
             
         }
 
@@ -52,7 +54,23 @@ namespace LilyStraker_Assignment_2019
                 enemy[i].drawEnemy(g);
 
             }
-     
+
+            jf1.drawJf1(g);
+
+         
+
+        }
+
+        //For flickering
+        //However, flickering still occurs when in fullscreen...?
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handleParam = base.CreateParams;
+                handleParam.ExStyle |= 0x02000000;   // WS_EX_COMPOSITED       
+                return handleParam;
+            }
         }
 
         private void pnlTitle_Paint(object sender, PaintEventArgs e)
@@ -88,6 +106,32 @@ namespace LilyStraker_Assignment_2019
         private void Label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmPlanetJamiro_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Left) { left = true; }
+            if (e.KeyData == Keys.Right) { right = true; }
+        }
+
+        private void FrmPlanetJamiro_KeyUp(object sender, KeyEventArgs e)
+        {
+           if (e.KeyData == Keys.Left) { left = false; }
+            if (e.KeyData == Keys.Right) { right = false; }
+        }
+
+        private void TmrJf1_Tick(object sender, EventArgs e)
+        {
+            if (right)
+            {
+                move1 = "right";
+                jf1.moveJf1(move1);
+            }
+            if (left)
+            {
+                move1 = "left";
+                jf1.moveJf1(move1);
+            }
         }
 
         private void TmrEnemy_Tick(object sender, EventArgs e)
