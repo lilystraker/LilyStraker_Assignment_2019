@@ -36,13 +36,17 @@
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.txtLives1 = new System.Windows.Forms.TextBox();
             this.lblScore1 = new System.Windows.Forms.Label();
+            this.txtName1 = new System.Windows.Forms.TextBox();
             this.labelName1 = new System.Windows.Forms.Label();
             this.labelLives1 = new System.Windows.Forms.Label();
             this.labelScore1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.txtLives2 = new System.Windows.Forms.TextBox();
             this.lblScore2 = new System.Windows.Forms.Label();
+            this.txtName2 = new System.Windows.Forms.TextBox();
             this.labelLives2 = new System.Windows.Forms.Label();
             this.labelName2 = new System.Windows.Forms.Label();
             this.labelScore2 = new System.Windows.Forms.Label();
@@ -63,10 +67,6 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.tmrEnemy = new System.Windows.Forms.Timer(this.components);
             this.tmrJf1 = new System.Windows.Forms.Timer(this.components);
-            this.txtLives2 = new System.Windows.Forms.TextBox();
-            this.txtName2 = new System.Windows.Forms.TextBox();
-            this.txtLives1 = new System.Windows.Forms.TextBox();
-            this.txtName1 = new System.Windows.Forms.TextBox();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -139,6 +139,15 @@
             this.panel3.Size = new System.Drawing.Size(1, 90);
             this.panel3.TabIndex = 1;
             // 
+            // txtLives1
+            // 
+            this.txtLives1.Location = new System.Drawing.Point(67, 61);
+            this.txtLives1.Name = "txtLives1";
+            this.txtLives1.ReadOnly = true;
+            this.txtLives1.Size = new System.Drawing.Size(33, 20);
+            this.txtLives1.TabIndex = 10;
+            this.txtLives1.Visible = false;
+            // 
             // lblScore1
             // 
             this.lblScore1.AutoSize = true;
@@ -149,6 +158,15 @@
             this.lblScore1.Size = new System.Drawing.Size(16, 18);
             this.lblScore1.TabIndex = 9;
             this.lblScore1.Text = "0";
+            // 
+            // txtName1
+            // 
+            this.txtName1.Location = new System.Drawing.Point(67, 3);
+            this.txtName1.Name = "txtName1";
+            this.txtName1.ReadOnly = true;
+            this.txtName1.Size = new System.Drawing.Size(122, 20);
+            this.txtName1.TabIndex = 8;
+            this.txtName1.Visible = false;
             // 
             // labelName1
             // 
@@ -211,6 +229,16 @@
             this.panel4.Size = new System.Drawing.Size(1, 90);
             this.panel4.TabIndex = 2;
             // 
+            // txtLives2
+            // 
+            this.txtLives2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLives2.Location = new System.Drawing.Point(99, 60);
+            this.txtLives2.Name = "txtLives2";
+            this.txtLives2.ReadOnly = true;
+            this.txtLives2.Size = new System.Drawing.Size(33, 20);
+            this.txtLives2.TabIndex = 11;
+            this.txtLives2.Visible = false;
+            // 
             // lblScore2
             // 
             this.lblScore2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -222,6 +250,16 @@
             this.lblScore2.Size = new System.Drawing.Size(16, 18);
             this.lblScore2.TabIndex = 11;
             this.lblScore2.Text = "0";
+            // 
+            // txtName2
+            // 
+            this.txtName2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtName2.Location = new System.Drawing.Point(10, 3);
+            this.txtName2.Name = "txtName2";
+            this.txtName2.ReadOnly = true;
+            this.txtName2.Size = new System.Drawing.Size(122, 20);
+            this.txtName2.TabIndex = 11;
+            this.txtName2.Visible = false;
             // 
             // labelLives2
             // 
@@ -449,36 +487,6 @@
             this.tmrJf1.Enabled = true;
             this.tmrJf1.Interval = 50;
             this.tmrJf1.Tick += new System.EventHandler(this.TmrJf1_Tick);
-            // 
-            // txtLives2
-            // 
-            this.txtLives2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLives2.Location = new System.Drawing.Point(99, 60);
-            this.txtLives2.Name = "txtLives2";
-            this.txtLives2.Size = new System.Drawing.Size(33, 20);
-            this.txtLives2.TabIndex = 11;
-            // 
-            // txtName2
-            // 
-            this.txtName2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtName2.Location = new System.Drawing.Point(10, 3);
-            this.txtName2.Name = "txtName2";
-            this.txtName2.Size = new System.Drawing.Size(122, 20);
-            this.txtName2.TabIndex = 11;
-            // 
-            // txtLives1
-            // 
-            this.txtLives1.Location = new System.Drawing.Point(67, 61);
-            this.txtLives1.Name = "txtLives1";
-            this.txtLives1.Size = new System.Drawing.Size(33, 20);
-            this.txtLives1.TabIndex = 10;
-            // 
-            // txtName1
-            // 
-            this.txtName1.Location = new System.Drawing.Point(67, 3);
-            this.txtName1.Name = "txtName1";
-            this.txtName1.Size = new System.Drawing.Size(122, 20);
-            this.txtName1.TabIndex = 8;
             // 
             // frmPlanetJamiro
             // 

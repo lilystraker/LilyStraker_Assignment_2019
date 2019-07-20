@@ -21,8 +21,9 @@ namespace LilyStraker_Assignment_2019
             y = 360;
             width = 50;
             height = 50;
-            jf1 = Image.FromFile("jellyfish.png");
+            jf1 = Image.FromFile("jellyfish2.gif");
             jf1Rec = new Rectangle(x, y, width, height);
+ 
         }
 
         public void drawJf1(Graphics g)
@@ -34,15 +35,60 @@ namespace LilyStraker_Assignment_2019
         public void moveJf1(string move1)
         {
             jf1Rec.Location = new Point(x, y);
-            if (move1 =="right")
+            if (move1 == "right")
             {
-                x += 5;
-                jf1Rec.Location = new Point(x, y);
+                if (jf1Rec.Location.X > 1850)
+                {
+                    x = 1850;
+                    jf1Rec.Location = new Point(x, y);
+                }
+                else
+                {
+                    x += 30;//change back to lower number
+                    jf1Rec.Location = new Point(x, y);
+                }
             }
+
             if (move1 == "left")
             {
-                x -= 5;
-                jf1Rec.Location = new Point(x, y);
+                if (jf1Rec.Location.X < 1)
+                {
+                    x = 1;
+                    jf1Rec.Location = new Point(x, y);
+                }
+                else
+                { 
+                    x -= 30;//change back to lower number
+                    jf1Rec.Location = new Point(x, y);
+                }
+            }
+
+            if (move1 == "up")
+            {
+                if (jf1Rec.Location.Y < 25)
+                {
+                    y = 25;
+                    jf1Rec.Location = new Point(x, y);
+                }
+                else
+                {
+                    y -= 30;//change back to lower number
+                    jf1Rec.Location = new Point(x, y);
+                }
+            }
+
+            if (move1 == "down")
+            {
+                if (jf1Rec.Location.Y > 375)
+                {
+                    y = 375;
+                    jf1Rec.Location = new Point(x, y);
+                }
+                else
+                {
+                    y += 30;//change back to lower number
+                    jf1Rec.Location = new Point(x, y);
+                }
             }
         }
 

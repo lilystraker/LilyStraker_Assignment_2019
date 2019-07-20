@@ -17,7 +17,7 @@ namespace LilyStraker_Assignment_2019
         Random yspeed = new Random();
        Jf1 jf1 = new Jf1();
 
-        bool left, right;
+        bool left, right, up, down;
         string move1;
 
         public frmPlanetJamiro()
@@ -112,12 +112,16 @@ namespace LilyStraker_Assignment_2019
         {
             if (e.KeyData == Keys.Left) { left = true; }
             if (e.KeyData == Keys.Right) { right = true; }
+            if (e.KeyData == Keys.Up) { up = true; }
+            if (e.KeyData == Keys.Down) { down = true; }
         }
 
         private void FrmPlanetJamiro_KeyUp(object sender, KeyEventArgs e)
         {
            if (e.KeyData == Keys.Left) { left = false; }
             if (e.KeyData == Keys.Right) { right = false; }
+            if (e.KeyData == Keys.Up) { up = false; }
+            if (e.KeyData == Keys.Down) { down = false; }
         }
 
         private void TmrJf1_Tick(object sender, EventArgs e)
@@ -126,10 +130,21 @@ namespace LilyStraker_Assignment_2019
             {
                 move1 = "right";
                 jf1.moveJf1(move1);
+ 
             }
             if (left)
             {
                 move1 = "left";
+                jf1.moveJf1(move1);
+            }
+            if (up)
+            {
+                move1 = "up";
+                jf1.moveJf1(move1);
+            }
+            if (down)
+            {
+                move1 = "down";
                 jf1.moveJf1(move1);
             }
         }
