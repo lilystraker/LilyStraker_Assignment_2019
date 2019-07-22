@@ -34,7 +34,8 @@ namespace LilyStraker_Assignment_2019
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            lives1 = int.Parse(txtLives1.Text);
+            MessageBox.Show("...", "Instructions");
+            txtName1.Focus();
         }
 
         private void pnlTopBar_Paint(object sender, PaintEventArgs e)
@@ -113,6 +114,35 @@ namespace LilyStraker_Assignment_2019
             if (e.KeyData == Keys.Right) { right = true; }
             if (e.KeyData == Keys.Up) { up = true; }
             if (e.KeyData == Keys.Down) { down = true; }
+        }
+
+        private void mnuStart_Click(object sender, EventArgs e)
+        {
+            if (txtName1.Text == "" || txtName2.Text == "" || txtLives1.Text == "")
+            {
+                MessageBox.Show("Check that both names have been entered and the lives have been set.", "Error!");
+
+                tmrEnemy.Enabled = false;
+                tmrJf1.Enabled = false;
+
+            }
+            else
+            {
+                score1 = 0;
+                lblScore1.Text = score1.ToString();
+                lives1 = int.Parse(txtLives1.Text);
+                tmrEnemy.Enabled = true;
+                tmrJf1.Enabled = true;
+
+            }
+
+        }
+
+        private void mnuStop_Click(object sender, EventArgs e)
+        {
+            tmrJf1.Enabled = false;
+            tmrEnemy.Enabled = false;
+
         }
 
         private void FrmPlanetJamiro_KeyUp(object sender, KeyEventArgs e)

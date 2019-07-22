@@ -97,12 +97,14 @@
             this.mnuStart.Name = "mnuStart";
             this.mnuStart.Size = new System.Drawing.Size(55, 20);
             this.mnuStart.Text = "Restart";
+            this.mnuStart.Click += new System.EventHandler(this.mnuStart_Click);
             // 
             // mnuStop
             // 
             this.mnuStop.Name = "mnuStop";
             this.mnuStop.Size = new System.Drawing.Size(43, 20);
             this.mnuStop.Text = "Stop";
+            this.mnuStop.Click += new System.EventHandler(this.mnuStop_Click);
             // 
             // pnlTopBar
             // 
@@ -166,7 +168,6 @@
             this.txtName1.ReadOnly = true;
             this.txtName1.Size = new System.Drawing.Size(122, 20);
             this.txtName1.TabIndex = 8;
-            this.txtName1.Visible = false;
             // 
             // labelName1
             // 
