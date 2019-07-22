@@ -146,7 +146,7 @@
             this.txtLives1.ReadOnly = true;
             this.txtLives1.Size = new System.Drawing.Size(33, 20);
             this.txtLives1.TabIndex = 10;
-            this.txtLives1.Visible = false;
+            this.txtLives1.Text = "5";
             // 
             // lblScore1
             // 
@@ -206,7 +206,7 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.txtLives2);

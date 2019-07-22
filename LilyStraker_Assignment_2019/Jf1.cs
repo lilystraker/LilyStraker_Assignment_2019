@@ -21,7 +21,7 @@ namespace LilyStraker_Assignment_2019
             y = 360;
             width = 50;
             height = 50;
-            jf1 = Image.FromFile("jellyfish2.gif");
+            jf1 = Image.FromFile("jellyfish.png");
             jf1Rec = new Rectangle(x, y, width, height);
  
         }

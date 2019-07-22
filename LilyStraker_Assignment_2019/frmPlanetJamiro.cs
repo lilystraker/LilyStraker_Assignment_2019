@@ -18,6 +18,7 @@ namespace LilyStraker_Assignment_2019
        Jf1 jf1 = new Jf1();
 
         bool left, right, up, down;
+        int score1, lives1;
         string move1;
 
         public frmPlanetJamiro()
@@ -31,11 +32,9 @@ namespace LilyStraker_Assignment_2019
             }
         }
 
-   
         private void Form1_Load(object sender, EventArgs e)
         {
-            pnlBG.Focus();
-            
+            lives1 = int.Parse(txtLives1.Text);
         }
 
         private void pnlTopBar_Paint(object sender, PaintEventArgs e)
@@ -151,12 +150,38 @@ namespace LilyStraker_Assignment_2019
 
         private void TmrEnemy_Tick(object sender, EventArgs e)
         {
+            score1 = 0;
             for (int i = 0; i < 7; i++)
             {
                 enemy[i].moveEnemy();
+
+                if (jf1.jf1Rec.IntersectsWith(enemy[i].enemyRec))
+                {
+                    //reset planet[i] back to top of panel
+                    enemy[i].y = 30; // set  y value of planetRec
+                    lives1 -= 1;// lose a life
+                    txtLives1.Text = lives1.ToString();// display number of lives
+                    checkLives();
+                }
+
+                score1 += enemy[i].score1;// get score from Planet class (in movePlanet method)
+                lblScore1.Text = score1.ToString();
+
             }
 
             pnlBG.Invalidate();
         }
+
+        private void checkLives()
+        {
+            if (lives1 == 0)
+            {
+                tmrEnemy.Enabled = false;
+                tmrJf1.Enabled = false;
+                MessageBox.Show("Game Over");
+
+            }
+        }
+
     }
 }
