@@ -145,10 +145,12 @@
             // 
             this.txtLives1.Location = new System.Drawing.Point(67, 61);
             this.txtLives1.Name = "txtLives1";
-            this.txtLives1.ReadOnly = true;
             this.txtLives1.Size = new System.Drawing.Size(33, 20);
             this.txtLives1.TabIndex = 10;
             this.txtLives1.Text = "5";
+            this.txtLives1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLives1_KeyDown);
+            this.txtLives1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLives1_KeyPress);
+            this.txtLives1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtLives1_KeyUp);
             // 
             // lblScore1
             // 
@@ -165,9 +167,11 @@
             // 
             this.txtName1.Location = new System.Drawing.Point(67, 3);
             this.txtName1.Name = "txtName1";
-            this.txtName1.ReadOnly = true;
             this.txtName1.Size = new System.Drawing.Size(122, 20);
             this.txtName1.TabIndex = 8;
+            this.txtName1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName1_KeyDown);
+            this.txtName1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName1_KeyPress);
+            this.txtName1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtName1_KeyUp);
             // 
             // labelName1
             // 
@@ -235,10 +239,11 @@
             this.txtLives2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtLives2.Location = new System.Drawing.Point(99, 60);
             this.txtLives2.Name = "txtLives2";
-            this.txtLives2.ReadOnly = true;
             this.txtLives2.Size = new System.Drawing.Size(33, 20);
             this.txtLives2.TabIndex = 11;
-            this.txtLives2.Visible = false;
+            this.txtLives2.TextChanged += new System.EventHandler(this.txtLives2_TextChanged);
+            this.txtLives2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLives2_KeyDown);
+            this.txtLives2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtLives2_KeyUp);
             // 
             // lblScore2
             // 
@@ -257,10 +262,11 @@
             this.txtName2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName2.Location = new System.Drawing.Point(10, 3);
             this.txtName2.Name = "txtName2";
-            this.txtName2.ReadOnly = true;
             this.txtName2.Size = new System.Drawing.Size(122, 20);
             this.txtName2.TabIndex = 11;
-            this.txtName2.Visible = false;
+            this.txtName2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName2_KeyDown);
+            this.txtName2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName2_KeyPress);
+            this.txtName2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtName2_KeyUp);
             // 
             // labelLives2
             // 
