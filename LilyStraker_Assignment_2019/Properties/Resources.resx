@@ -118,20 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="space" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\space.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Planet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Planet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PlanetJamiro-Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlanetJamiro-Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PlanetJamiro-Logo-Dark_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlanetJamiro-Logo-Dark_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="jellyfish" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jellyfish.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Planet" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Planet.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="jellyfish1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jellyfish.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -139,7 +130,22 @@
   <data name="jellyfish2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jellyfish2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="jellyfish" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jellyfish.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PlanetJamiro-Logo-Dark_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlanetJamiro-Logo-Dark_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="space1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\space1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="space" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\space.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="jellyfish21" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jellyfish2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stars" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stars.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

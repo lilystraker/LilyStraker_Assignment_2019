@@ -64,6 +64,7 @@
             this.labelAmmo1 = new System.Windows.Forms.Label();
             this.labelCharged1 = new System.Windows.Forms.Label();
             this.pnlBG = new System.Windows.Forms.Panel();
+            this.pnlFG = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.tmrEnemy = new System.Windows.Forms.Timer(this.components);
             this.tmrJf1 = new System.Windows.Forms.Timer(this.components);
@@ -74,6 +75,7 @@
             this.pnlBottomBar.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.pnlBG.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuStrip
@@ -468,12 +470,22 @@
             // 
             this.pnlBG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlBG.AutoSize = true;
-            this.pnlBG.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.space;
+            this.pnlBG.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.space1;
+            this.pnlBG.Controls.Add(this.pnlFG);
             this.pnlBG.Location = new System.Drawing.Point(0, 120);
             this.pnlBG.Name = "pnlBG";
-            this.pnlBG.Size = new System.Drawing.Size(985, 444);
+            this.pnlBG.Size = new System.Drawing.Size(988, 447);
             this.pnlBG.TabIndex = 3;
             this.pnlBG.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBG_Paint);
+            // 
+            // pnlFG
+            // 
+            this.pnlFG.BackColor = System.Drawing.Color.Transparent;
+            this.pnlFG.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.stars;
+            this.pnlFG.Location = new System.Drawing.Point(0, 0);
+            this.pnlFG.Name = "pnlFG";
+            this.pnlFG.Size = new System.Drawing.Size(985, 444);
+            this.pnlFG.TabIndex = 0;
             // 
             // panel7
             // 
@@ -526,6 +538,7 @@
             this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.pnlBG.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -570,6 +583,7 @@
         private System.Windows.Forms.TextBox txtName1;
         private System.Windows.Forms.TextBox txtLives2;
         private System.Windows.Forms.TextBox txtName2;
+        private System.Windows.Forms.Panel pnlFG;
     }
 }
 
