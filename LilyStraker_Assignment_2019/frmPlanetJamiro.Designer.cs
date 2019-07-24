@@ -78,7 +78,7 @@
             // 
             // mnuStrip
             // 
-            this.mnuStrip.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.mnuStrip.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mnuStrip.AutoSize = false;
             this.mnuStrip.BackColor = System.Drawing.Color.CornflowerBlue;
             this.mnuStrip.Dock = System.Windows.Forms.DockStyle.None;
@@ -87,7 +87,7 @@
             this.mnuStop});
             this.mnuStrip.Location = new System.Drawing.Point(0, 0);
             this.mnuStrip.Name = "mnuStrip";
-            this.mnuStrip.Size = new System.Drawing.Size(2000, 24);
+            this.mnuStrip.Size = new System.Drawing.Size(985, 24);
             this.mnuStrip.TabIndex = 0;
             this.mnuStrip.Text = "menuStrip1";
             this.mnuStrip.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.mnuStrip_ItemClicked);
@@ -108,13 +108,13 @@
             // 
             // pnlTopBar
             // 
-            this.pnlTopBar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pnlTopBar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlTopBar.BackColor = System.Drawing.Color.Navy;
             this.pnlTopBar.Controls.Add(this.panel1);
             this.pnlTopBar.Controls.Add(this.panel2);
             this.pnlTopBar.Location = new System.Drawing.Point(0, 27);
             this.pnlTopBar.Name = "pnlTopBar";
-            this.pnlTopBar.Size = new System.Drawing.Size(2000, 90);
+            this.pnlTopBar.Size = new System.Drawing.Size(985, 90);
             this.pnlTopBar.TabIndex = 2;
             this.pnlTopBar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTopBar_Paint);
             // 
@@ -220,7 +220,7 @@
             this.panel2.Controls.Add(this.labelLives2);
             this.panel2.Controls.Add(this.labelName2);
             this.panel2.Controls.Add(this.labelScore2);
-            this.panel2.Location = new System.Drawing.Point(782, 3);
+            this.panel2.Location = new System.Drawing.Point(779, 3);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 84);
             this.panel2.TabIndex = 7;
@@ -320,13 +320,13 @@
             // 
             // pnlBottomBar
             // 
-            this.pnlBottomBar.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pnlBottomBar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlBottomBar.BackColor = System.Drawing.Color.PowderBlue;
             this.pnlBottomBar.Controls.Add(this.panel8);
             this.pnlBottomBar.Controls.Add(this.panel6);
             this.pnlBottomBar.Location = new System.Drawing.Point(0, 570);
             this.pnlBottomBar.Name = "pnlBottomBar";
-            this.pnlBottomBar.Size = new System.Drawing.Size(2000, 91);
+            this.pnlBottomBar.Size = new System.Drawing.Size(985, 91);
             this.pnlBottomBar.TabIndex = 3;
             this.pnlBottomBar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBottomBar_Paint);
             // 
@@ -338,7 +338,7 @@
             this.panel8.Controls.Add(this.lblAmmo2);
             this.panel8.Controls.Add(this.labelAmmo2);
             this.panel8.Controls.Add(this.labelCharged2);
-            this.panel8.Location = new System.Drawing.Point(782, 4);
+            this.panel8.Location = new System.Drawing.Point(781, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(200, 84);
             this.panel8.TabIndex = 12;
@@ -466,12 +466,12 @@
             // 
             // pnlBG
             // 
-            this.pnlBG.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pnlBG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlBG.AutoSize = true;
             this.pnlBG.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.space;
             this.pnlBG.Location = new System.Drawing.Point(0, 120);
             this.pnlBG.Name = "pnlBG";
-            this.pnlBG.Size = new System.Drawing.Size(2000, 444);
+            this.pnlBG.Size = new System.Drawing.Size(985, 444);
             this.pnlBG.TabIndex = 3;
             this.pnlBG.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBG_Paint);
             // 

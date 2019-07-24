@@ -73,7 +73,7 @@ namespace LilyStraker_Assignment_2019
             txtLives2.SelectionLength = 0;
             txtLives2.ForeColor = Color.Gray;
 
-            jf1.x = 1000;
+            jf1.x = 443;
             jf1.y = 350;
 
             tmrJf1.Enabled = false;
