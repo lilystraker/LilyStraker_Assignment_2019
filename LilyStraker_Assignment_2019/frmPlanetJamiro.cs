@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms;
 using System.Reflection;
 
 namespace LilyStraker_Assignment_2019
@@ -349,22 +348,26 @@ namespace LilyStraker_Assignment_2019
             {
                 move1 = "right";
                 jf1.moveJf1(move1);
- 
+                stars.moveStar(move1);
+
             }
             if (left)
             {
                 move1 = "left";
                 jf1.moveJf1(move1);
+                stars.moveStar(move1);
             }
             if (up)
             {
                 move1 = "up";
                 jf1.moveJf1(move1);
+                stars.moveStar(move1);
             }
             if (down)
             {
                 move1 = "down";
                 jf1.moveJf1(move1);
+                stars.moveStar(move1);
             }
         }
 

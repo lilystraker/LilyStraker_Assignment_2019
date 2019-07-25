@@ -37,56 +37,58 @@ namespace LilyStraker_Assignment_2019
             jf1Rec.Location = new Point(x, y);
             if (move1 == "right")
             {
-                if (jf1Rec.Location.X > 1850)
+               
+                if (jf1Rec.Location.X > 925)
                 {
-                    x = 1850;
+                    x = 935;
                     jf1Rec.Location = new Point(x, y);
+                  
                 }
                 else
                 {
-                    x += 30;//change back to lower number
+                    x += 10;
                     jf1Rec.Location = new Point(x, y);
                 }
             }
 
             if (move1 == "left")
             {
-                if (jf1Rec.Location.X < 1)
+                if (jf1Rec.Location.X < 10)
                 {
-                    x = 1;
+                    x = 0;
                     jf1Rec.Location = new Point(x, y);
                 }
                 else
                 { 
-                    x -= 30;//change back to lower number
+                    x -= 10;
                     jf1Rec.Location = new Point(x, y);
                 }
             }
 
             if (move1 == "up")
             {
-                if (jf1Rec.Location.Y < 25)
+                if (jf1Rec.Location.Y < 10)
                 {
-                    y = 25;
+                    y = 0;
                     jf1Rec.Location = new Point(x, y);
                 }
                 else
                 {
-                    y -= 30;//change back to lower number
+                    y -= 10;//change back to lower number
                     jf1Rec.Location = new Point(x, y);
                 }
             }
 
             if (move1 == "down")
             {
-                if (jf1Rec.Location.Y > 375)
+                if (jf1Rec.Location.Y > 384)
                 {
-                    y = 375;
+                    y = 394;
                     jf1Rec.Location = new Point(x, y);
                 }
                 else
                 {
-                    y += 30;//change back to lower number
+                    y += 10;//change back to lower number
                     jf1Rec.Location = new Point(x, y);
                 }
             }

@@ -20,7 +20,7 @@ namespace LilyStraker_Assignment_2019
             y = 0;
             width = 985;
             height = 444;
-            starImage = Image.FromFile("stars.png");
+            starImage = Image.FromFile("stars_big.png");
             starRec = new Rectangle(x, y, width, height);
 
         }
@@ -31,5 +31,62 @@ namespace LilyStraker_Assignment_2019
             g.DrawImage(starImage, starRec);
         }
 
+        public void moveStar(string move1)
+        {
+
+            starRec.Location = new Point(x, y);
+            if (move1 == "right")
+            {
+                if (starRec.Location.X < -100)
+                {
+                    x = -100;
+                    starRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    x -= 2;
+                    starRec.Location = new Point(x, y);
+                }
+            }
+            if (move1 == "left")
+            {
+                if (starRec.Location.X > 100)
+                {
+                    x = 100;
+                    starRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    x += 2;
+                    starRec.Location = new Point(x, y);
+                }
+            }
+            if (move1 == "up")
+            {
+                if (starRec.Location.Y > 70)
+                {
+                    y = 70;
+                    starRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    y += 2;
+                    starRec.Location = new Point(x, y);
+                }
+            }
+            if (move1 == "down")
+            {
+                if (starRec.Location.Y < -15)
+                {
+                    y = -15;
+                    starRec.Location = new Point(x, y);
+                }
+                else
+                {
+                    y -= 2;
+                    starRec.Location = new Point(x, y);
+                }
+            }
+        }
     }
 }
