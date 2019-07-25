@@ -18,6 +18,7 @@ namespace LilyStraker_Assignment_2019
         Enemy[] enemy = new Enemy[7];
         Random yspeed = new Random();
        Jf1 jf1 = new Jf1();
+        Stars stars = new Stars();
 
         bool left, right, up, down;
         int score1, lives1;
@@ -98,7 +99,7 @@ namespace LilyStraker_Assignment_2019
 
             jf1.drawJf1(g);
 
-         
+            stars.drawStars(g);
 
         }
 
