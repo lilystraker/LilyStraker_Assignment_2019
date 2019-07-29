@@ -17,7 +17,7 @@ namespace LilyStraker_Assignment_2019
         Enemy[] enemy = new Enemy[7];
         Random yspeed = new Random();
        Jf1 jf1 = new Jf1();
-        Stars stars = new Stars();
+        Stars stars = new Stars();    
         List<Bubble> bubbles = new List<Bubble>();
 
         bool left, right, up, down;
@@ -349,9 +349,30 @@ namespace LilyStraker_Assignment_2019
             }
         }
 
-    
+        private void tmrBubble_Tick(object sender, EventArgs e)
+        {
+            score1 = 0;
+          //  for (int i = 0; i < 7; i++)
+           // {
+              //  bubbles[i].moveBubble();
 
-    private void FrmPlanetJamiro_KeyUp(object sender, KeyEventArgs e)
+                if (jf1.jf1Rec.IntersectsWith(bubbles.bubbleRec))
+                {
+                    //reset planet[i] back to top of panel
+                    bubbles.y = 30; // set  y value of planetRec
+                    score1 += 1;
+                    lblScore1.Text = score1.ToString();
+                }
+
+           //     score1 += enemy[i].score1;// get score from Planet class (in movePlanet method)
+              //  lblScore1.Text = score1.ToString();
+
+           // }
+
+            pnlBG.Invalidate();
+        }
+
+        private void FrmPlanetJamiro_KeyUp(object sender, KeyEventArgs e)
         {
            if (e.KeyData == Keys.Left) { left = false; }
             if (e.KeyData == Keys.Right) { right = false; }

@@ -67,6 +67,7 @@
             this.panel7 = new System.Windows.Forms.Panel();
             this.tmrEnemy = new System.Windows.Forms.Timer(this.components);
             this.tmrJf1 = new System.Windows.Forms.Timer(this.components);
+            this.tmrBubble = new System.Windows.Forms.Timer(this.components);
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -496,6 +497,11 @@
             this.tmrJf1.Interval = 50;
             this.tmrJf1.Tick += new System.EventHandler(this.TmrJf1_Tick);
             // 
+            // tmrBubble
+            // 
+            this.tmrBubble.Enabled = true;
+            this.tmrBubble.Tick += new System.EventHandler(this.tmrBubble_Tick);
+            // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -571,6 +577,7 @@
         private System.Windows.Forms.TextBox txtName1;
         private System.Windows.Forms.TextBox txtLives2;
         private System.Windows.Forms.TextBox txtName2;
+        private System.Windows.Forms.Timer tmrBubble;
     }
 }
 
