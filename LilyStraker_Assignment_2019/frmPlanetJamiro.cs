@@ -18,6 +18,7 @@ namespace LilyStraker_Assignment_2019
         Random yspeed = new Random();
        Jf1 jf1 = new Jf1();
         Stars stars = new Stars();
+        List<Bubble> bubbles = new List<Bubble>();
 
         bool left, right, up, down;
         int score1, lives1;
@@ -97,6 +98,12 @@ namespace LilyStraker_Assignment_2019
             }
 
             jf1.drawJf1(g);
+
+            foreach (Bubble b in bubbles)
+            {
+                b.drawBubble(g);
+                b.moveBubble(g);
+            }
 
             stars.drawStars(g);
 
@@ -334,7 +341,17 @@ namespace LilyStraker_Assignment_2019
             }
         }
 
-        private void FrmPlanetJamiro_KeyUp(object sender, KeyEventArgs e)
+        private void pnlBG_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                bubbles.Add(new Bubble(jf1.jf1Rec));
+            }
+        }
+
+    
+
+    private void FrmPlanetJamiro_KeyUp(object sender, KeyEventArgs e)
         {
            if (e.KeyData == Keys.Left) { left = false; }
             if (e.KeyData == Keys.Right) { right = false; }

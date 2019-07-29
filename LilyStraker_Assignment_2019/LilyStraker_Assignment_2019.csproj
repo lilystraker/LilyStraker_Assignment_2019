@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bubble.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
