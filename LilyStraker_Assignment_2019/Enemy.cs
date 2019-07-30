@@ -23,8 +23,11 @@ namespace LilyStraker_Assignment_2019
             y = 10;
             width = 50;
             height = 50;
-            enemyImage = Image.FromFile("Planet.png");
+            enemyImage = Image.FromFile("Planet.png");  
             enemyRec = new Rectangle(x, y, width, height);
+
+         //   Enemy enemyImage1 = new Enemy();
+         //   enemyImage.ImageLocation = paths[random.Next(0, images.Count - 1)];
 
         }
 

@@ -334,7 +334,7 @@
             // panel8
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel8.BackColor = System.Drawing.Color.Navy;
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel8.Controls.Add(this.lblCharged2);
             this.panel8.Controls.Add(this.lblAmmo2);
             this.panel8.Controls.Add(this.labelAmmo2);
@@ -399,7 +399,7 @@
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.Navy;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel6.Controls.Add(this.panel5);
             this.panel6.Controls.Add(this.lblCharged1);
             this.panel6.Controls.Add(this.lblAmmo1);
@@ -472,7 +472,7 @@
             this.pnlBG.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.space1;
             this.pnlBG.Location = new System.Drawing.Point(0, 120);
             this.pnlBG.Name = "pnlBG";
-            this.pnlBG.Size = new System.Drawing.Size(988, 447);
+            this.pnlBG.Size = new System.Drawing.Size(985, 447);
             this.pnlBG.TabIndex = 3;
             this.pnlBG.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBG_Paint);
             this.pnlBG.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlBG_MouseDown);
