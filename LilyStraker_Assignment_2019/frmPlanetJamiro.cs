@@ -42,6 +42,7 @@ namespace LilyStraker_Assignment_2019
 
             tmrJf1.Enabled = false;
             tmrEnemy.Enabled = false;
+            tmrBubble.Enabled = false;
 
             MessageBox.Show("Instructions", "Instructions");
             txtName1.Focus();
@@ -77,7 +78,6 @@ namespace LilyStraker_Assignment_2019
             jf1.x = 443;
             jf1.y = 350;
 
-            tmrJf1.Enabled = false;
         }
 
         private void pnlTopBar_Paint(object sender, PaintEventArgs e)
@@ -91,7 +91,7 @@ namespace LilyStraker_Assignment_2019
 
             for (int i = 0; i <7; i++)
             {
-                int rndmspeed = yspeed.Next(5, 20);
+                int rndmspeed = yspeed.Next(5, 10);
                 enemy[i].y += rndmspeed;
                 enemy[i].drawEnemy(g);
 
@@ -181,6 +181,7 @@ namespace LilyStraker_Assignment_2019
                 lives1 = int.Parse(txtLives1.Text);
                 tmrEnemy.Enabled = true;
                 tmrJf1.Enabled = true;
+                tmrBubble.Enabled = true;
                 txtName1.Enabled = false;
                 txtName2.Enabled = false;
                 txtLives1.Enabled = false;
@@ -352,24 +353,36 @@ namespace LilyStraker_Assignment_2019
         private void tmrBubble_Tick(object sender, EventArgs e)
         {
             score1 = 0;
-          //  for (int i = 0; i < 7; i++)
-           // {
-              //  bubbles[i].moveBubble();
+            //  for (int i = 0; i < 7; i++)
+            // {
+            //  bubbles[i].moveBubble();
 
-                if (jf1.jf1Rec.IntersectsWith(bubbles.bubbleRec))
+
+            //     score1 += enemy[i].score1;// get score from Planet class (in movePlanet method)
+            //  lblScore1.Text = score1.ToString();
+
+            // }
+
+            foreach (Enemy n in enemy)
+            {
+
+                foreach (Bubble b in bubbles)
                 {
-                    //reset planet[i] back to top of panel
-                    bubbles.y = 30; // set  y value of planetRec
-                    score1 += 1;
-                    lblScore1.Text = score1.ToString();
+                    if (n.enemyRec.IntersectsWith(b.bubbleRec))
+                    {
+                        bubbles.Remove(b);// remove missile
+                        n.y = 20;// relocate planet to the top of the form
+                        score1 += 1;
+                        lblScore1.Text = score1.ToString();
+                        break;
+                    }
                 }
+                this.Invalidate();
 
-           //     score1 += enemy[i].score1;// get score from Planet class (in movePlanet method)
-              //  lblScore1.Text = score1.ToString();
+            }
 
-           // }
 
-            pnlBG.Invalidate();
+         //   pnlBG.Invalidate();
         }
 
         private void FrmPlanetJamiro_KeyUp(object sender, KeyEventArgs e)
@@ -424,7 +437,7 @@ namespace LilyStraker_Assignment_2019
                     txtLives1.Text = lives1.ToString();// display number of lives
                     checkLives();
                 }
-
+ 
                 score1 += enemy[i].score1;// get score from Planet class (in movePlanet method)
                 lblScore1.Text = score1.ToString();
 

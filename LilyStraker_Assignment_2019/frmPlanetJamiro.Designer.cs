@@ -488,18 +488,15 @@
             // 
             // tmrEnemy
             // 
-            this.tmrEnemy.Enabled = true;
             this.tmrEnemy.Tick += new System.EventHandler(this.TmrEnemy_Tick);
             // 
             // tmrJf1
             // 
-            this.tmrJf1.Enabled = true;
             this.tmrJf1.Interval = 50;
             this.tmrJf1.Tick += new System.EventHandler(this.TmrJf1_Tick);
             // 
             // tmrBubble
             // 
-            this.tmrBubble.Enabled = true;
             this.tmrBubble.Tick += new System.EventHandler(this.tmrBubble_Tick);
             // 
             // frmPlanetJamiro
