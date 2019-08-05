@@ -53,14 +53,14 @@
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.pnlBottomBar = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.lblCharged2 = new System.Windows.Forms.Label();
-            this.lblAmmo2 = new System.Windows.Forms.Label();
+            this.lblBubbletime2 = new System.Windows.Forms.Label();
+            this.lblBubblecount2 = new System.Windows.Forms.Label();
             this.labelAmmo2 = new System.Windows.Forms.Label();
             this.labelCharged2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lblCharged1 = new System.Windows.Forms.Label();
-            this.lblAmmo1 = new System.Windows.Forms.Label();
+            this.lblBubbletime = new System.Windows.Forms.Label();
+            this.lblBubbleCount = new System.Windows.Forms.Label();
             this.labelAmmo1 = new System.Windows.Forms.Label();
             this.labelCharged1 = new System.Windows.Forms.Label();
             this.pnlBG = new System.Windows.Forms.Panel();
@@ -68,6 +68,8 @@
             this.tmrEnemy = new System.Windows.Forms.Timer(this.components);
             this.tmrJf1 = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble = new System.Windows.Forms.Timer(this.components);
+            this.tmrBubbleRecharge = new System.Windows.Forms.Timer(this.components);
+            this.tmrBubbleUse = new System.Windows.Forms.Timer(this.components);
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -149,6 +151,7 @@
             this.txtLives1.Size = new System.Drawing.Size(33, 20);
             this.txtLives1.TabIndex = 10;
             this.txtLives1.Text = "5";
+            this.txtLives1.TextChanged += new System.EventHandler(this.txtLives1_TextChanged);
             this.txtLives1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLives1_KeyDown);
             this.txtLives1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLives1_KeyPress);
             this.txtLives1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtLives1_KeyUp);
@@ -335,8 +338,8 @@
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.panel8.Controls.Add(this.lblCharged2);
-            this.panel8.Controls.Add(this.lblAmmo2);
+            this.panel8.Controls.Add(this.lblBubbletime2);
+            this.panel8.Controls.Add(this.lblBubblecount2);
             this.panel8.Controls.Add(this.labelAmmo2);
             this.panel8.Controls.Add(this.labelCharged2);
             this.panel8.Location = new System.Drawing.Point(781, 3);
@@ -345,30 +348,30 @@
             this.panel8.TabIndex = 12;
             this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel8_Paint);
             // 
-            // lblCharged2
+            // lblBubbletime2
             // 
-            this.lblCharged2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblCharged2.AutoSize = true;
-            this.lblCharged2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCharged2.ForeColor = System.Drawing.Color.White;
-            this.lblCharged2.Location = new System.Drawing.Point(94, 46);
-            this.lblCharged2.Name = "lblCharged2";
-            this.lblCharged2.Size = new System.Drawing.Size(16, 18);
-            this.lblCharged2.TabIndex = 10;
-            this.lblCharged2.Text = "3";
-            this.lblCharged2.Click += new System.EventHandler(this.Label1_Click);
+            this.lblBubbletime2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblBubbletime2.AutoSize = true;
+            this.lblBubbletime2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBubbletime2.ForeColor = System.Drawing.Color.White;
+            this.lblBubbletime2.Location = new System.Drawing.Point(94, 46);
+            this.lblBubbletime2.Name = "lblBubbletime2";
+            this.lblBubbletime2.Size = new System.Drawing.Size(16, 18);
+            this.lblBubbletime2.TabIndex = 10;
+            this.lblBubbletime2.Text = "3";
+            this.lblBubbletime2.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // lblAmmo2
+            // lblBubblecount2
             // 
-            this.lblAmmo2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblAmmo2.AutoSize = true;
-            this.lblAmmo2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmmo2.ForeColor = System.Drawing.Color.White;
-            this.lblAmmo2.Location = new System.Drawing.Point(89, 11);
-            this.lblAmmo2.Name = "lblAmmo2";
-            this.lblAmmo2.Size = new System.Drawing.Size(24, 18);
-            this.lblAmmo2.TabIndex = 9;
-            this.lblAmmo2.Text = "10";
+            this.lblBubblecount2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblBubblecount2.AutoSize = true;
+            this.lblBubblecount2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBubblecount2.ForeColor = System.Drawing.Color.White;
+            this.lblBubblecount2.Location = new System.Drawing.Point(89, 11);
+            this.lblBubblecount2.Name = "lblBubblecount2";
+            this.lblBubblecount2.Size = new System.Drawing.Size(24, 18);
+            this.lblBubblecount2.TabIndex = 9;
+            this.lblBubblecount2.Text = "10";
             // 
             // labelAmmo2
             // 
@@ -401,8 +404,8 @@
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel6.Controls.Add(this.panel5);
-            this.panel6.Controls.Add(this.lblCharged1);
-            this.panel6.Controls.Add(this.lblAmmo1);
+            this.panel6.Controls.Add(this.lblBubbletime);
+            this.panel6.Controls.Add(this.lblBubbleCount);
             this.panel6.Controls.Add(this.labelAmmo1);
             this.panel6.Controls.Add(this.labelCharged1);
             this.panel6.Location = new System.Drawing.Point(3, 3);
@@ -418,27 +421,27 @@
             this.panel5.Size = new System.Drawing.Size(1, 90);
             this.panel5.TabIndex = 1;
             // 
-            // lblCharged1
+            // lblBubbletime
             // 
-            this.lblCharged1.AutoSize = true;
-            this.lblCharged1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCharged1.ForeColor = System.Drawing.Color.White;
-            this.lblCharged1.Location = new System.Drawing.Point(92, 47);
-            this.lblCharged1.Name = "lblCharged1";
-            this.lblCharged1.Size = new System.Drawing.Size(16, 18);
-            this.lblCharged1.TabIndex = 10;
-            this.lblCharged1.Text = "3";
+            this.lblBubbletime.AutoSize = true;
+            this.lblBubbletime.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBubbletime.ForeColor = System.Drawing.Color.White;
+            this.lblBubbletime.Location = new System.Drawing.Point(92, 47);
+            this.lblBubbletime.Name = "lblBubbletime";
+            this.lblBubbletime.Size = new System.Drawing.Size(16, 18);
+            this.lblBubbletime.TabIndex = 10;
+            this.lblBubbletime.Text = "3";
             // 
-            // lblAmmo1
+            // lblBubbleCount
             // 
-            this.lblAmmo1.AutoSize = true;
-            this.lblAmmo1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmmo1.ForeColor = System.Drawing.Color.White;
-            this.lblAmmo1.Location = new System.Drawing.Point(90, 15);
-            this.lblAmmo1.Name = "lblAmmo1";
-            this.lblAmmo1.Size = new System.Drawing.Size(24, 18);
-            this.lblAmmo1.TabIndex = 9;
-            this.lblAmmo1.Text = "10";
+            this.lblBubbleCount.AutoSize = true;
+            this.lblBubbleCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBubbleCount.ForeColor = System.Drawing.Color.White;
+            this.lblBubbleCount.Location = new System.Drawing.Point(90, 15);
+            this.lblBubbleCount.Name = "lblBubbleCount";
+            this.lblBubbleCount.Size = new System.Drawing.Size(24, 18);
+            this.lblBubbleCount.TabIndex = 9;
+            this.lblBubbleCount.Text = "10";
             // 
             // labelAmmo1
             // 
@@ -499,6 +502,18 @@
             // 
             this.tmrBubble.Tick += new System.EventHandler(this.tmrBubble_Tick);
             // 
+            // tmrBubbleRecharge
+            // 
+            this.tmrBubbleRecharge.Enabled = true;
+            this.tmrBubbleRecharge.Interval = 1000;
+            this.tmrBubbleRecharge.Tick += new System.EventHandler(this.tmrBubbleRecharge_Tick);
+            // 
+            // tmrBubbleUse
+            // 
+            this.tmrBubbleUse.Enabled = true;
+            this.tmrBubbleUse.Interval = 500;
+            this.tmrBubbleUse.Tick += new System.EventHandler(this.tmrBubbleUse_Tick);
+            // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,6 +533,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmPlanetJamiro_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FrmPlanetJamiro_KeyUp);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmPlanetJamiro_MouseDown);
             this.mnuStrip.ResumeLayout(false);
             this.mnuStrip.PerformLayout();
             this.pnlTopBar.ResumeLayout(false);
@@ -558,14 +574,14 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label lblAmmo1;
+        private System.Windows.Forms.Label lblBubbleCount;
         private System.Windows.Forms.Label labelAmmo1;
         private System.Windows.Forms.Label labelCharged1;
-        private System.Windows.Forms.Label lblCharged1;
+        private System.Windows.Forms.Label lblBubbletime;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label lblCharged2;
-        private System.Windows.Forms.Label lblAmmo2;
+        private System.Windows.Forms.Label lblBubbletime2;
+        private System.Windows.Forms.Label lblBubblecount2;
         private System.Windows.Forms.Label labelAmmo2;
         private System.Windows.Forms.Label labelCharged2;
         private System.Windows.Forms.Timer tmrEnemy;
@@ -575,6 +591,8 @@
         private System.Windows.Forms.TextBox txtLives2;
         private System.Windows.Forms.TextBox txtName2;
         private System.Windows.Forms.Timer tmrBubble;
+        private System.Windows.Forms.Timer tmrBubbleRecharge;
+        private System.Windows.Forms.Timer tmrBubbleUse;
     }
 }
 

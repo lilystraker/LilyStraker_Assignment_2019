@@ -24,6 +24,11 @@ namespace LilyStraker_Assignment_2019
         int score1, lives1;
         string move1;
 
+
+        int bubbleuse = 1;
+        int bubblenumber = 10;
+        int bubbletime = 3;
+
         public frmPlanetJamiro()
         {
             InitializeComponent();
@@ -162,6 +167,8 @@ namespace LilyStraker_Assignment_2019
             if (e.KeyData == Keys.Right) { right = true; }
             if (e.KeyData == Keys.Up) { up = true; }
             if (e.KeyData == Keys.Down) { down = true; }
+          
+
         }
 
         private void mnuStart_Click(object sender, EventArgs e)
@@ -344,15 +351,36 @@ namespace LilyStraker_Assignment_2019
 
         private void pnlBG_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+        //    if (e.Button == MouseButtons.Left)
+       //     {
+       //         bubbles.Add(new Bubble(jf1.jf1Rec));
+       //     }
+
+            if (bubblenumber == 0)
             {
+                tmrBubbleRecharge.Start();
+            }
+
+            if ((e.Button == MouseButtons.Left) && bubblenumber > 0 && bubbleuse > 0)
+            {
+                bubblenumber--;
+                bubbleuse -= 1;
+                lblBubbleCount.Text = bubblenumber.ToString();
                 bubbles.Add(new Bubble(jf1.jf1Rec));
+            }
+            if (bubblenumber == 0)
+            {
+                tmrBubbleRecharge.Start();
+            }
+            if (bubbleuse == 0)
+            {
+                tmrBubbleUse.Start();
             }
         }
 
         private void tmrBubble_Tick(object sender, EventArgs e)
         {
-            score1 = 0;
+            //score1 = 0;
             //  for (int i = 0; i < 7; i++)
             // {
             //  bubbles[i].moveBubble();
@@ -383,6 +411,44 @@ namespace LilyStraker_Assignment_2019
 
 
          //   pnlBG.Invalidate();
+        }
+
+        private void txtLives1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tmrBubbleRecharge_Tick(object sender, EventArgs e)
+        {
+            lblBubbletime.Text = "Recharging Bubbles";
+            bubbletime--;
+            lblBubbletime.Text = bubbletime.ToString();
+
+            if (bubbletime == 0)
+            {
+                tmrBubbleRecharge.Stop();
+                bubblenumber = 10;
+                lblBubbleCount.Text = bubblenumber.ToString();
+                bubbletime = 3;
+                lblBubbletime.Text = "";
+            }
+
+        }
+
+        private void frmPlanetJamiro_MouseDown(object sender, MouseEventArgs e)
+        {
+          
+
+      
+        }
+
+        private void tmrBubbleUse_Tick(object sender, EventArgs e)
+        {
+            if (bubbleuse == 0)
+            {
+                tmrBubbleUse.Stop();
+                bubbleuse = 1;
+            }
         }
 
         private void FrmPlanetJamiro_KeyUp(object sender, KeyEventArgs e)

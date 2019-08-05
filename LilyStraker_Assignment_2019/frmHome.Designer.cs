@@ -61,6 +61,7 @@
             this.pnlTopBar.Name = "pnlTopBar";
             this.pnlTopBar.Size = new System.Drawing.Size(2000, 90);
             this.pnlTopBar.TabIndex = 4;
+            this.pnlTopBar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTopBar_Paint);
             // 
             // pnlTitle
             // 
@@ -76,7 +77,7 @@
             // 
             this.pnlHomeBG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlHomeBG.AutoSize = true;
-            this.pnlHomeBG.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.space;
+            this.pnlHomeBG.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.space1;
             this.pnlHomeBG.Controls.Add(this.btnInstructions);
             this.pnlHomeBG.Controls.Add(this.btnPlay);
             this.pnlHomeBG.Location = new System.Drawing.Point(-500, 120);
