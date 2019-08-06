@@ -15,8 +15,10 @@ namespace LilyStraker_Assignment_2019
     {
         Graphics g;
         Enemy[] enemy = new Enemy[7];
+        Turtle[] turtle = new Turtle[7];
         Random yspeed = new Random();
-       Jf1 jf1 = new Jf1();
+        Random xspeed = new Random();
+        Jf1 jf1 = new Jf1();
         Stars stars = new Stars();    
         List<Bubble> bubbles = new List<Bubble>();
 
@@ -39,6 +41,11 @@ namespace LilyStraker_Assignment_2019
             {
                 int x = 70 + (i * (pnlBG.Width / 7)); ;
                 enemy[i] = new Enemy(x);
+            }
+            for (int i = 0; i < 7; i++)
+            {
+                int x = 70 + (i * (pnlBG.Width / 7)); ;
+                turtle[i] = new Turtle(x);
             }
         }
 
@@ -96,11 +103,16 @@ namespace LilyStraker_Assignment_2019
 
             for (int i = 0; i <7; i++)
             {
-                int rndmspeed = yspeed.Next(5, 10);
-                enemy[i].y += rndmspeed;
-                enemy[i].drawEnemy(g);
+                int yrndmspeed = yspeed.Next(5, 10);
+                enemy[i].y += yrndmspeed;
+               enemy[i].drawEnemy(g);
+
+                int xrndmspeed = xspeed.Next(5, 10);
+                turtle[i].x += xrndmspeed;
+                turtle[i].drawEnemy(g);
 
             }
+
 
             jf1.drawJf1(g);
 
@@ -410,7 +422,26 @@ namespace LilyStraker_Assignment_2019
             }
 
 
-         //   pnlBG.Invalidate();
+            foreach (Turtle t in turtle)
+            {
+
+                foreach (Bubble b in bubbles)
+                {
+                    if (t.enemyRec.IntersectsWith(b.bubbleRec))
+                    {
+                        bubbles.Remove(b);// remove missile
+                        t.x = 10;// relocate planet to the top of the form
+                        score1 += 1;
+                        lblScore1.Text = score1.ToString();
+                        break;
+                    }
+                }
+                this.Invalidate();
+
+            }
+
+
+            //   pnlBG.Invalidate();
         }
 
         private void txtLives1_TextChanged(object sender, EventArgs e)
@@ -505,6 +536,24 @@ namespace LilyStraker_Assignment_2019
                 }
  
                 score1 += enemy[i].score1;// get score from Planet class (in movePlanet method)
+                lblScore1.Text = score1.ToString();
+
+            }
+
+            for (int i = 0; i < 7; i++)
+            {
+                turtle[i].moveEnemy();
+
+                if (jf1.jf1Rec.IntersectsWith(turtle[i].enemyRec))
+                {
+                    //reset planet[i] back to top of panel
+                    turtle[i].x = 10; // set  y value of planetRec
+                    lives1 -= 1;// lose a life
+                    txtLives1.Text = lives1.ToString();// display number of lives
+                    checkLives();
+                }
+
+                score1 += turtle[i].score1;// get score from Planet class (in movePlanet method)
                 lblScore1.Text = score1.ToString();
 
             }
