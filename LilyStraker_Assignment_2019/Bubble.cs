@@ -16,6 +16,8 @@ namespace LilyStraker_Assignment_2019
         public Image bubble;//variable for the missile's image
         public Rectangle bubbleRec;//variable for a rectangle to place our image in
         Point centreBubble;//centre of missile
+        public int rotationAngle;
+        public Matrix matrix;
 
         public int bubbleRotate;
 
@@ -23,6 +25,7 @@ namespace LilyStraker_Assignment_2019
         {
             width = 20;
             height = 20;
+            rotationAngle = 0;
             bubble = Image.FromFile("bubble.png");
             bubbleRec = new Rectangle(x, y, width, height);
 
@@ -41,7 +44,20 @@ namespace LilyStraker_Assignment_2019
         {
             //centre missile 
             centreBubble = new Point(x, y);
-  
+
+            //find the centre point of spaceRec
+            centreBubble = new Point(bubbleRec.X + width / 2, bubbleRec.Y + width / 2);
+            //instantiate a Matrix object called matrix
+            matrix = new Matrix();
+            //rotate the matrix (spaceRec) about its centre
+            matrix.RotateAt(rotationAngle, centreBubble);
+            //Set the current draw location to the rotated matrix point
+            g.Transform = matrix;
+            //draw the spaceship
+
+
+
+
             g.DrawImage(bubble, bubbleRec);
 
         }
