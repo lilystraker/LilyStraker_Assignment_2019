@@ -37,6 +37,7 @@
             this.btnPlay = new System.Windows.Forms.Button();
             this.mnuHome = new System.Windows.Forms.MenuStrip();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pnlTopBar.SuspendLayout();
             this.pnlHomeBG.SuspendLayout();
             this.mnuHome.SuspendLayout();
@@ -57,7 +58,7 @@
             this.pnlTopBar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlTopBar.BackColor = System.Drawing.Color.Navy;
             this.pnlTopBar.Controls.Add(this.pnlBG);
-            this.pnlTopBar.Location = new System.Drawing.Point(-500, 27);
+            this.pnlTopBar.Location = new System.Drawing.Point(-500, -73);
             this.pnlTopBar.Name = "pnlTopBar";
             this.pnlTopBar.Size = new System.Drawing.Size(2000, 90);
             this.pnlTopBar.TabIndex = 4;
@@ -68,7 +69,7 @@
             this.pnlTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlTitle.BackColor = System.Drawing.Color.Transparent;
             this.pnlTitle.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.PlanetJamiro_Logo_Dark_Blue;
-            this.pnlTitle.Location = new System.Drawing.Point(336, 27);
+            this.pnlTitle.Location = new System.Drawing.Point(336, -73);
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(326, 90);
             this.pnlTitle.TabIndex = 5;
@@ -78,11 +79,12 @@
             this.pnlHomeBG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlHomeBG.AutoSize = true;
             this.pnlHomeBG.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.space1;
+            this.pnlHomeBG.Controls.Add(this.panel1);
             this.pnlHomeBG.Controls.Add(this.btnInstructions);
             this.pnlHomeBG.Controls.Add(this.btnPlay);
-            this.pnlHomeBG.Location = new System.Drawing.Point(-500, 120);
+            this.pnlHomeBG.Location = new System.Drawing.Point(-500, 20);
             this.pnlHomeBG.Name = "pnlHomeBG";
-            this.pnlHomeBG.Size = new System.Drawing.Size(2000, 546);
+            this.pnlHomeBG.Size = new System.Drawing.Size(1484, 546);
             this.pnlHomeBG.TabIndex = 5;
             this.pnlHomeBG.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlHomeBG_Paint);
             // 
@@ -92,7 +94,7 @@
             this.btnInstructions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnInstructions.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInstructions.ForeColor = System.Drawing.Color.White;
-            this.btnInstructions.Location = new System.Drawing.Point(893, 279);
+            this.btnInstructions.Location = new System.Drawing.Point(893, 262);
             this.btnInstructions.Name = "btnInstructions";
             this.btnInstructions.Size = new System.Drawing.Size(219, 49);
             this.btnInstructions.TabIndex = 1;
@@ -106,7 +108,7 @@
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(954, 170);
+            this.btnPlay.Location = new System.Drawing.Point(954, 180);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(101, 49);
             this.btnPlay.TabIndex = 0;
@@ -131,11 +133,21 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.PlanetJamiro_Logo_Dark_Blue;
+            this.panel1.Location = new System.Drawing.Point(848, 36);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(326, 90);
+            this.panel1.TabIndex = 6;
+            // 
             // frmHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 661);
+            this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.mnuHome);
             this.Controls.Add(this.pnlHomeBG);
             this.Controls.Add(this.pnlTitle);
@@ -164,5 +176,6 @@
         private System.Windows.Forms.Button btnInstructions;
         private System.Windows.Forms.MenuStrip mnuHome;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Panel panel1;
     }
 }
