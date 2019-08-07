@@ -16,7 +16,9 @@ namespace LilyStraker_Assignment_2019
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPlanetJamiro());
+            new frmHome().Show();
+            // Application.Run(new frmPlanetJamiro());
+            Application.Run();
         }
     }
 }

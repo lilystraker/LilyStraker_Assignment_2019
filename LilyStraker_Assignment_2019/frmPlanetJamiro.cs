@@ -21,6 +21,7 @@ namespace LilyStraker_Assignment_2019
         Jf1 jf1 = new Jf1();
         Stars stars = new Stars();    
         List<Bubble> bubbles = new List<Bubble>();
+        List<Egg> eggs = new List<Egg>();
 
         bool left, right, up, down;
         int score1, lives1;
@@ -44,7 +45,7 @@ namespace LilyStraker_Assignment_2019
             }
             for (int i = 0; i < 7; i++)
             {
-                int x = 70 + (i * (pnlBG.Width / 7)); ;
+                int x = 70 + (i * (pnlBG.Width / 4)); ;
                 turtle[i] = new Turtle(x);
             }
         }
@@ -120,6 +121,12 @@ namespace LilyStraker_Assignment_2019
             {
                 b.drawBubble(g);
                 b.moveBubble(g);
+            }
+
+            foreach (Egg s in eggs)
+            {
+              s.drawEgg(g);
+               s.moveEgg(g);
             }
 
             stars.drawStars(g);
@@ -205,6 +212,7 @@ namespace LilyStraker_Assignment_2019
                 txtName2.Enabled = false;
                 txtLives1.Enabled = false;
                 txtLives2.Enabled = false;
+                tmrEgg.Enabled = true;
 
 
             }
@@ -482,6 +490,39 @@ namespace LilyStraker_Assignment_2019
             }
         }
 
+        private void tmrEgg_Tick(object sender, EventArgs e)
+        {
+            foreach (Turtle t in turtle)
+            {
+                eggs.Add(new Egg(t.enemyRec));
+            }
+
+                foreach (Egg s in eggs)
+                {
+                    if ((s.x < 0))
+                    {
+                        eggs.Remove(s);
+                        break;
+                    }
+                    if (jf1.jf1Rec.IntersectsWith(s.eggRec))
+                    {
+                        eggs.Remove(s);// remove missile
+                     //   jf1.y = 20;// relocate planet to the top of the form
+                        lives1 -= 1;
+                        txtLives1.Text = lives1.ToString();
+                        break;
+                    }
+                }
+            
+
+            }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
         private void FrmPlanetJamiro_KeyUp(object sender, KeyEventArgs e)
         {
            if (e.KeyData == Keys.Left) { left = false; }
@@ -521,7 +562,7 @@ namespace LilyStraker_Assignment_2019
 
         private void TmrEnemy_Tick(object sender, EventArgs e)
         {
-            score1 = 0;
+            
             for (int i = 0; i < 7; i++)
             {
                 enemy[i].moveEnemy();

@@ -70,6 +70,7 @@
             this.tmrBubble = new System.Windows.Forms.Timer(this.components);
             this.tmrBubbleRecharge = new System.Windows.Forms.Timer(this.components);
             this.tmrBubbleUse = new System.Windows.Forms.Timer(this.components);
+            this.tmrEgg = new System.Windows.Forms.Timer(this.components);
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -514,6 +515,11 @@
             this.tmrBubbleUse.Interval = 500;
             this.tmrBubbleUse.Tick += new System.EventHandler(this.tmrBubbleUse_Tick);
             // 
+            // tmrEgg
+            // 
+            this.tmrEgg.Interval = 1000;
+            this.tmrEgg.Tick += new System.EventHandler(this.tmrEgg_Tick);
+            // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -593,6 +599,7 @@
         private System.Windows.Forms.Timer tmrBubble;
         private System.Windows.Forms.Timer tmrBubbleRecharge;
         private System.Windows.Forms.Timer tmrBubbleUse;
+        private System.Windows.Forms.Timer tmrEgg;
     }
 }
 

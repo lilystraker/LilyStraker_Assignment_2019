@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bubble.cs" />
+    <Compile Include="Egg.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
@@ -137,6 +138,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\turtle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Turtle egg-1.png.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
