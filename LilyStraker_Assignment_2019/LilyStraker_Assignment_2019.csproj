@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bubble.cs" />
+    <Compile Include="Bubble2.cs" />
     <Compile Include="Egg.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="frmHome.cs">
@@ -64,6 +65,7 @@
       <DependentUpon>frmPlanetJamiro.cs</DependentUpon>
     </Compile>
     <Compile Include="Jf1.cs" />
+    <Compile Include="Jf2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Stars.cs" />

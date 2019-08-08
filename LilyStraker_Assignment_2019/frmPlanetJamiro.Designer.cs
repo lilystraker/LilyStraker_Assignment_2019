@@ -54,7 +54,7 @@
             this.pnlBottomBar = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblBubbletime2 = new System.Windows.Forms.Label();
-            this.lblBubblecount2 = new System.Windows.Forms.Label();
+            this.lblBubbleCount2 = new System.Windows.Forms.Label();
             this.labelAmmo2 = new System.Windows.Forms.Label();
             this.labelCharged2 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -71,6 +71,10 @@
             this.tmrBubbleRecharge = new System.Windows.Forms.Timer(this.components);
             this.tmrBubbleUse = new System.Windows.Forms.Timer(this.components);
             this.tmrEgg = new System.Windows.Forms.Timer(this.components);
+            this.tmrJf2 = new System.Windows.Forms.Timer(this.components);
+            this.tmrBubble2 = new System.Windows.Forms.Timer(this.components);
+            this.tmrBubble2Recharge = new System.Windows.Forms.Timer(this.components);
+            this.tmrBubble2Use = new System.Windows.Forms.Timer(this.components);
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -340,7 +344,7 @@
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel8.Controls.Add(this.lblBubbletime2);
-            this.panel8.Controls.Add(this.lblBubblecount2);
+            this.panel8.Controls.Add(this.lblBubbleCount2);
             this.panel8.Controls.Add(this.labelAmmo2);
             this.panel8.Controls.Add(this.labelCharged2);
             this.panel8.Location = new System.Drawing.Point(781, 3);
@@ -362,17 +366,17 @@
             this.lblBubbletime2.Text = "3";
             this.lblBubbletime2.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // lblBubblecount2
+            // lblBubbleCount2
             // 
-            this.lblBubblecount2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblBubblecount2.AutoSize = true;
-            this.lblBubblecount2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBubblecount2.ForeColor = System.Drawing.Color.White;
-            this.lblBubblecount2.Location = new System.Drawing.Point(89, 11);
-            this.lblBubblecount2.Name = "lblBubblecount2";
-            this.lblBubblecount2.Size = new System.Drawing.Size(24, 18);
-            this.lblBubblecount2.TabIndex = 9;
-            this.lblBubblecount2.Text = "10";
+            this.lblBubbleCount2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblBubbleCount2.AutoSize = true;
+            this.lblBubbleCount2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBubbleCount2.ForeColor = System.Drawing.Color.White;
+            this.lblBubbleCount2.Location = new System.Drawing.Point(89, 11);
+            this.lblBubbleCount2.Name = "lblBubbleCount2";
+            this.lblBubbleCount2.Size = new System.Drawing.Size(24, 18);
+            this.lblBubbleCount2.TabIndex = 9;
+            this.lblBubbleCount2.Text = "10";
             // 
             // labelAmmo2
             // 
@@ -520,6 +524,25 @@
             this.tmrEgg.Interval = 1000;
             this.tmrEgg.Tick += new System.EventHandler(this.tmrEgg_Tick);
             // 
+            // tmrJf2
+            // 
+            this.tmrJf2.Interval = 50;
+            this.tmrJf2.Tick += new System.EventHandler(this.tmrJf2_Tick);
+            // 
+            // tmrBubble2
+            // 
+            this.tmrBubble2.Tick += new System.EventHandler(this.tmrBubble2_Tick);
+            // 
+            // tmrBubble2Recharge
+            // 
+            this.tmrBubble2Recharge.Interval = 1000;
+            this.tmrBubble2Recharge.Tick += new System.EventHandler(this.tmrBubble2Recharge_Tick);
+            // 
+            // tmrBubble2Use
+            // 
+            this.tmrBubble2Use.Interval = 500;
+            this.tmrBubble2Use.Tick += new System.EventHandler(this.tmrBubble2Use_Tick);
+            // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -587,7 +610,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label lblBubbletime2;
-        private System.Windows.Forms.Label lblBubblecount2;
+        private System.Windows.Forms.Label lblBubbleCount2;
         private System.Windows.Forms.Label labelAmmo2;
         private System.Windows.Forms.Label labelCharged2;
         private System.Windows.Forms.Timer tmrEnemy;
@@ -600,6 +623,10 @@
         private System.Windows.Forms.Timer tmrBubbleRecharge;
         private System.Windows.Forms.Timer tmrBubbleUse;
         private System.Windows.Forms.Timer tmrEgg;
+        private System.Windows.Forms.Timer tmrJf2;
+        private System.Windows.Forms.Timer tmrBubble2;
+        private System.Windows.Forms.Timer tmrBubble2Recharge;
+        private System.Windows.Forms.Timer tmrBubble2Use;
     }
 }
 

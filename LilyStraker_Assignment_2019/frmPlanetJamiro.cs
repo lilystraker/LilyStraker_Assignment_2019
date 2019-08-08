@@ -19,18 +19,24 @@ namespace LilyStraker_Assignment_2019
         Random yspeed = new Random();
         Random xspeed = new Random();
         Jf1 jf1 = new Jf1();
+        Jf2 jf2 = new Jf2();
         Stars stars = new Stars();    
         List<Bubble> bubbles = new List<Bubble>();
+        List<Bubble2> bubbles2 = new List<Bubble2>();
         List<Egg> eggs = new List<Egg>();
 
-        bool left, right, up, down;
-        int score1, lives1;
+        bool left, right, up, down, left2, right2, up2, down2, shoot2;
+        int score1, lives1, score2, lives2;
         string move1;
-
+        string move2;
 
         int bubbleuse = 1;
         int bubblenumber = 10;
         int bubbletime = 3;
+
+        int bubbleuse2 = 1;
+        int bubblenumber2 = 10;
+        int bubbletime2 = 3;
 
         public frmPlanetJamiro()
         {
@@ -54,8 +60,15 @@ namespace LilyStraker_Assignment_2019
         {
 
             tmrJf1.Enabled = false;
+            tmrJf2.Enabled = false;
             tmrEnemy.Enabled = false;
             tmrBubble.Enabled = false;
+            tmrBubbleUse.Enabled = false;
+            tmrBubbleRecharge.Enabled = false;
+            tmrEgg.Enabled = false;
+            tmrBubble2.Enabled = false;
+            tmrBubble2Use.Enabled = false;
+            tmrBubble2Recharge.Enabled = false;
 
             MessageBox.Show("Instructions", "Instructions");
             txtName1.Focus();
@@ -88,8 +101,11 @@ namespace LilyStraker_Assignment_2019
             txtLives2.SelectionLength = 0;
             txtLives2.ForeColor = Color.Gray;
 
-            jf1.x = 443;
+            jf1.x = 523;
             jf1.y = 350;
+
+            jf2.x = 443;
+            jf2.y = 350;
 
         }
 
@@ -116,6 +132,7 @@ namespace LilyStraker_Assignment_2019
 
 
             jf1.drawJf1(g);
+            jf2.drawJf2(g);
 
             foreach (Bubble b in bubbles)
             {
@@ -123,6 +140,11 @@ namespace LilyStraker_Assignment_2019
                 b.moveBubble(g);
             }
 
+            foreach (Bubble2 b2 in bubbles2)
+            {
+                b2.drawBubble2(g);
+                b2.moveBubble2(g);
+            }
             foreach (Egg s in eggs)
             {
               s.drawEgg(g);
@@ -186,7 +208,34 @@ namespace LilyStraker_Assignment_2019
             if (e.KeyData == Keys.Right) { right = true; }
             if (e.KeyData == Keys.Up) { up = true; }
             if (e.KeyData == Keys.Down) { down = true; }
-          
+
+
+            if (e.KeyData == Keys.A) { left2 = true; }
+            if (e.KeyData == Keys.D) { right2 = true; }
+            if (e.KeyData == Keys.W) { up2 = true; }
+            if (e.KeyData == Keys.S) { down2 = true; }
+            if (e.KeyData == Keys.Space) { shoot2 = true; }
+
+            if (bubblenumber2 == 0)
+            {
+                tmrBubble2Recharge.Start();
+            }
+
+            if (shoot2 && bubblenumber2 > 0 && bubbleuse2 > 0)
+            {
+                bubblenumber2--;
+                bubbleuse2 -= 1;
+                lblBubbleCount2.Text = bubblenumber2.ToString();
+                bubbles2.Add(new Bubble2(jf2.jf2Rec));
+            }
+            if (bubblenumber2 == 0)
+            {
+                tmrBubble2Recharge.Start();
+            }
+            if (bubbleuse2 == 0)
+            {
+                tmrBubble2Use.Start();
+            }
 
         }
 
@@ -198,6 +247,14 @@ namespace LilyStraker_Assignment_2019
 
                 tmrEnemy.Enabled = false;
                 tmrJf1.Enabled = false;
+                tmrJf2.Enabled = false;
+                tmrBubble.Enabled = false;
+                tmrEgg.Enabled = false;
+                tmrBubbleRecharge.Enabled = false;
+                tmrBubbleUse.Enabled = false;
+                tmrBubble2.Enabled = false;
+                tmrBubble2Use.Enabled = false;
+                tmrBubble2Recharge.Enabled = false;
 
             }
             else
@@ -207,12 +264,21 @@ namespace LilyStraker_Assignment_2019
                 lives1 = int.Parse(txtLives1.Text);
                 tmrEnemy.Enabled = true;
                 tmrJf1.Enabled = true;
+                tmrJf2.Enabled = true;
                 tmrBubble.Enabled = true;
+                tmrEgg.Enabled = true;
+                tmrBubbleRecharge.Enabled = true;
+                tmrBubbleUse.Enabled = true;
+                tmrBubble2.Enabled = true;
+                tmrBubble2Use.Enabled = true;
+                tmrBubble2Recharge.Enabled = true;
+
+
                 txtName1.Enabled = false;
                 txtName2.Enabled = false;
                 txtLives1.Enabled = false;
                 txtLives2.Enabled = false;
-                tmrEgg.Enabled = true;
+              
 
 
             }
@@ -222,7 +288,16 @@ namespace LilyStraker_Assignment_2019
         private void mnuStop_Click(object sender, EventArgs e)
         {
             tmrJf1.Enabled = false;
+            tmrJf2.Enabled = false;
             tmrEnemy.Enabled = false;
+            tmrBubble.Enabled = false;
+            tmrBubbleRecharge.Enabled = false;
+            tmrBubbleUse.Enabled = false;
+            tmrEgg.Enabled = false;
+            tmrBubble2.Enabled = false;
+            tmrBubble2Recharge.Enabled = false;
+            tmrBubble2Use.Enabled = false;
+      
 
         }
 
@@ -430,6 +505,25 @@ namespace LilyStraker_Assignment_2019
             }
 
 
+            foreach (Enemy n in enemy)
+            {
+
+                foreach (Bubble2 b2 in bubbles2)
+                {
+                    if (n.enemyRec.IntersectsWith(b2.bubble2Rec))
+                    {
+                        bubbles2.Remove(b2);// remove missile
+                        n.y = 20;// relocate planet to the top of the form
+                        score2 += 1;
+                        lblScore2.Text = score2.ToString();
+                        break;
+                    }
+                }
+                this.Invalidate();
+
+            }
+
+
             foreach (Turtle t in turtle)
             {
 
@@ -448,6 +542,24 @@ namespace LilyStraker_Assignment_2019
 
             }
 
+            foreach (Turtle t in turtle)
+            {
+
+                foreach (Bubble2 b2 in bubbles2)
+                {
+                    if (t.enemyRec.IntersectsWith(b2.bubble2Rec))
+                    {
+                        bubbles2.Remove(b2);// remove missile
+                        t.x = 10;// relocate planet to the top of the form
+                        score2 += 1;
+                        lblScore2.Text = score2.ToString();
+                        break;
+                    }
+                }
+                this.Invalidate();
+
+            }
+
 
             //   pnlBG.Invalidate();
         }
@@ -455,6 +567,31 @@ namespace LilyStraker_Assignment_2019
         private void txtLives1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void tmrBubble2Recharge_Tick(object sender, EventArgs e)
+        {
+            lblBubbletime2.Text = "Recharging Bubbles";
+            bubbletime2--;
+            lblBubbletime2.Text = bubbletime2.ToString();
+
+            if (bubbletime2 == 0)
+            {
+                tmrBubble2Recharge.Stop();
+                bubblenumber2 = 10;
+                lblBubbleCount2.Text = bubblenumber2.ToString();
+                bubbletime2 = 3;
+                lblBubbletime2.Text = "";
+            }
+        }
+
+        private void tmrBubble2Use_Tick(object sender, EventArgs e)
+        {
+            if (bubbleuse2 == 0)
+            {
+                tmrBubble2Use.Stop();
+                bubbleuse2 = 1;
+            }
         }
 
         private void tmrBubbleRecharge_Tick(object sender, EventArgs e)
@@ -499,7 +636,7 @@ namespace LilyStraker_Assignment_2019
 
                 foreach (Egg s in eggs)
                 {
-                    if ((s.x < 0))
+                    if ((s.x > 985))
                     {
                         eggs.Remove(s);
                         break;
@@ -507,12 +644,20 @@ namespace LilyStraker_Assignment_2019
                     if (jf1.jf1Rec.IntersectsWith(s.eggRec))
                     {
                         eggs.Remove(s);// remove missile
-                     //   jf1.y = 20;// relocate planet to the top of the form
+                        s.x = 0;// relocate planet to the top of the form
                         lives1 -= 1;
                         txtLives1.Text = lives1.ToString();
                         break;
                     }
+                if (jf2.jf2Rec.IntersectsWith(s.eggRec))
+                {
+                    eggs.Remove(s);// remove missile
+                    s.x = 0;// relocate planet to the top of the form
+                    lives2 -= 1;
+                    txtLives2.Text = lives2.ToString();
+                    break;
                 }
+            }
             
 
             }
@@ -523,12 +668,50 @@ namespace LilyStraker_Assignment_2019
 
         }
 
+        private void tmrJf2_Tick(object sender, EventArgs e)
+        {
+            if (right2)
+            {
+                move2 = "right2";
+                jf2.moveJf2(move2);
+                
+
+            }
+            if (left2)
+            {
+                move2 = "left2";
+                jf2.moveJf2(move2);
+            }
+            if (up2)
+            {
+                move2 = "up2";
+                jf2.moveJf2(move2);
+            }
+            if (down2)
+            {
+                move2 = "down2";
+                jf2.moveJf2(move2);
+            }
+        }
+
+        private void tmrBubble2_Tick(object sender, EventArgs e)
+        {
+           
+        }
+
         private void FrmPlanetJamiro_KeyUp(object sender, KeyEventArgs e)
         {
            if (e.KeyData == Keys.Left) { left = false; }
             if (e.KeyData == Keys.Right) { right = false; }
             if (e.KeyData == Keys.Up) { up = false; }
             if (e.KeyData == Keys.Down) { down = false; }
+
+
+            if (e.KeyData == Keys.A) { left2 = false; }
+            if (e.KeyData == Keys.D) { right2 = false; }
+            if (e.KeyData == Keys.W) { up2 = false; }
+            if (e.KeyData == Keys.S) { down2 = false; }
+            if (e.KeyData == Keys.Space) { shoot2 = false; }
         }
 
         private void TmrJf1_Tick(object sender, EventArgs e)
@@ -575,9 +758,20 @@ namespace LilyStraker_Assignment_2019
                     txtLives1.Text = lives1.ToString();// display number of lives
                     checkLives();
                 }
- 
+                if (jf2.jf2Rec.IntersectsWith(enemy[i].enemyRec))
+                {
+                    //reset planet[i] back to top of panel
+                    enemy[i].y = 30; // set  y value of planetRec
+                    lives2 -= 1;// lose a life
+                    txtLives2.Text = lives2.ToString();// display number of lives
+                    checkLives();
+                }
+
                 score1 += enemy[i].score1;// get score from Planet class (in movePlanet method)
                 lblScore1.Text = score1.ToString();
+
+                score2 += enemy[i].score2;// get score from Planet class (in movePlanet method)
+                lblScore2.Text = score2.ToString();
 
             }
 
@@ -593,9 +787,20 @@ namespace LilyStraker_Assignment_2019
                     txtLives1.Text = lives1.ToString();// display number of lives
                     checkLives();
                 }
+                if (jf2.jf2Rec.IntersectsWith(turtle[i].enemyRec))
+                {
+                    //reset planet[i] back to top of panel
+                    turtle[i].x = 10; // set  y value of planetRec
+                    lives2 -= 1;// lose a life
+                    txtLives2.Text = lives2.ToString();// display number of lives
+                    checkLives();
+                }
 
                 score1 += turtle[i].score1;// get score from Planet class (in movePlanet method)
                 lblScore1.Text = score1.ToString();
+
+                score2 += turtle[i].score2;// get score from Planet class (in movePlanet method)
+                lblScore2.Text = score2.ToString();
 
             }
 
@@ -606,11 +811,48 @@ namespace LilyStraker_Assignment_2019
         {
             if (lives1 == 0)
             {
-                tmrEnemy.Enabled = false;
+                lives1 = 0;
                 tmrJf1.Enabled = false;
+                tmrBubble.Enabled = false;
+                tmrBubbleRecharge.Enabled = false;
+                tmrBubbleUse.Enabled = false;
+            }
+
+            if (lives1 < 0)
+            {
+                lives1 = 0;
+            }
+
+            if (lives2 == 0)
+            {
+                lives2 = 0;
+                tmrJf2.Enabled = false;
+                tmrBubble2.Enabled = false;
+                tmrBubble2Recharge.Enabled = false;
+                tmrBubble2Use.Enabled = false;
+            }
+
+            if (lives2 < 0)
+            {
+                lives2 = 0;
+            }
+
+            if (lives1 == 0 && lives2 == 0)
+            {
+                tmrJf1.Enabled = false;
+                tmrJf2.Enabled = false;
+                tmrEnemy.Enabled = false;
+                tmrBubble.Enabled = false;
+                tmrBubbleRecharge.Enabled = false;
+                tmrBubbleUse.Enabled = false;
+                tmrBubble2.Enabled = false;
+                tmrBubble2Recharge.Enabled = false;
+                tmrBubble2Use.Enabled = false;
+                tmrEgg.Enabled = false;
                 MessageBox.Show("Game Over");
 
             }
+
         }
 
     }
