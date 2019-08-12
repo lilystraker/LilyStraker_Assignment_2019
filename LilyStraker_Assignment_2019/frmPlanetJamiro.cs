@@ -70,7 +70,7 @@ namespace LilyStraker_Assignment_2019
             tmrBubble2Use.Enabled = false;
             tmrBubble2Recharge.Enabled = false;
 
-            MessageBox.Show("Instructions", "Instructions");
+         //   MessageBox.Show("Instructions", "Instructions");
             txtName1.Focus();
 
             txtName1.Text = "Player1's name";
@@ -382,7 +382,7 @@ namespace LilyStraker_Assignment_2019
         {
             txtLives1.MaxLength = 1; //limits the amount of digits allowed in text box to 1
 
-            if (e.KeyChar > 50 && e.KeyChar < 58 || e.KeyChar == 13)
+            if (e.KeyChar > 50 && e.KeyChar < 58 || e.KeyChar == 13 || e.KeyChar == 8)
             {
                 txtLives2.Text = txtLives1.Text;
 
@@ -592,6 +592,11 @@ namespace LilyStraker_Assignment_2019
                 tmrBubble2Use.Stop();
                 bubbleuse2 = 1;
             }
+        }
+
+        private void txtName1_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void tmrBubbleRecharge_Tick(object sender, EventArgs e)

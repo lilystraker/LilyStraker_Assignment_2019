@@ -178,6 +178,7 @@
             this.txtName1.Name = "txtName1";
             this.txtName1.Size = new System.Drawing.Size(122, 20);
             this.txtName1.TabIndex = 8;
+            this.txtName1.TextChanged += new System.EventHandler(this.txtName1_TextChanged);
             this.txtName1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtName1_KeyDown);
             this.txtName1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtName1_KeyPress);
             this.txtName1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtName1_KeyUp);
@@ -526,6 +527,7 @@
             // 
             // tmrJf2
             // 
+            this.tmrJf2.Enabled = true;
             this.tmrJf2.Interval = 50;
             this.tmrJf2.Tick += new System.EventHandler(this.tmrJf2_Tick);
             // 
