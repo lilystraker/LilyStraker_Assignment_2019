@@ -261,7 +261,10 @@ namespace LilyStraker_Assignment_2019
             {
                 score1 = 0;
                 lblScore1.Text = score1.ToString();
+                score1 = 2;
+                lblScore2.Text = score2.ToString();
                 lives1 = int.Parse(txtLives1.Text);
+                lives2 = int.Parse(txtLives1.Text);
                 tmrEnemy.Enabled = true;
                 tmrJf1.Enabled = true;
                 tmrJf2.Enabled = true;
@@ -648,18 +651,22 @@ namespace LilyStraker_Assignment_2019
                     }
                     if (jf1.jf1Rec.IntersectsWith(s.eggRec))
                     {
-                        eggs.Remove(s);// remove missile
-                        s.x = 0;// relocate planet to the top of the form
-                        lives1 -= 1;
-                        txtLives1.Text = lives1.ToString();
+                    lives1 -= 1;
+                    txtLives1.Text = lives1.ToString();
+                    checkLives();
+                    eggs.Remove(s);
+                        //s.x = 0;
+                       
                         break;
                     }
                 if (jf2.jf2Rec.IntersectsWith(s.eggRec))
                 {
-                    eggs.Remove(s);// remove missile
-                    s.x = 0;// relocate planet to the top of the form
                     lives2 -= 1;
                     txtLives2.Text = lives2.ToString();
+                    checkLives();
+                    eggs.Remove(s);
+                   // s.x = 0;
+                    
                     break;
                 }
             }
@@ -814,38 +821,31 @@ namespace LilyStraker_Assignment_2019
 
         private void checkLives()
         {
-            if (lives1 == 0)
+            if (lives1 <= 0)
             {
                 lives1 = 0;
                 tmrJf1.Enabled = false;
                 tmrBubble.Enabled = false;
                 tmrBubbleRecharge.Enabled = false;
                 tmrBubbleUse.Enabled = false;
+                txtLives1.Text = lives1.ToString();
             }
 
-            if (lives1 < 0)
-            {
-                lives1 = 0;
-            }
-
-            if (lives2 == 0)
+            if (lives2 <= 0)
             {
                 lives2 = 0;
+                txtLives2.Text = lives2.ToString();
                 tmrJf2.Enabled = false;
                 tmrBubble2.Enabled = false;
                 tmrBubble2Recharge.Enabled = false;
                 tmrBubble2Use.Enabled = false;
             }
 
-            if (lives2 < 0)
-            {
-                lives2 = 0;
-            }
 
             if (lives1 == 0 && lives2 == 0)
             {
                 tmrJf1.Enabled = false;
-                tmrJf2.Enabled = false;
+               tmrJf2.Enabled = false;
                 tmrEnemy.Enabled = false;
                 tmrBubble.Enabled = false;
                 tmrBubbleRecharge.Enabled = false;

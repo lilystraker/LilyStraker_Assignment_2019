@@ -31,8 +31,8 @@ namespace LilyStraker_Assignment_2019
             x = turtleRec.X + turtleRec.Width / 2;
             y = turtleRec.Y + turtleRec.Height / 2;
 
-            ySpeed = 30 * (Math.Cos((eggRotate - 90) * Math.PI / 180));
-            xSpeed = 30 * (Math.Sin((eggRotate + 90) * Math.PI / 180));
+            ySpeed = 20 * (Math.Cos((eggRotate - 90) * Math.PI / 180));
+            xSpeed = 20 * (Math.Sin((eggRotate + 90) * Math.PI / 180));
 
 
 
