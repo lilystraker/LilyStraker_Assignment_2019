@@ -656,20 +656,22 @@ namespace LilyStraker_Assignment_2019
                     }
                     if (jf1.jf1Rec.IntersectsWith(s.eggRec))
                     {
+                    eggs.Remove(s);
                     lives1 -= 1;
                     txtLives1.Text = lives1.ToString();
                     checkLives();
-                    eggs.Remove(s);
+                 
                         //s.x = 0;
                        
                         break;
                     }
                 if (jf2.jf2Rec.IntersectsWith(s.eggRec))
                 {
+                    eggs.Remove(s);
                     lives2 -= 1;
                     txtLives2.Text = lives2.ToString();
                     checkLives();
-                    eggs.Remove(s);
+                   
                    // s.x = 0;
                     
                     break;

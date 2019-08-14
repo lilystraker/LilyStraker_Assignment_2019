@@ -44,6 +44,7 @@ namespace LilyStraker_Assignment_2019
             if (enemyRec.Location.X > 987)
             {
                 score1 += 1;
+
                 x = 10;
                 enemyRec.Location = new Point(x, y);
             }
