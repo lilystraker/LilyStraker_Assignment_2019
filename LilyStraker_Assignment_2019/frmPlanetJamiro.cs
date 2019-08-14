@@ -259,9 +259,9 @@ namespace LilyStraker_Assignment_2019
             }
             else
             {
-                score1 = 0;
+           score1 = 0;
                 lblScore1.Text = score1.ToString();
-                score1 = 2;
+                score2 = 0;
                 lblScore2.Text = score2.ToString();
                 lives1 = int.Parse(txtLives1.Text);
                 lives2 = int.Parse(txtLives1.Text);
@@ -479,15 +479,15 @@ namespace LilyStraker_Assignment_2019
         private void tmrBubble_Tick(object sender, EventArgs e)
         {
             //score1 = 0;
-            //  for (int i = 0; i < 7; i++)
-            // {
-            //  bubbles[i].moveBubble();
+          //    for (int i = 0; i < 7; i++)
+          //   {
+           //   bubbles[i].moveBubble(g);
 
 
             //     score1 += enemy[i].score1;// get score from Planet class (in movePlanet method)
-            //  lblScore1.Text = score1.ToString();
+          //    lblScore1.Text = score1.ToString();
 
-            // }
+          //   }
 
             foreach (Enemy n in enemy)
             {
@@ -518,7 +518,7 @@ namespace LilyStraker_Assignment_2019
                         bubbles2.Remove(b2);// remove missile
                         n.y = 20;// relocate planet to the top of the form
                         score2 += 1;
-                        lblScore2.Text = score2.ToString();
+                       lblScore2.Text = score2.ToString();
                         break;
                     }
                 }
@@ -536,7 +536,7 @@ namespace LilyStraker_Assignment_2019
                     {
                         bubbles.Remove(b);// remove missile
                         t.x = 10;// relocate planet to the top of the form
-                        score1 += 1;
+                       score1 += 1;
                         lblScore1.Text = score1.ToString();
                         break;
                     }
@@ -600,6 +600,11 @@ namespace LilyStraker_Assignment_2019
         private void txtName1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void tmrBubbleRecharge_Tick(object sender, EventArgs e)
@@ -779,11 +784,23 @@ namespace LilyStraker_Assignment_2019
                     checkLives();
                 }
 
-                score1 += enemy[i].score1;// get score from Planet class (in movePlanet method)
-                lblScore1.Text = score1.ToString();
+                foreach (Enemy n in enemy)
+                {
+                    if (n.y > 444)
+                    {
+                        score1 += 1;
+                        lblScore1.Text = score1.ToString();
+                        score2 += 1;
+                        lblScore2.Text = score2.ToString();
+                        n.y = 20;
+                    }
+                }
+               
+            //    score1 += enemy[i].score1;// get score from Planet class (in movePlanet method)
+            //    lblScore1.Text = score1.ToString();
 
-                score2 += enemy[i].score2;// get score from Planet class (in movePlanet method)
-                lblScore2.Text = score2.ToString();
+           //     score2 += enemy[i].score2;// get score from Planet class (in movePlanet method)
+              //  lblScore2.Text = score2.ToString();
 
             }
 
@@ -808,11 +825,11 @@ namespace LilyStraker_Assignment_2019
                     checkLives();
                 }
 
-                score1 += turtle[i].score1;// get score from Planet class (in movePlanet method)
-                lblScore1.Text = score1.ToString();
+            //    score1 += turtle[i].score1;// get score from Planet class (in movePlanet method)
+            //    lblScore1.Text = score1.ToString();
 
-                score2 += turtle[i].score2;// get score from Planet class (in movePlanet method)
-                lblScore2.Text = score2.ToString();
+           //    score2 += turtle[i].score2;// get score from Planet class (in movePlanet method)
+            //    lblScore2.Text = score2.ToString();
 
             }
 
