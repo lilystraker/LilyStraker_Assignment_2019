@@ -263,7 +263,7 @@ namespace LilyStraker_Assignment_2019
                 lblScore1.Text = score1.ToString();
                 score2 = 0;
                 lblScore2.Text = score2.ToString();
-                lives1 = int.Parse(txtLives1.Text);
+                lives1 = int.Parse(txtLives1.Text); 
                 lives2 = int.Parse(txtLives1.Text);
                 tmrEnemy.Enabled = true;
                 tmrJf1.Enabled = true;
