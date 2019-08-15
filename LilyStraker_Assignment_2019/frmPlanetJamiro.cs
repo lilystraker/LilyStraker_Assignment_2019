@@ -647,36 +647,8 @@ namespace LilyStraker_Assignment_2019
                 eggs.Add(new Egg(t.enemyRec));
             }
 
-                foreach (Egg s in eggs)
-                {
-                    if ((s.x > 985))
-                    {
-                        eggs.Remove(s);
-                        break;
-                    }
-                    if (jf1.jf1Rec.IntersectsWith(s.eggRec))
-                    {
-                    eggs.Remove(s);
-                    lives1 -= 1;
-                    txtLives1.Text = lives1.ToString();
-                    checkLives();
-                 
-                        //s.x = 0;
-                       
-                        break;
-                    }
-                if (jf2.jf2Rec.IntersectsWith(s.eggRec))
-                {
-                    eggs.Remove(s);
-                    lives2 -= 1;
-                    txtLives2.Text = lives2.ToString();
-                    checkLives();
-                   
-                   // s.x = 0;
-                    
-                    break;
-                }
-            }
+              
+            
             
 
             }
@@ -760,7 +732,39 @@ namespace LilyStraker_Assignment_2019
                 jf1.moveJf1(move1);
                 stars.moveStar(move1);
             }
-        }
+
+            foreach (Egg s in eggs)
+            {
+                if (jf1.jf1Rec.IntersectsWith(s.eggRec))
+                {
+                    eggs.Remove(s);
+                    lives1 -= 1;
+                    txtLives1.Text = lives1.ToString();
+                    checkLives();
+
+                    //s.x = 0;
+
+                    break;
+                }
+                if (jf2.jf2Rec.IntersectsWith(s.eggRec))
+                {
+                    eggs.Remove(s);
+                    lives2 -= 1;
+                    txtLives2.Text = lives2.ToString();
+                    checkLives();
+
+                    // s.x = 0;
+
+                    break;
+                }
+
+                if ((s.x > 985))
+                {
+                    eggs.Remove(s);
+                    break;
+                }
+            }
+            }
 
         private void TmrEnemy_Tick(object sender, EventArgs e)
         {
