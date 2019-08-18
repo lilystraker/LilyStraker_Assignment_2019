@@ -15,9 +15,12 @@ namespace LilyStraker_Assignment_2019
     {
         Graphics g;
         Enemy[] enemy = new Enemy[7];
-        Turtle[] turtle = new Turtle[7];
+        Turtle[] turtle = new Turtle[2];
         Random yspeed = new Random();
         Random xspeed = new Random();
+
+        Random yc = new Random();
+
         Jf1 jf1 = new Jf1();
         Jf2 jf2 = new Jf2();
         Stars stars = new Stars();    
@@ -49,7 +52,7 @@ namespace LilyStraker_Assignment_2019
                 int x = 70 + (i * (pnlBG.Width / 7)); ;
                 enemy[i] = new Enemy(x);
             }
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 2; i++)
             {
                 int x = 70 + (i * (pnlBG.Width / 4)); ;
                 turtle[i] = new Turtle(x);
@@ -118,16 +121,33 @@ namespace LilyStraker_Assignment_2019
         {
             g = e.Graphics;
 
-            for (int i = 0; i <7; i++)
+            for (int i = 0; i < 7; i++)
             {
                 int yrndmspeed = yspeed.Next(5, 10);
                 enemy[i].y += yrndmspeed;
-               enemy[i].drawEnemy(g);
-
+                enemy[i].drawEnemy(g);
+            }
+            for (int i = 0; i < 2; i++)
+            {
                 int xrndmspeed = xspeed.Next(5, 10);
                 turtle[i].x += xrndmspeed;
                 turtle[i].drawEnemy(g);
 
+             //   int yc = turtle[i].y.Next(5, 400);
+             //   turtle[i]
+
+
+            }
+
+            foreach (Turtle t in turtle)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                  //  t.y = yc.Next(20, 400);
+                  //  turtle[i].y += yrndmspeed;
+                 //   turtle[i].drawEnemy(g);
+
+                }
             }
 
 
@@ -768,7 +788,7 @@ namespace LilyStraker_Assignment_2019
 
         private void TmrEnemy_Tick(object sender, EventArgs e)
         {
-            
+
             for (int i = 0; i < 7; i++)
             {
                 enemy[i].moveEnemy();
@@ -801,16 +821,27 @@ namespace LilyStraker_Assignment_2019
                         n.y = 20;
                     }
                 }
-               
-            //    score1 += enemy[i].score1;// get score from Planet class (in movePlanet method)
-            //    lblScore1.Text = score1.ToString();
+            }
+            for (int i = 0; i < 2; i++)
+            {
 
-           //     score2 += enemy[i].score2;// get score from Planet class (in movePlanet method)
-              //  lblScore2.Text = score2.ToString();
+                foreach (Turtle t in turtle)
+                {
+                    if (t.x > 987)
+                    {
+                        t.y = yc.Next(20, 400);
+                    }
+                }
+            
+                //    score1 += enemy[i].score1;// get score from Planet class (in movePlanet method)
+                //    lblScore1.Text = score1.ToString();
+
+                //     score2 += enemy[i].score2;// get score from Planet class (in movePlanet method)
+                //  lblScore2.Text = score2.ToString();
 
             }
 
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 2; i++)
             {
                 turtle[i].moveEnemy();
 

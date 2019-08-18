@@ -16,14 +16,18 @@ namespace LilyStraker_Assignment_2019
         public int score1;
         public int score2;
 
-        public Turtle(int spacing)
+      //  public int yc;
+
+        public Turtle(int yc)
         {
             x = 10;
-            y = spacing;
+            y = yc;
             width = 100;
             height = 50;
             enemyImage = Image.FromFile("turtle.png");
             enemyRec = new Rectangle(x, y, width, height);
+
+           
 
             //   Enemy enemyImage1 = new Enemy();
             //   enemyImage.ImageLocation = paths[random.Next(0, images.Count - 1)];
@@ -46,6 +50,7 @@ namespace LilyStraker_Assignment_2019
                 score1 += 1;
 
                 x = 10;
+
                 enemyRec.Location = new Point(x, y);
             }
         }
