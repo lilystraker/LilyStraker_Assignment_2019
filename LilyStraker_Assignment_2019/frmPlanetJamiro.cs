@@ -64,7 +64,7 @@ namespace LilyStraker_Assignment_2019
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            txtName1.Focus();
             tmrJf1.Enabled = false;
             tmrJf2.Enabled = false;
             tmrEnemy.Enabled = false;
@@ -76,8 +76,11 @@ namespace LilyStraker_Assignment_2019
             tmrBubble2Use.Enabled = false;
             tmrBubble2Recharge.Enabled = false;
 
+            btnPlay.Visible = false;
+            lblTitle.Visible = true;
+
          //   MessageBox.Show("Instructions", "Instructions");
-            txtName1.Focus();
+          
 
             txtName1.Text = "Player1's name";
             txtName1.ForeColor = Color.Gray;
@@ -357,7 +360,10 @@ namespace LilyStraker_Assignment_2019
                 txtName2.Enabled = false;
                 txtLives1.Enabled = false;
                 txtLives2.Enabled = false;
-              
+
+                btnPlay.Visible = false;
+                lblTitle.Visible = true;
+
 
 
             }
@@ -686,6 +692,61 @@ namespace LilyStraker_Assignment_2019
             Application.Exit();
         }
 
+        private void btnPlay_Click(object sender, EventArgs e)
+        {
+            if (txtName1.Text == "" || txtName2.Text == "" || txtLives1.Text == "")
+            {
+                MessageBox.Show("Check that both names have been entered and the lives have been set.", "Error!");
+
+                tmrEnemy.Enabled = false;
+                tmrJf1.Enabled = false;
+                tmrJf2.Enabled = false;
+
+                tmrBubble.Enabled = false;
+                tmrBubbleRecharge.Enabled = false;
+                tmrBubbleUse.Enabled = false;
+
+                tmrBubble2.Enabled = false;
+                tmrBubble2Recharge.Enabled = false;
+                tmrBubble2Use.Enabled = false;
+
+                btnPlay.Visible = false;
+
+
+            }
+            else
+            {
+                score1 = 0;
+                score2 = 0;
+                lblScore1.Text = score1.ToString();
+                lblScore2.Text = score2.ToString();
+             //   lives1 = int.Parse(txtLives1.Text);
+            //    lives2 = int.Parse(txtLives2.Text);
+                tmrEnemy.Enabled = true;
+                tmrJf1.Enabled = true;
+                tmrJf2.Enabled = true;
+
+                tmrBubble.Enabled = true;
+                tmrBubbleRecharge.Enabled = true;
+                tmrBubbleUse.Enabled = true;
+
+                tmrBubble2.Enabled = true;
+                tmrBubble2Recharge.Enabled = true;
+                tmrBubble2Use.Enabled = true;
+
+
+                txtName1.Enabled = false;
+                txtName2.Enabled = false;
+                txtLives1.Enabled = false;
+                txtLives2.Enabled = false;
+
+                btnPlay.Visible = false;
+                lblTitle.Visible = true;
+
+
+            }
+        }
+
         private void tmrBubbleRecharge_Tick(object sender, EventArgs e)
         {
             lblBubbletime.Text = "Recharging Bubbles";
@@ -938,11 +999,12 @@ namespace LilyStraker_Assignment_2019
             {
                 lives1 = 0;
            //     tmrJf1.Enabled = false;
-              //  tmrBubble.Enabled = false;
-              //  tmrBubbleRecharge.Enabled = false;
-              //  tmrBubbleUse.Enabled = false;
+                tmrBubble.Enabled = false;
+             //   tmrBubbleRecharge.Enabled = false;
+            //    tmrBubbleUse.Enabled = false;
                 txtLives1.Text = lives1.ToString();
-                alive = false; 
+                alive = false;
+                
             }
 
             if (lives2 <= 0)
@@ -950,9 +1012,9 @@ namespace LilyStraker_Assignment_2019
                 lives2 = 0;
                 txtLives2.Text = lives2.ToString();
                 //  tmrJf2.Enabled = false;
-                //  tmrBubble2.Enabled = false;
-                //  tmrBubble2Recharge.Enabled = false;
-                //  tmrBubble2Use.Enabled = false;
+                  tmrBubble2.Enabled = false;
+                  tmrBubble2Recharge.Enabled = false;
+                  tmrBubble2Use.Enabled = false;
                 alive2 = false;
             }
 

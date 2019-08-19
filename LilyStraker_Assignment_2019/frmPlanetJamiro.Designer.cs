@@ -35,6 +35,7 @@
             this.mnuStop = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTopBar = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtLives1 = new System.Windows.Forms.TextBox();
@@ -51,7 +52,6 @@
             this.labelLives2 = new System.Windows.Forms.Label();
             this.labelName2 = new System.Windows.Forms.Label();
             this.labelScore2 = new System.Windows.Forms.Label();
-            this.pnlTitle = new System.Windows.Forms.Panel();
             this.pnlBottomBar = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblBubbletime2 = new System.Windows.Forms.Label();
@@ -76,8 +76,10 @@
             this.tmrBubble2 = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Recharge = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Use = new System.Windows.Forms.Timer(this.components);
+            this.btnPlay = new System.Windows.Forms.Button();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
+            this.lblTitle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlBottomBar.SuspendLayout();
@@ -127,7 +129,7 @@
             // 
             this.pnlTopBar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlTopBar.BackColor = System.Drawing.Color.Navy;
-            this.pnlTopBar.Controls.Add(this.pnlTitle);
+            this.pnlTopBar.Controls.Add(this.lblTitle);
             this.pnlTopBar.Controls.Add(this.panel1);
             this.pnlTopBar.Controls.Add(this.panel2);
             this.pnlTopBar.Location = new System.Drawing.Point(0, 27);
@@ -135,6 +137,18 @@
             this.pnlTopBar.Size = new System.Drawing.Size(985, 90);
             this.pnlTopBar.TabIndex = 2;
             this.pnlTopBar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTopBar_Paint);
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lblTitle.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.PlanetJamiro_Logo;
+            this.lblTitle.Controls.Add(this.btnPlay);
+            this.lblTitle.Location = new System.Drawing.Point(333, 3);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(326, 90);
+            this.lblTitle.TabIndex = 5;
+            this.lblTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
             // 
             // panel1
             // 
@@ -326,17 +340,6 @@
             this.labelScore2.Size = new System.Drawing.Size(56, 20);
             this.labelScore2.TabIndex = 3;
             this.labelScore2.Text = "Score";
-            // 
-            // pnlTitle
-            // 
-            this.pnlTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pnlTitle.BackColor = System.Drawing.Color.Transparent;
-            this.pnlTitle.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.PlanetJamiro_Logo;
-            this.pnlTitle.Location = new System.Drawing.Point(333, 3);
-            this.pnlTitle.Name = "pnlTitle";
-            this.pnlTitle.Size = new System.Drawing.Size(326, 90);
-            this.pnlTitle.TabIndex = 5;
-            this.pnlTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
             // 
             // pnlBottomBar
             // 
@@ -555,6 +558,20 @@
             this.tmrBubble2Use.Interval = 500;
             this.tmrBubble2Use.Tick += new System.EventHandler(this.tmrBubble2Use_Tick);
             // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.Color.White;
+            this.btnPlay.Location = new System.Drawing.Point(118, 13);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(101, 49);
+            this.btnPlay.TabIndex = 1;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,6 +594,7 @@
             this.mnuStrip.ResumeLayout(false);
             this.mnuStrip.PerformLayout();
             this.pnlTopBar.ResumeLayout(false);
+            this.lblTitle.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -599,7 +617,7 @@
         private System.Windows.Forms.Panel pnlTopBar;
         private System.Windows.Forms.Panel pnlBG;
         private System.Windows.Forms.Panel pnlBottomBar;
-        private System.Windows.Forms.Panel pnlTitle;
+        private System.Windows.Forms.Panel lblTitle;
         private System.Windows.Forms.Label labelName1;
         private System.Windows.Forms.Label labelName2;
         private System.Windows.Forms.Label labelLives1;
@@ -639,6 +657,7 @@
         private System.Windows.Forms.Timer tmrBubble2Recharge;
         private System.Windows.Forms.Timer tmrBubble2Use;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.Button btnPlay;
     }
 }
 
