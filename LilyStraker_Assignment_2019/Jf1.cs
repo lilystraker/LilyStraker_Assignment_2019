@@ -15,6 +15,8 @@ namespace LilyStraker_Assignment_2019
 
         public Rectangle jf1Rec;
 
+        bool alivePriv = frmPlanetJamiro.alive;
+
         public Jf1()
         {
             x = 10;
@@ -28,8 +30,12 @@ namespace LilyStraker_Assignment_2019
 
         public void drawJf1(Graphics g)
         {
-            jf1Rec = new Rectangle(x, y, width, height);
-            g.DrawImage(jf1, jf1Rec);
+
+            if (alivePriv == true)
+            {
+                jf1Rec = new Rectangle(x, y, width, height);
+                g.DrawImage(jf1, jf1Rec);
+            }
         }
 
         public void moveJf1(string move1)

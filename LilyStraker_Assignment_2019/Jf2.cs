@@ -9,12 +9,12 @@ namespace LilyStraker_Assignment_2019
 {
     class Jf2
     {
-
-
         public int x, y, width, height;
         public Image jf2;
 
         public Rectangle jf2Rec;
+
+        bool alivePriv2 = frmPlanetJamiro.alive2;
 
         public Jf2()
         {
@@ -29,8 +29,11 @@ namespace LilyStraker_Assignment_2019
 
         public void drawJf2(Graphics g)
         {
-            jf2Rec = new Rectangle(x, y, width, height);
-            g.DrawImage(jf2, jf2Rec);
+            if (alivePriv2 == true)
+            {
+                jf2Rec = new Rectangle(x, y, width, height);
+                g.DrawImage(jf2, jf2Rec);
+            }
         }
 
         public void moveJf2(string move2)
