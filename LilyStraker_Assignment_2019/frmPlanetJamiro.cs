@@ -224,6 +224,26 @@ namespace LilyStraker_Assignment_2019
 
         private void FrmPlanetJamiro_KeyDown(object sender, KeyEventArgs e)
         {
+
+            if (e.KeyData == Keys.Escape)
+            {
+                Cursor.Show();
+                DialogResult result1 = MessageBox.Show("Are you sure you want to Exit to the main menu?",
+                  "Bruh?",
+                   MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning,
+                  MessageBoxDefaultButton.Button2);
+                if (result1 == DialogResult.Yes)
+                {
+                    frmHome homeform = new frmHome();
+                    //Application.Exit();
+                    this.Close();
+                    homeform.Show();
+                }
+
+
+            }
+
             if (e.KeyData == Keys.Left) { left = true; }
             if (e.KeyData == Keys.Right) { right = true; }
             if (e.KeyData == Keys.Up) { up = true; }
@@ -908,7 +928,10 @@ namespace LilyStraker_Assignment_2019
                 tmrBubble2Recharge.Enabled = false;
                 tmrBubble2Use.Enabled = false;
                 tmrEgg.Enabled = false;
-                MessageBox.Show("Game Over");
+             //   MessageBox.Show("Game Over");
+                frmGameOver GOform = new frmGameOver();
+                this.Close();
+                GOform.Show();
 
             }
 

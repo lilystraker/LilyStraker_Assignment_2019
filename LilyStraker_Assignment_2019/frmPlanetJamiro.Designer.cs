@@ -33,6 +33,7 @@
             this.mnuStrip = new System.Windows.Forms.MenuStrip();
             this.mnuStart = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStop = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -75,7 +76,6 @@
             this.tmrBubble2 = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Recharge = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Use = new System.Windows.Forms.Timer(this.components);
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -116,10 +116,18 @@
             this.mnuStop.Text = "Stop";
             this.mnuStop.Click += new System.EventHandler(this.mnuStop_Click);
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // pnlTopBar
             // 
             this.pnlTopBar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlTopBar.BackColor = System.Drawing.Color.Navy;
+            this.pnlTopBar.Controls.Add(this.pnlTitle);
             this.pnlTopBar.Controls.Add(this.panel1);
             this.pnlTopBar.Controls.Add(this.panel2);
             this.pnlTopBar.Location = new System.Drawing.Point(0, 27);
@@ -323,8 +331,8 @@
             // 
             this.pnlTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlTitle.BackColor = System.Drawing.Color.Transparent;
-            this.pnlTitle.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.PlanetJamiro_Logo_Dark_Blue;
-            this.pnlTitle.Location = new System.Drawing.Point(336, 27);
+            this.pnlTitle.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.PlanetJamiro_Logo;
+            this.pnlTitle.Location = new System.Drawing.Point(333, 3);
             this.pnlTitle.Name = "pnlTitle";
             this.pnlTitle.Size = new System.Drawing.Size(326, 90);
             this.pnlTitle.TabIndex = 5;
@@ -547,20 +555,12 @@
             this.tmrBubble2Use.Interval = 500;
             this.tmrBubble2Use.Tick += new System.EventHandler(this.tmrBubble2Use_Tick);
             // 
-            // exitToolStripMenuItem
-            // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
-            // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 661);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.pnlTitle);
             this.Controls.Add(this.pnlBottomBar);
             this.Controls.Add(this.pnlBG);
             this.Controls.Add(this.mnuStrip);

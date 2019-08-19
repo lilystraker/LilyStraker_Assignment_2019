@@ -125,7 +125,7 @@ namespace LilyStraker_Assignment_2019.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap PlanetJamiro_Logo {
             get {
-                object obj = ResourceManager.GetObject("PlanetJamiro-Logo", resourceCulture);
+                object obj = ResourceManager.GetObject("PlanetJamiro_Logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -135,7 +135,7 @@ namespace LilyStraker_Assignment_2019.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap PlanetJamiro_Logo_Dark_Blue {
             get {
-                object obj = ResourceManager.GetObject("PlanetJamiro-Logo-Dark_Blue", resourceCulture);
+                object obj = ResourceManager.GetObject("PlanetJamiro_Logo_Dark_Blue", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
