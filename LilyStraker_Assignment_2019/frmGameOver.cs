@@ -16,5 +16,17 @@ namespace LilyStraker_Assignment_2019
         {
             InitializeComponent();
         }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            frmHighScores frmHighScore2 = new frmHighScores(txtName.Text, txtScore.Text);
+          //  Hide();
+            frmHighScore2.ShowDialog();
+        }
     }
 }

@@ -106,7 +106,7 @@
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(473, 256);
+            this.btnPlay.Location = new System.Drawing.Point(435, 256);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(101, 49);
             this.btnPlay.TabIndex = 0;
@@ -120,7 +120,7 @@
             this.btnInstructions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnInstructions.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInstructions.ForeColor = System.Drawing.Color.White;
-            this.btnInstructions.Location = new System.Drawing.Point(415, 351);
+            this.btnInstructions.Location = new System.Drawing.Point(377, 351);
             this.btnInstructions.Name = "btnInstructions";
             this.btnInstructions.Size = new System.Drawing.Size(219, 49);
             this.btnInstructions.TabIndex = 1;
@@ -133,7 +133,7 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Location = new System.Drawing.Point(368, 112);
+            this.panel1.Location = new System.Drawing.Point(332, 112);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(326, 90);
             this.panel1.TabIndex = 6;
