@@ -27,6 +27,10 @@ namespace LilyStraker_Assignment_2019
             if (txtName.Text == "" || txtScore.Text == "")
             {
                 MessageBox.Show("Check that both names have been entered and the lives have been set.", "Error!");
+                
+            }
+            else
+            {
                 frmHighScores frmHighScore2 = new frmHighScores(txtName.Text, txtScore.Text);
                 //  Hide();
                 frmHighScore2.ShowDialog();
@@ -82,6 +86,23 @@ namespace LilyStraker_Assignment_2019
             if (e.KeyChar == 13)
             {
                 
+            }
+        }
+
+        private void MnuExit_Click(object sender, EventArgs e)
+        {
+            DialogResult result1 = MessageBox.Show("Are you sure you want to exit the game?",
+                 "Already going?",
+                  MessageBoxButtons.YesNo,
+                 MessageBoxIcon.Warning,
+                 MessageBoxDefaultButton.Button2);
+
+            if (result1 == DialogResult.Yes)
+            {
+                // frmHome homeform = new frmHome();
+                //Application.Exit();
+                this.Close();
+                //  homeform.Show();
             }
         }
     }
