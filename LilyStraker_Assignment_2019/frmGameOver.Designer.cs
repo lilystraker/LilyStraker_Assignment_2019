@@ -69,6 +69,8 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 2;
+            this.txtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
+            this.txtName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtName_KeyPress);
             // 
             // txtScore
             // 
@@ -78,6 +80,7 @@
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(100, 20);
             this.txtScore.TabIndex = 3;
+            this.txtScore.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtScore_KeyPress);
             // 
             // btnCheck
             // 

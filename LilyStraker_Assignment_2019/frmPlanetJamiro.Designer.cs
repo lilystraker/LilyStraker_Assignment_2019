@@ -77,6 +77,7 @@
             this.tmrBubble2 = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Recharge = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Use = new System.Windows.Forms.Timer(this.components);
+            this.btnPlay1 = new System.Windows.Forms.PictureBox();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.lblTitle.SuspendLayout();
@@ -85,6 +86,7 @@
             this.pnlBottomBar.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuStrip
@@ -143,6 +145,7 @@
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.PlanetJamiro_Logo;
+            this.lblTitle.Controls.Add(this.btnPlay1);
             this.lblTitle.Controls.Add(this.btnPlay);
             this.lblTitle.Location = new System.Drawing.Point(333, 3);
             this.lblTitle.Name = "lblTitle";
@@ -156,7 +159,7 @@
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(118, 13);
+            this.btnPlay.Location = new System.Drawing.Point(122, 13);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(101, 49);
             this.btnPlay.TabIndex = 1;
@@ -580,6 +583,15 @@
             this.tmrBubble2Use.Interval = 500;
             this.tmrBubble2Use.Tick += new System.EventHandler(this.tmrBubble2Use_Tick);
             // 
+            // btnPlay1
+            // 
+            this.btnPlay1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
+            this.btnPlay1.Location = new System.Drawing.Point(123, 12);
+            this.btnPlay1.Name = "btnPlay1";
+            this.btnPlay1.Size = new System.Drawing.Size(100, 50);
+            this.btnPlay1.TabIndex = 2;
+            this.btnPlay1.TabStop = false;
+            // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -612,6 +624,7 @@
             this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -666,6 +679,7 @@
         private System.Windows.Forms.Timer tmrBubble2Use;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.PictureBox btnPlay1;
     }
 }
 
