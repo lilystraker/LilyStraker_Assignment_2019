@@ -63,6 +63,8 @@
             // 
             // txtName
             // 
+            this.txtName.BackColor = System.Drawing.Color.Black;
+            this.txtName.ForeColor = System.Drawing.Color.White;
             this.txtName.Location = new System.Drawing.Point(538, 151);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
@@ -70,6 +72,8 @@
             // 
             // txtScore
             // 
+            this.txtScore.BackColor = System.Drawing.Color.Black;
+            this.txtScore.ForeColor = System.Drawing.Color.White;
             this.txtScore.Location = new System.Drawing.Point(538, 271);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(100, 20);

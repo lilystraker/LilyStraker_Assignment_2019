@@ -36,6 +36,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Panel();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtLives1 = new System.Windows.Forms.TextBox();
@@ -76,7 +77,6 @@
             this.tmrBubble2 = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Recharge = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Use = new System.Windows.Forms.Timer(this.components);
-            this.btnPlay = new System.Windows.Forms.Button();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.lblTitle.SuspendLayout();
@@ -107,8 +107,8 @@
             // mnuStart
             // 
             this.mnuStart.Name = "mnuStart";
-            this.mnuStart.Size = new System.Drawing.Size(55, 20);
-            this.mnuStart.Text = "Restart";
+            this.mnuStart.Size = new System.Drawing.Size(43, 20);
+            this.mnuStart.Text = "Start";
             this.mnuStart.Click += new System.EventHandler(this.mnuStart_Click);
             // 
             // mnuStop
@@ -150,6 +150,20 @@
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
             // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.Color.White;
+            this.btnPlay.Location = new System.Drawing.Point(118, 13);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(101, 49);
+            this.btnPlay.TabIndex = 1;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -175,6 +189,8 @@
             // 
             // txtLives1
             // 
+            this.txtLives1.BackColor = System.Drawing.Color.Black;
+            this.txtLives1.ForeColor = System.Drawing.Color.White;
             this.txtLives1.Location = new System.Drawing.Point(67, 61);
             this.txtLives1.Name = "txtLives1";
             this.txtLives1.Size = new System.Drawing.Size(33, 20);
@@ -198,6 +214,8 @@
             // 
             // txtName1
             // 
+            this.txtName1.BackColor = System.Drawing.Color.Black;
+            this.txtName1.ForeColor = System.Drawing.Color.White;
             this.txtName1.Location = new System.Drawing.Point(67, 3);
             this.txtName1.Name = "txtName1";
             this.txtName1.Size = new System.Drawing.Size(122, 20);
@@ -271,6 +289,8 @@
             // txtLives2
             // 
             this.txtLives2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLives2.BackColor = System.Drawing.Color.Black;
+            this.txtLives2.ForeColor = System.Drawing.Color.White;
             this.txtLives2.Location = new System.Drawing.Point(99, 60);
             this.txtLives2.Name = "txtLives2";
             this.txtLives2.Size = new System.Drawing.Size(33, 20);
@@ -294,6 +314,8 @@
             // txtName2
             // 
             this.txtName2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtName2.BackColor = System.Drawing.Color.Black;
+            this.txtName2.ForeColor = System.Drawing.Color.White;
             this.txtName2.Location = new System.Drawing.Point(10, 3);
             this.txtName2.Name = "txtName2";
             this.txtName2.Size = new System.Drawing.Size(122, 20);
@@ -557,20 +579,6 @@
             // 
             this.tmrBubble2Use.Interval = 500;
             this.tmrBubble2Use.Tick += new System.EventHandler(this.tmrBubble2Use_Tick);
-            // 
-            // btnPlay
-            // 
-            this.btnPlay.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(118, 13);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(101, 49);
-            this.btnPlay.TabIndex = 1;
-            this.btnPlay.Text = "Play";
-            this.btnPlay.UseVisualStyleBackColor = false;
-            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // frmPlanetJamiro
             // 

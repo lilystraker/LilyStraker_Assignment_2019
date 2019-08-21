@@ -19,7 +19,7 @@ namespace LilyStraker_Assignment_2019
         public int rotationAngle;
         public Matrix matrix;
 
-        public int bubbleRotate;
+       public int bubbleRotate;
 
         public Bubble(Rectangle Jf1Rec)
         {

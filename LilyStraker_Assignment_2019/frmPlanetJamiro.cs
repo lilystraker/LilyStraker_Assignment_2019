@@ -83,32 +83,32 @@ namespace LilyStraker_Assignment_2019
           
 
             txtName1.Text = "Player1's name";
-            txtName1.ForeColor = Color.Gray;
+            txtName1.ForeColor = Color.White;
 
             txtName1.SelectionStart = 0;
             txtName1.SelectionLength = 0;
-            txtName1.ForeColor = Color.Gray;
+            txtName1.ForeColor = Color.White;
 
             txtName2.Text = "Player2's name";
-            txtName2.ForeColor = Color.Gray;
+            txtName2.ForeColor = Color.White;
 
             txtName2.SelectionStart = 0; //If the text was selected, this is the value it will start at.
             txtName2.SelectionLength = 0; //This is the length of the selection. It is set to 0 so that there is no selection/highlight.
-            txtName2.ForeColor = Color.Gray;
+            txtName2.ForeColor = Color.White;
 
             txtLives1.Text = "Lives";
-            txtLives1.ForeColor = Color.Gray;
+            txtLives1.ForeColor = Color.White;
 
             txtLives1.SelectionStart = 0;
             txtLives1.SelectionLength = 0;
-            txtLives1.ForeColor = Color.Gray;
+            txtLives1.ForeColor = Color.White;
 
             txtLives2.Text = "Lives";
-            txtLives2.ForeColor = Color.Gray;
+            txtLives2.ForeColor = Color.White;
 
             txtLives2.SelectionStart = 0;
             txtLives2.SelectionLength = 0;
-            txtLives2.ForeColor = Color.Gray;
+            txtLives2.ForeColor = Color.White;
 
             jf1.x = 523;
             jf1.y = 350;
@@ -335,6 +335,8 @@ namespace LilyStraker_Assignment_2019
                 tmrBubble2Use.Enabled = false;
                 tmrBubble2Recharge.Enabled = false;
 
+                
+
             }
             else
             {
@@ -382,7 +384,10 @@ namespace LilyStraker_Assignment_2019
             tmrBubble2.Enabled = false;
             tmrBubble2Recharge.Enabled = false;
             tmrBubble2Use.Enabled = false;
-      //
+
+            btnPlay.Visible = false;
+            lblTitle.Visible = true;
+            //
 
         }
 
@@ -399,6 +404,7 @@ namespace LilyStraker_Assignment_2019
                 //event Handled is set to true, user input is suppressed and not reflected in the text box
                 e.Handled = true;
                 txtName1.Focus();
+                btnPlay.Visible = false;
             }
 
             if (e.KeyChar == 13)
@@ -432,7 +438,7 @@ namespace LilyStraker_Assignment_2019
             if (txtName1.Text.Equals("Player1's name") == true)
             {
                 txtName1.Text = "";
-                txtName1.ForeColor = Color.Black;
+                txtName1.ForeColor = Color.White;
             }
         }
 
@@ -441,7 +447,7 @@ namespace LilyStraker_Assignment_2019
             if (txtName1.Text.Equals(null) == true || txtName1.Text.Equals("") == true)
             {
                 txtName1.Text = "Player1's name";
-                txtName1.ForeColor = Color.Gray;
+                txtName1.ForeColor = Color.White;
             }
         }
 
@@ -450,7 +456,7 @@ namespace LilyStraker_Assignment_2019
             if (txtName2.Text.Equals("Player2's name") == true)
             {
                 txtName2.Text = "";
-                txtName2.ForeColor = Color.Black;
+                txtName2.ForeColor = Color.White;
             }
         }
 
@@ -470,20 +476,26 @@ namespace LilyStraker_Assignment_2019
             if (e.KeyChar > 50 && e.KeyChar < 58 || e.KeyChar == 13 || e.KeyChar == 8)
             {
                 txtLives2.Text = txtLives1.Text;
-
+                btnPlay.Visible = true;
+                lblTitle.Visible = false;
             }
             else
             {
                 MessageBox.Show("Please only enter numerical characters", "Error");
                 e.Handled = true;
+                btnPlay.Visible = false;
+
             }
 
             if (e.KeyChar == 13 && txtLives1.Text != "")
             {
-
+                btnPlay.Visible = true;
+             
             }
             else
             {
+                btnPlay.Visible = false;
+                lblTitle.Visible = true;
             }
 
         }
@@ -493,7 +505,7 @@ namespace LilyStraker_Assignment_2019
             if (txtLives1.Text.Equals("Lives") == true)
             {
                 txtLives1.Text = "";
-                txtLives1.ForeColor = Color.Black;
+                txtLives1.ForeColor = Color.White;
             }
         }
 
@@ -502,7 +514,7 @@ namespace LilyStraker_Assignment_2019
             if (txtLives1.Text.Equals(null) == true || txtLives1.Text.Equals("") == true)
             {
                 txtLives1.Text = "Lives";
-                txtLives1.ForeColor = Color.Gray;
+                txtLives1.ForeColor = Color.White;
             }
         }
 
@@ -516,7 +528,7 @@ namespace LilyStraker_Assignment_2019
             if (txtLives2.Text.Equals("Lives") == true)
             {
                 txtLives2.Text = "";
-                txtLives2.ForeColor = Color.Black;
+                txtLives2.ForeColor = Color.White;
             }
         }
 
@@ -525,7 +537,13 @@ namespace LilyStraker_Assignment_2019
             if (txtLives2.Text.Equals(null) == true || txtLives2.Text.Equals("") == true)
             {
                 txtLives2.Text = "Lives";
-                txtLives2.ForeColor = Color.Gray;
+                txtLives2.ForeColor = Color.White;
+            }
+
+            if (txtLives2.Text.Equals(null) == false || txtLives2.Text.Equals("") == true)
+            {
+              //  txtLives2.Text = "Lives";
+                txtLives2.ForeColor = Color.White;
             }
         }
 
