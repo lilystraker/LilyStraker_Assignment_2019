@@ -35,16 +35,20 @@
             this.pnlTitle = new System.Windows.Forms.Panel();
             this.mnuHome = new System.Windows.Forms.MenuStrip();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnPlay = new System.Windows.Forms.Button();
             this.btnInstructions = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlHomeBG = new System.Windows.Forms.Panel();
+            this.btnInstructions1 = new System.Windows.Forms.PictureBox();
+            this.btnPlay1 = new System.Windows.Forms.PictureBox();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.pnlTopBar.SuspendLayout();
             this.mnuHome.SuspendLayout();
             this.pnlHomeBG.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnInstructions1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -99,30 +103,17 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.exitToolStripMenuItem.Text = "Exit";
-            // 
-            // btnPlay
-            // 
-            this.btnPlay.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(435, 256);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(101, 49);
-            this.btnPlay.TabIndex = 0;
-            this.btnPlay.Text = "Play";
-            this.btnPlay.UseVisualStyleBackColor = false;
-            this.btnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // btnInstructions
             // 
-            this.btnInstructions.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnInstructions.BackColor = System.Drawing.Color.Transparent;
             this.btnInstructions.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnInstructions.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInstructions.ForeColor = System.Drawing.Color.White;
-            this.btnInstructions.Location = new System.Drawing.Point(377, 351);
+            this.btnInstructions.Location = new System.Drawing.Point(399, 413);
             this.btnInstructions.Name = "btnInstructions";
-            this.btnInstructions.Size = new System.Drawing.Size(219, 49);
+            this.btnInstructions.Size = new System.Drawing.Size(212, 49);
             this.btnInstructions.TabIndex = 1;
             this.btnInstructions.Text = "Instructions";
             this.btnInstructions.UseVisualStyleBackColor = false;
@@ -133,9 +124,10 @@
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Location = new System.Drawing.Point(332, 112);
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Location = new System.Drawing.Point(163, 78);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(326, 90);
+            this.panel1.Size = new System.Drawing.Size(671, 142);
             this.panel1.TabIndex = 6;
             // 
             // pnlHomeBG
@@ -144,22 +136,65 @@
             this.pnlHomeBG.AutoSize = true;
             this.pnlHomeBG.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.space1;
             this.pnlHomeBG.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlHomeBG.Controls.Add(this.btnInstructions1);
+            this.pnlHomeBG.Controls.Add(this.btnPlay1);
+            this.pnlHomeBG.Controls.Add(this.btnPlay);
             this.pnlHomeBG.Controls.Add(this.panel1);
             this.pnlHomeBG.Controls.Add(this.btnInstructions);
-            this.pnlHomeBG.Controls.Add(this.btnPlay);
             this.pnlHomeBG.Controls.Add(this.pictureBox2);
             this.pnlHomeBG.Controls.Add(this.pictureBox1);
             this.pnlHomeBG.Location = new System.Drawing.Point(0, 0);
             this.pnlHomeBG.Name = "pnlHomeBG";
-            this.pnlHomeBG.Size = new System.Drawing.Size(1003, 703);
+            this.pnlHomeBG.Size = new System.Drawing.Size(1003, 706);
             this.pnlHomeBG.TabIndex = 5;
             this.pnlHomeBG.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlHomeBG_Paint);
+            // 
+            // btnInstructions1
+            // 
+            this.btnInstructions1.BackColor = System.Drawing.Color.Transparent;
+            this.btnInstructions1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.instructions;
+            this.btnInstructions1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnInstructions1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInstructions1.Location = new System.Drawing.Point(385, 409);
+            this.btnInstructions1.Name = "btnInstructions1";
+            this.btnInstructions1.Size = new System.Drawing.Size(247, 64);
+            this.btnInstructions1.TabIndex = 10;
+            this.btnInstructions1.TabStop = false;
+            this.btnInstructions1.Click += new System.EventHandler(this.BtnInstructions1_Click);
+            // 
+            // btnPlay1
+            // 
+            this.btnPlay1.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlay1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
+            this.btnPlay1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPlay1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlay1.Location = new System.Drawing.Point(439, 312);
+            this.btnPlay1.Name = "btnPlay1";
+            this.btnPlay1.Size = new System.Drawing.Size(138, 60);
+            this.btnPlay1.TabIndex = 9;
+            this.btnPlay1.TabStop = false;
+            this.btnPlay1.Click += new System.EventHandler(this.BtnPlay1_Click);
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.Transparent;
+            this.btnPlay.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
+            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.Color.Transparent;
+            this.btnPlay.Location = new System.Drawing.Point(451, 312);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(126, 49);
+            this.btnPlay.TabIndex = 0;
+            this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.BtnPlay_Click);
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.stars_big;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Location = new System.Drawing.Point(-14, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(1000, 700);
             this.pictureBox2.TabIndex = 8;
@@ -196,6 +231,7 @@
             this.MainMenuStrip = this.mnuHome;
             this.Name = "frmHome";
             this.Text = "frmHome";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmHome_FormClosing);
             this.Load += new System.EventHandler(this.frmHome_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmHome_KeyDown);
             this.pnlTopBar.ResumeLayout(false);
@@ -203,6 +239,8 @@
             this.mnuHome.ResumeLayout(false);
             this.mnuHome.PerformLayout();
             this.pnlHomeBG.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnInstructions1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -216,12 +254,14 @@
         private System.Windows.Forms.Panel pnlTitle;
         private System.Windows.Forms.MenuStrip mnuHome;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.Button btnInstructions;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlHomeBG;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.PictureBox btnPlay1;
+        private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox btnInstructions1;
     }
 }

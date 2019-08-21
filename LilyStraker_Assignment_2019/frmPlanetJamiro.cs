@@ -707,8 +707,50 @@ namespace LilyStraker_Assignment_2019
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
+
+            tmrJf1.Enabled = false;
+            tmrJf2.Enabled = false;
+            tmrEnemy.Enabled = false;
+            tmrBubble.Enabled = false;
+            tmrBubbleRecharge.Enabled = false;
+            tmrBubbleUse.Enabled = false;
+            tmrBubble2.Enabled = false;
+            tmrBubble2Recharge.Enabled = false;
+            tmrBubble2Use.Enabled = false;
+            tmrEgg.Enabled = false;
+
+
+            DialogResult result1 = MessageBox.Show("Are you sure you want to exit to the main menu?",
+                  "Already going?",
+                   MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning,
+                  MessageBoxDefaultButton.Button2);
+        
+
+            if (result1 == DialogResult.Yes)
+            {
+               
+
+                frmHome homeform = new frmHome();
+                //Application.Exit();
+                this.Close();
+                homeform.Show();
+            }
+
+            if (result1 == DialogResult.No)
+            {
+                tmrJf1.Enabled = true;
+                tmrJf2.Enabled = true;
+                tmrEnemy.Enabled = true;
+                tmrBubble.Enabled = true;
+                tmrBubbleRecharge.Enabled = true;
+                tmrBubbleUse.Enabled = true;
+                tmrBubble2.Enabled = true;
+                tmrBubble2Recharge.Enabled = true;
+                tmrBubble2Use.Enabled = true;
+                tmrEgg.Enabled = true;
+            }
+            }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
@@ -1022,7 +1064,8 @@ namespace LilyStraker_Assignment_2019
             //    tmrBubbleUse.Enabled = false;
                 txtLives1.Text = lives1.ToString();
                 alive = false;
-                
+                lblScore1.Enabled = false;
+
             }
 
             if (lives2 <= 0)
@@ -1049,6 +1092,7 @@ namespace LilyStraker_Assignment_2019
                 tmrBubble2Recharge.Enabled = false;
                 tmrBubble2Use.Enabled = false;
                 tmrEgg.Enabled = false;
+                lblScore1.Enabled = false;
              //   MessageBox.Show("Game Over");
                 frmGameOver GOform = new frmGameOver();
                 this.Close();
