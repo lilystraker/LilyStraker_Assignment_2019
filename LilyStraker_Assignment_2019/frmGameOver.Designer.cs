@@ -40,6 +40,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mnuHome = new System.Windows.Forms.MenuStrip();
             this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblScore1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lblGameOver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -85,10 +86,11 @@
             // 
             this.txtScore.BackColor = System.Drawing.Color.Black;
             this.txtScore.ForeColor = System.Drawing.Color.White;
-            this.txtScore.Location = new System.Drawing.Point(553, 360);
+            this.txtScore.Location = new System.Drawing.Point(872, 345);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(100, 20);
             this.txtScore.TabIndex = 3;
+            this.txtScore.Visible = false;
             this.txtScore.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtScore_KeyPress);
             // 
             // btnCheck
@@ -181,6 +183,20 @@
             this.mnuExit.Text = "Exit";
             this.mnuExit.Click += new System.EventHandler(this.MnuExit_Click);
             // 
+            // lblScore1
+            // 
+            this.lblScore1.AutoSize = true;
+            this.lblScore1.BackColor = System.Drawing.Color.Black;
+            this.lblScore1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScore1.ForeColor = System.Drawing.Color.White;
+            this.lblScore1.Location = new System.Drawing.Point(585, 339);
+            this.lblScore1.Name = "lblScore1";
+            this.lblScore1.Size = new System.Drawing.Size(26, 27);
+            this.lblScore1.TabIndex = 11;
+            this.lblScore1.Text = "0";
+            this.lblScore1.Click += new System.EventHandler(this.label3_Click);
+            // 
             // frmGameOver
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -188,6 +204,7 @@
             this.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.space1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.lblScore1);
             this.Controls.Add(this.mnuHome);
             this.Controls.Add(this.lblGameOver);
             this.Controls.Add(this.btnRestart);
@@ -202,6 +219,7 @@
             this.DoubleBuffered = true;
             this.Name = "frmGameOver";
             this.Text = "frmGameOver";
+            this.Load += new System.EventHandler(this.frmGameOver_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lblGameOver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -226,5 +244,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.MenuStrip mnuHome;
         private System.Windows.Forms.ToolStripMenuItem mnuExit;
+        private System.Windows.Forms.Label lblScore1;
     }
 }

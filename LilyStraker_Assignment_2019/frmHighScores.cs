@@ -17,13 +17,18 @@ namespace LilyStraker_Assignment_2019
 
         List<HighScores> highScores = new List<HighScores>();
 
+        string playerName = frmPlanetJamiro.jf1name;
+        int playerScore = frmPlanetJamiro.endscore1;
+      //  string jf1score;
 
 
-        public frmHighScores(string playerName, string playerScore)
+
+
+        public frmHighScores(string playerName, int playerScore)
         {
             InitializeComponent();  
             lblPlayerName.Text = playerName;
-            lblPlayerScore.Text = playerScore;
+            lblPlayerScore.Text = frmPlanetJamiro.endscore1.ToString();
 
             var reader = new StreamReader(binPath);
 
@@ -95,6 +100,11 @@ namespace LilyStraker_Assignment_2019
             frmGameOver frmGame2 = new frmGameOver();
             Hide();
             frmGame2.ShowDialog();
+
+        }
+
+        private void lblPlayerName_Click(object sender, EventArgs e)
+        {
 
         }
     }

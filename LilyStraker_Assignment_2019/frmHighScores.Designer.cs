@@ -73,9 +73,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(23, 314);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.Size = new System.Drawing.Size(88, 13);
             this.label2.TabIndex = 1;
-            this.label2.Text = "Player\'s Name";
+            this.label2.Text = "Player\'s Score";
             // 
             // label3
             // 
@@ -99,6 +99,7 @@
             this.lblPlayerName.Size = new System.Drawing.Size(35, 13);
             this.lblPlayerName.TabIndex = 3;
             this.lblPlayerName.Text = "Name";
+            this.lblPlayerName.Click += new System.EventHandler(this.lblPlayerName_Click);
             // 
             // label5
             // 
@@ -108,9 +109,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(23, 271);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 13);
+            this.label5.Size = new System.Drawing.Size(87, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Player\'s Score";
+            this.label5.Text = "Player\'s Name";
             // 
             // lblPlayerScore
             // 
