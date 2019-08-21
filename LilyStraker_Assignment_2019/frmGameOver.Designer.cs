@@ -34,6 +34,7 @@
             this.txtScore = new System.Windows.Forms.TextBox();
             this.btnCheck = new System.Windows.Forms.Button();
             this.btnQuit = new System.Windows.Forms.Button();
+            this.btnRestart = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -86,13 +87,23 @@
             // 
             // btnQuit
             // 
-            this.btnQuit.Location = new System.Drawing.Point(554, 437);
+            this.btnQuit.Location = new System.Drawing.Point(554, 491);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(75, 23);
             this.btnQuit.TabIndex = 5;
             this.btnQuit.Text = "Quit";
             this.btnQuit.UseVisualStyleBackColor = true;
             this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
+            // 
+            // btnRestart
+            // 
+            this.btnRestart.Location = new System.Drawing.Point(554, 429);
+            this.btnRestart.Name = "btnRestart";
+            this.btnRestart.Size = new System.Drawing.Size(75, 23);
+            this.btnRestart.TabIndex = 6;
+            this.btnRestart.Text = "Try Again";
+            this.btnRestart.UseVisualStyleBackColor = true;
+            this.btnRestart.Click += new System.EventHandler(this.btnRestart_Click);
             // 
             // frmGameOver
             // 
@@ -101,6 +112,7 @@
             this.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.space1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 661);
+            this.Controls.Add(this.btnRestart);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnCheck);
             this.Controls.Add(this.txtScore);
@@ -123,5 +135,6 @@
         private System.Windows.Forms.TextBox txtScore;
         private System.Windows.Forms.Button btnCheck;
         private System.Windows.Forms.Button btnQuit;
+        private System.Windows.Forms.Button btnRestart;
     }
 }

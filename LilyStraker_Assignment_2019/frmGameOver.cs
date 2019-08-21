@@ -28,5 +28,13 @@ namespace LilyStraker_Assignment_2019
           //  Hide();
             frmHighScore2.ShowDialog();
         }
+
+        private void btnRestart_Click(object sender, EventArgs e)
+        {
+            frmHome frmHome = new frmHome();
+            //  Hide();
+            this.Close();
+            frmHome.Show();
+        }
     }
 }
