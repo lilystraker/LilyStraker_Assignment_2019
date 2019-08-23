@@ -17,6 +17,10 @@ namespace LilyStraker_Assignment_2019
         int score1 = frmPlanetJamiro.endscore1;
         string jf1score;
 
+        string name2 = frmPlanetJamiro.jf2name;
+        int score2 = frmPlanetJamiro.endscore2;
+        string jf2score;
+
 
 
         public frmGameOver()
@@ -24,6 +28,8 @@ namespace LilyStraker_Assignment_2019
             InitializeComponent();
 
             jf1score = frmPlanetJamiro.endscore1.ToString();
+
+            jf2score = frmPlanetJamiro.endscore2.ToString();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -40,7 +46,7 @@ namespace LilyStraker_Assignment_2019
             }
             else
             {
-                frmHighScores frmHighScore2 = new frmHighScores(txtName.Text, Int32.Parse(lblScore1.Text));
+                frmHighScores frmHighScore2 = new frmHighScores(txtName.Text, Int32.Parse(lblScore1.Text), txtName2.Text, Int32.Parse(lblScore2.Text));
                 //  Hide();
                 frmHighScore2.ShowDialog();
             }
@@ -48,10 +54,7 @@ namespace LilyStraker_Assignment_2019
 
         private void btnRestart_Click(object sender, EventArgs e)
         {
-            frmHome frmHome = new frmHome();
-            //  Hide();
-            this.Close();
-            frmHome.Show();
+            Application.Restart();
         }
 
         private void TxtName_TextChanged(object sender, EventArgs e)
@@ -61,27 +64,23 @@ namespace LilyStraker_Assignment_2019
 
         private void TxtName_KeyPress(object sender, KeyPressEventArgs e)
         {
-         
-          
-            
-            
-            
-            //  if (e.KeyChar == 8 || e.KeyChar > 64 && e.KeyChar < 91 || e.KeyChar > 96 && e.KeyChar < 123 || e.KeyChar == 13) //alpabet, enter key, backspace key
-          //  {
-                //mnuStart.Visible = true;
-         //   }
-         //   else
-          //  {
-           //     MessageBox.Show("Please only enter alphabetical characters", "Error");
-                //event Handled is set to true, user input is suppressed and not reflected in the text box
-          //      e.Handled = true;
-        //        txtScore.Focus();
-         //   }
 
-      //      if (e.KeyChar == 13)
-       //     {
-        //        txtScore.Focus();
-        //    }
+              if (e.KeyChar == 8 || e.KeyChar > 64 && e.KeyChar < 91 || e.KeyChar > 96 && e.KeyChar < 123 || e.KeyChar == 13) //alpabet, enter key, backspace key
+            {
+                //mnuStart.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Please only enter alphabetical characters", "Error");
+                //event Handled is set to true, user input is suppressed and not reflected in the text box
+                e.Handled = true;
+                txtScore.Focus();
+            }
+
+            if (e.KeyChar == 13)
+          {
+               txtScore.Focus();
+            }
         }
 
         private void TxtScore_KeyPress(object sender, KeyPressEventArgs e)
@@ -124,10 +123,44 @@ namespace LilyStraker_Assignment_2019
         {
            txtName.Text = name1;
            lblScore1.Text = jf1score;
+
+            txtName2.Text = name2;
+            lblScore2.Text = jf2score;
         }
 
         private void label3_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void BtnCheck2_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void TxtName2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtName2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 8 || e.KeyChar > 64 && e.KeyChar < 91 || e.KeyChar > 96 && e.KeyChar < 123 || e.KeyChar == 13) //alpabet, enter key, backspace key
+            {
+                //mnuStart.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("Please only enter alphabetical characters", "Error");
+                //event Handled is set to true, user input is suppressed and not reflected in the text box
+                e.Handled = true;
+                txtScore.Focus();
+            }
+
+            if (e.KeyChar == 13)
+            {
+                txtScore.Focus();
+            }
 
         }
     }

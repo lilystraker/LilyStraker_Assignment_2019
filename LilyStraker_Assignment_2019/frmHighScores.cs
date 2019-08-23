@@ -19,16 +19,20 @@ namespace LilyStraker_Assignment_2019
 
         string playerName = frmPlanetJamiro.jf1name;
         int playerScore = frmPlanetJamiro.endscore1;
-      //  string jf1score;
+
+        string playerName2 = frmPlanetJamiro.jf2name;
+        int playerScore2 = frmPlanetJamiro.endscore2;
 
 
-
-
-        public frmHighScores(string playerName, int playerScore)
+            public frmHighScores(string playerName, int playerScore, string playerName2, int playerScore2)
         {
             InitializeComponent();  
             lblPlayerName.Text = playerName;
             lblPlayerScore.Text = frmPlanetJamiro.endscore1.ToString();
+
+            lblPlayerName2.Text = playerName2;
+            lblPlayerScore2.Text = frmPlanetJamiro.endscore2.ToString();
+
 
             var reader = new StreamReader(binPath);
 
@@ -48,12 +52,22 @@ namespace LilyStraker_Assignment_2019
 
             if (int.Parse(lblPlayerScore.Text) > lowest_score)
             {
-                lblMessage1.Text = "You have made the Top Ten! Well Done!";
+                lblMessage1.Text = "Player one has made the top ten!\nWell done!";
                 highScores.Add(new HighScores(lblPlayerName.Text, int.Parse(lblPlayerScore.Text)));
             }
             else
             {
                 lblMessage1.Text = "Keep trying to make the top ten!";
+            }
+
+            if (int.Parse(lblPlayerScore2.Text) > lowest_score)
+            {
+                lblMessage2.Text = "Player two has made the top ten!\nWell done!";
+                highScores.Add(new HighScores(lblPlayerName2.Text, int.Parse(lblPlayerScore2.Text)));
+            }
+            else
+            {
+                lblMessage2.Text = "Keep trying to make the top ten, player two!";
             }
 
 

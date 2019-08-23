@@ -20,8 +20,10 @@ namespace LilyStraker_Assignment_2019
         Random xspeed = new Random();
 
         public static string jf1name;
-
         public static int endscore1;
+
+        public static string jf2name;
+        public static int endscore2;
 
         Random yc = new Random();
 
@@ -162,11 +164,58 @@ namespace LilyStraker_Assignment_2019
 
             if (alive == true)
             {
+   
                 jf1.drawJf1(g);
             }
+            if (alive == false)
+                {
+                    MessageBox.Show("Player2 wins!", "Game Over");
+
+                    tmrJf1.Enabled = false;
+                    tmrJf2.Enabled = false;
+                    tmrEnemy.Enabled = false;
+                    tmrBubble.Enabled = false;
+                    tmrBubbleRecharge.Enabled = false;
+                    tmrBubbleUse.Enabled = false;
+                    tmrBubble2.Enabled = false;
+                    tmrBubble2Recharge.Enabled = false;
+                    tmrBubble2Use.Enabled = false;
+                    tmrEgg.Enabled = false;
+                    lblScore1.Enabled = false;
+
+                    endscore1 = score1;
+                endscore2 = score2;
+
+                frmGameOver GOform = new frmGameOver();
+                    this.Close();
+                    GOform.Show();
+                }
             if (alive2 == true)
             {
                 jf2.drawJf2(g);
+            }
+            if (alive2 == false)
+            {
+                MessageBox.Show("Player1 wins!", "Game Over");
+
+                tmrJf1.Enabled = false;
+                tmrJf2.Enabled = false;
+                tmrEnemy.Enabled = false;
+                tmrBubble.Enabled = false;
+                tmrBubbleRecharge.Enabled = false;
+                tmrBubbleUse.Enabled = false;
+                tmrBubble2.Enabled = false;
+                tmrBubble2Recharge.Enabled = false;
+                tmrBubble2Use.Enabled = false;
+                tmrEgg.Enabled = false;
+                lblScore1.Enabled = false;
+
+                endscore1 = score1;
+                endscore2 = score2;
+
+                frmGameOver GOform = new frmGameOver();
+                this.Close();
+                GOform.Show();
             }
 
             foreach (Bubble b in bubbles)
@@ -326,8 +375,12 @@ namespace LilyStraker_Assignment_2019
         {
 
             jf1name = txtName1.Text;
+            jf2name = txtName2.Text;
 
-           
+            alive = true;
+            alive2 = true;
+
+
 
             if (txtName1.Text == "" || txtName2.Text == "" || txtLives1.Text == "")
             {
@@ -1083,6 +1136,7 @@ namespace LilyStraker_Assignment_2019
                 txtLives1.Text = lives1.ToString();
                 alive = false;
                 lblScore1.Enabled = false;
+            
 
             }
 
@@ -1095,33 +1149,35 @@ namespace LilyStraker_Assignment_2019
                   tmrBubble2Recharge.Enabled = false;
                   tmrBubble2Use.Enabled = false;
                 alive2 = false;
+
+             
             }
 
 
-            if (lives1 == 0 && lives2 == 0)
-            {
-                tmrJf1.Enabled = false;
-               tmrJf2.Enabled = false;
-                tmrEnemy.Enabled = false;
-                tmrBubble.Enabled = false;
-                tmrBubbleRecharge.Enabled = false;
-                tmrBubbleUse.Enabled = false;
-                tmrBubble2.Enabled = false;
-                tmrBubble2Recharge.Enabled = false;
-                tmrBubble2Use.Enabled = false;
-                tmrEgg.Enabled = false;
-                lblScore1.Enabled = false;
+         //   if (lives1 == 0 && lives2 == 0)
+         //   {
+           //     tmrJf1.Enabled = false;
+            //   tmrJf2.Enabled = false;
+              //  tmrEnemy.Enabled = false;
+                //tmrBubble.Enabled = false;
+            //    tmrBubbleRecharge.Enabled = false;
+        //        tmrBubbleUse.Enabled = false;
+          //      tmrBubble2.Enabled = false;
+            //    tmrBubble2Recharge.Enabled = false;
+              //  tmrBubble2Use.Enabled = false;
+      //          tmrEgg.Enabled = false;
+        //        lblScore1.Enabled = false;
 
-                endscore1 = score1;
+          //      endscore1 = score1;
                
              //   MessageBox.Show("Game Over");
-                frmGameOver GOform = new frmGameOver();
-                this.Close();
-                GOform.Show();
+             //   frmGameOver GOform = new frmGameOver();
+           //     this.Close();
+          //      GOform.Show();
 
             }
 
         }
 
     }
-}
+

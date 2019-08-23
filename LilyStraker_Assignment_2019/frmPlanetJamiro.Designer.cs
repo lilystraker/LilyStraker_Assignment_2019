@@ -36,6 +36,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Panel();
+            this.btnPlay1 = new System.Windows.Forms.PictureBox();
             this.btnPlay = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -77,16 +78,15 @@
             this.tmrBubble2 = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Recharge = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Use = new System.Windows.Forms.Timer(this.components);
-            this.btnPlay1 = new System.Windows.Forms.PictureBox();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.lblTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlBottomBar.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuStrip
@@ -152,6 +152,15 @@
             this.lblTitle.Size = new System.Drawing.Size(326, 90);
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
+            // 
+            // btnPlay1
+            // 
+            this.btnPlay1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
+            this.btnPlay1.Location = new System.Drawing.Point(123, 12);
+            this.btnPlay1.Name = "btnPlay1";
+            this.btnPlay1.Size = new System.Drawing.Size(100, 50);
+            this.btnPlay1.TabIndex = 2;
+            this.btnPlay1.TabStop = false;
             // 
             // btnPlay
             // 
@@ -583,15 +592,6 @@
             this.tmrBubble2Use.Interval = 500;
             this.tmrBubble2Use.Tick += new System.EventHandler(this.tmrBubble2Use_Tick);
             // 
-            // btnPlay1
-            // 
-            this.btnPlay1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
-            this.btnPlay1.Location = new System.Drawing.Point(123, 12);
-            this.btnPlay1.Name = "btnPlay1";
-            this.btnPlay1.Size = new System.Drawing.Size(100, 50);
-            this.btnPlay1.TabIndex = 2;
-            this.btnPlay1.TabStop = false;
-            // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -615,6 +615,7 @@
             this.mnuStrip.PerformLayout();
             this.pnlTopBar.ResumeLayout(false);
             this.lblTitle.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -624,7 +625,6 @@
             this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
