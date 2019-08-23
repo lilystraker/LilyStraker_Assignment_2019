@@ -73,9 +73,9 @@ namespace LilyStraker_Assignment_2019
 
             if (move1 == "up")
             {
-                if (jf1Rec.Location.Y < 10)
+                if (jf1Rec.Location.Y < 50)
                 {
-                    y = 0;
+                    y = 40;
                     jf1Rec.Location = new Point(x, y);
                 }
                 else

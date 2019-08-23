@@ -19,6 +19,10 @@ namespace LilyStraker_Assignment_2019
         Random yspeed = new Random();
         Random xspeed = new Random();
 
+        public static string jf1name = "blah";
+
+        public static int endscore1 = 5;
+
         Random yc = new Random();
 
         Jf1 jf1 = new Jf1();
@@ -320,6 +324,11 @@ namespace LilyStraker_Assignment_2019
 
         private void mnuStart_Click(object sender, EventArgs e)
         {
+
+            jf1name = txtName1.Text;
+
+           
+
             if (txtName1.Text == "" || txtName2.Text == "" || txtLives1.Text == "")
             {
                 MessageBox.Show("Check that both names have been entered and the lives have been set.", "Error!");
@@ -334,9 +343,6 @@ namespace LilyStraker_Assignment_2019
                 tmrBubble2.Enabled = false;
                 tmrBubble2Use.Enabled = false;
                 tmrBubble2Recharge.Enabled = false;
-
-                
-
             }
             else
             {
@@ -707,8 +713,50 @@ namespace LilyStraker_Assignment_2019
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
+
+            tmrJf1.Enabled = false;
+            tmrJf2.Enabled = false;
+            tmrEnemy.Enabled = false;
+            tmrBubble.Enabled = false;
+            tmrBubbleRecharge.Enabled = false;
+            tmrBubbleUse.Enabled = false;
+            tmrBubble2.Enabled = false;
+            tmrBubble2Recharge.Enabled = false;
+            tmrBubble2Use.Enabled = false;
+            tmrEgg.Enabled = false;
+
+
+            DialogResult result1 = MessageBox.Show("Are you sure you want to exit to the main menu?",
+                  "Already going?",
+                   MessageBoxButtons.YesNo,
+                  MessageBoxIcon.Warning,
+                  MessageBoxDefaultButton.Button2);
+        
+
+            if (result1 == DialogResult.Yes)
+            {
+               
+
+                frmHome homeform = new frmHome();
+                //Application.Exit();
+                this.Close();
+                homeform.Show();
+            }
+
+            if (result1 == DialogResult.No)
+            {
+                tmrJf1.Enabled = true;
+                tmrJf2.Enabled = true;
+                tmrEnemy.Enabled = true;
+                tmrBubble.Enabled = true;
+                tmrBubbleRecharge.Enabled = true;
+                tmrBubbleUse.Enabled = true;
+                tmrBubble2.Enabled = true;
+                tmrBubble2Recharge.Enabled = true;
+                tmrBubble2Use.Enabled = true;
+                tmrEgg.Enabled = true;
+            }
+            }
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
@@ -931,21 +979,33 @@ namespace LilyStraker_Assignment_2019
             {
                 enemy[i].moveEnemy();
 
-                if (jf1.jf1Rec.IntersectsWith(enemy[i].enemyRec))
-                {
-                    //reset planet[i] back to top of panel
-                    enemy[i].y = 30; // set  y value of planetRec
-                    lives1 -= 1;// lose a life
-                    txtLives1.Text = lives1.ToString();// display number of lives
-                    checkLives();
+                if (tmrJf1.Enabled == true)
+                    {
+
+                    if (jf1.jf1Rec.IntersectsWith(enemy[i].enemyRec))
+                    {
+                        //reset planet[i] back to top of panel
+                        enemy[i].y = 30; // set  y value of planetRec
+                        lives1 -= 1;// lose a life
+                        txtLives1.Text = lives1.ToString();// display number of lives
+                        checkLives();
+                    }
                 }
-                if (jf2.jf2Rec.IntersectsWith(enemy[i].enemyRec))
+
+                if (tmrJf2.Enabled == true)
                 {
-                    //reset planet[i] back to top of panel
-                    enemy[i].y = 30; // set  y value of planetRec
-                    lives2 -= 1;// lose a life
-                    txtLives2.Text = lives2.ToString();// display number of lives
-                    checkLives();
+                    if (jf2.jf2Rec.IntersectsWith(enemy[i].enemyRec))
+                    {
+                        //reset planet[i] back to top of panel
+                        enemy[i].y = 30; // set  y value of planetRec
+                        lives2 -= 1;// lose a life
+                        txtLives2.Text = lives2.ToString();// display number of lives
+                        checkLives();
+                    }
+                }
+                else
+                {
+
                 }
 
                 foreach (Enemy n in enemy)
@@ -1022,7 +1082,8 @@ namespace LilyStraker_Assignment_2019
             //    tmrBubbleUse.Enabled = false;
                 txtLives1.Text = lives1.ToString();
                 alive = false;
-                
+                lblScore1.Enabled = false;
+
             }
 
             if (lives2 <= 0)
@@ -1049,6 +1110,10 @@ namespace LilyStraker_Assignment_2019
                 tmrBubble2Recharge.Enabled = false;
                 tmrBubble2Use.Enabled = false;
                 tmrEgg.Enabled = false;
+                lblScore1.Enabled = false;
+
+                endscore1 = score1;
+               
              //   MessageBox.Show("Game Over");
                 frmGameOver GOform = new frmGameOver();
                 this.Close();

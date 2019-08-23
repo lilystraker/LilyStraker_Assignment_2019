@@ -20,7 +20,7 @@ namespace LilyStraker_Assignment_2019
         public Enemy(int spacing)
         {
             x = spacing;
-            y = 10;
+            y = 0;
             width = 50;
             height = 50;
             enemyImage = Image.FromFile("Planet.png");  
