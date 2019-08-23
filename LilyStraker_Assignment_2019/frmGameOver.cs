@@ -16,7 +16,7 @@ namespace LilyStraker_Assignment_2019
         string name1 = frmPlanetJamiro.jf1name;
         int score1 = frmPlanetJamiro.endscore1;
         string jf1score;
-        string jf1score;
+
 
 
         public frmGameOver()
@@ -40,7 +40,7 @@ namespace LilyStraker_Assignment_2019
             }
             else
             {
-                frmHighScores frmHighScore2 = new frmHighScores(txtName.Text, txtScore.Text);
+                frmHighScores frmHighScore2 = new frmHighScores(txtName.Text, Int32.Parse(lblScore1.Text));
                 //  Hide();
                 frmHighScore2.ShowDialog();
             }

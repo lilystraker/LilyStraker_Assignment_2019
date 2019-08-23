@@ -19,9 +19,9 @@ namespace LilyStraker_Assignment_2019
         Random yspeed = new Random();
         Random xspeed = new Random();
 
-        public static string jf1name = "blah";
+        public static string jf1name;
 
-        public static int endscore1 = 5;
+        public static int endscore1;
 
         Random yc = new Random();
 
