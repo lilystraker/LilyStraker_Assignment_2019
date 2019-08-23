@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmGameOver));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -105,7 +106,7 @@
             this.btnCheck.BackColor = System.Drawing.Color.White;
             this.btnCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCheck.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCheck.Location = new System.Drawing.Point(246, 432);
+            this.btnCheck.Location = new System.Drawing.Point(452, 431);
             this.btnCheck.Name = "btnCheck";
             this.btnCheck.Size = new System.Drawing.Size(120, 23);
             this.btnCheck.TabIndex = 4;
@@ -246,12 +247,13 @@
             this.btnCheck2.BackColor = System.Drawing.Color.White;
             this.btnCheck2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCheck2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCheck2.Location = new System.Drawing.Point(653, 431);
+            this.btnCheck2.Location = new System.Drawing.Point(12, 626);
             this.btnCheck2.Name = "btnCheck2";
             this.btnCheck2.Size = new System.Drawing.Size(120, 23);
             this.btnCheck2.TabIndex = 17;
             this.btnCheck2.Text = "Check leaderboard";
             this.btnCheck2.UseVisualStyleBackColor = false;
+            this.btnCheck2.Visible = false;
             this.btnCheck2.Click += new System.EventHandler(this.BtnCheck2_Click);
             // 
             // txtName2
@@ -316,6 +318,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmGameOver";
             this.Text = "frmGameOver";
             this.Load += new System.EventHandler(this.frmGameOver_Load);

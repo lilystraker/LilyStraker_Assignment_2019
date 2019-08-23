@@ -78,6 +78,8 @@
             this.tmrBubble2 = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Recharge = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Use = new System.Windows.Forms.Timer(this.components);
+            this.lblCharge1 = new System.Windows.Forms.Label();
+            this.lblCharge2 = new System.Windows.Forms.Label();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.lblTitle.SuspendLayout();
@@ -379,6 +381,8 @@
             // 
             this.pnlBottomBar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlBottomBar.BackColor = System.Drawing.Color.Black;
+            this.pnlBottomBar.Controls.Add(this.lblCharge2);
+            this.pnlBottomBar.Controls.Add(this.lblCharge1);
             this.pnlBottomBar.Controls.Add(this.panel8);
             this.pnlBottomBar.Controls.Add(this.panel6);
             this.pnlBottomBar.Location = new System.Drawing.Point(0, 570);
@@ -592,6 +596,28 @@
             this.tmrBubble2Use.Interval = 500;
             this.tmrBubble2Use.Tick += new System.EventHandler(this.tmrBubble2Use_Tick);
             // 
+            // lblCharge1
+            // 
+            this.lblCharge1.AutoSize = true;
+            this.lblCharge1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCharge1.ForeColor = System.Drawing.Color.White;
+            this.lblCharge1.Location = new System.Drawing.Point(233, 29);
+            this.lblCharge1.Name = "lblCharge1";
+            this.lblCharge1.Size = new System.Drawing.Size(87, 24);
+            this.lblCharge1.TabIndex = 11;
+            this.lblCharge1.Text = "Charging";
+            // 
+            // lblCharge2
+            // 
+            this.lblCharge2.AutoSize = true;
+            this.lblCharge2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCharge2.ForeColor = System.Drawing.Color.White;
+            this.lblCharge2.Location = new System.Drawing.Point(677, 29);
+            this.lblCharge2.Name = "lblCharge2";
+            this.lblCharge2.Size = new System.Drawing.Size(87, 24);
+            this.lblCharge2.TabIndex = 13;
+            this.lblCharge2.Text = "Charging";
+            // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -621,6 +647,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnlBottomBar.ResumeLayout(false);
+            this.pnlBottomBar.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -680,6 +707,8 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.PictureBox btnPlay1;
+        private System.Windows.Forms.Label lblCharge2;
+        private System.Windows.Forms.Label lblCharge1;
     }
 }
 

@@ -736,7 +736,7 @@ namespace LilyStraker_Assignment_2019
 
         private void tmrBubble2Recharge_Tick(object sender, EventArgs e)
         {
-            lblBubbletime2.Text = "Recharging Bubbles";
+            lblCharge2.Text = "Recharging\nBubbles";
             bubbletime2--;
             lblBubbletime2.Text = bubbletime2.ToString();
 
@@ -746,7 +746,7 @@ namespace LilyStraker_Assignment_2019
                 bubblenumber2 = 10;
                 lblBubbleCount2.Text = bubblenumber2.ToString();
                 bubbletime2 = 3;
-                lblBubbletime2.Text = "";
+                lblCharge2.Text = "Charged";
             }
         }
 
@@ -868,7 +868,7 @@ namespace LilyStraker_Assignment_2019
 
         private void tmrBubbleRecharge_Tick(object sender, EventArgs e)
         {
-            lblBubbletime.Text = "Recharging Bubbles";
+            lblCharge1.Text = "Recharging\nBubbles";
             bubbletime--;
             lblBubbletime.Text = bubbletime.ToString();
 
@@ -878,7 +878,7 @@ namespace LilyStraker_Assignment_2019
                 bubblenumber = 10;
                 lblBubbleCount.Text = bubblenumber.ToString();
                 bubbletime = 3;
-                lblBubbletime.Text = "";
+                lblCharge1.Text = "Charged";
             }
 
         }

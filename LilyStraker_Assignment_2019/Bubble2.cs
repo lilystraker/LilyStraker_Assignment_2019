@@ -48,11 +48,11 @@ namespace LilyStraker_Assignment_2019
             //find the centre point of spaceRec
             centreBubble2 = new Point(bubble2Rec.X + width / 2, bubble2Rec.Y + width / 2);
             //instantiate a Matrix object called matrix
-            matrix = new Matrix();
+          //  matrix = new Matrix();
             //rotate the matrix (spaceRec) about its centre
-            matrix.RotateAt(rotationAngle2, centreBubble2);
+         //   matrix.RotateAt(rotationAngle2, centreBubble2);
             //Set the current draw location to the rotated matrix point
-            g.Transform = matrix;
+         //   g.Transform = matrix;
             //draw the spaceship
 
 

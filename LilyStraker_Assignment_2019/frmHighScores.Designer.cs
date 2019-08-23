@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Label lblMessage;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHighScores));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -152,6 +153,7 @@
             this.ListBoxName.Name = "ListBoxName";
             this.ListBoxName.Size = new System.Drawing.Size(118, 212);
             this.ListBoxName.TabIndex = 8;
+            this.ListBoxName.SelectedIndexChanged += new System.EventHandler(this.ListBoxName_SelectedIndexChanged);
             // 
             // ListBoxScore
             // 
@@ -262,8 +264,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmHighScores";
             this.Text = "frmHighScores";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmHighScores_FormClosing);
             this.Load += new System.EventHandler(this.frmHighScores_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

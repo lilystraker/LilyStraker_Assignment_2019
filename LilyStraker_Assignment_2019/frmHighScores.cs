@@ -57,7 +57,7 @@ namespace LilyStraker_Assignment_2019
             }
             else
             {
-                lblMessage1.Text = "Keep trying to make the top ten!";
+                lblMessage1.Text = "Keep trying to make the top ten,\nplayer one!";
             }
 
             if (int.Parse(lblPlayerScore2.Text) > lowest_score)
@@ -67,7 +67,7 @@ namespace LilyStraker_Assignment_2019
             }
             else
             {
-                lblMessage2.Text = "Keep trying to make the top ten, player two!";
+                lblMessage2.Text = "Keep trying to make the top ten,\nplayer two!";
             }
 
 
@@ -120,6 +120,19 @@ namespace LilyStraker_Assignment_2019
         private void lblPlayerName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ListBoxName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmHighScores_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SaveHighScores();
+           // frmGameOver frmGame2 = new frmGameOver();
+          //  Hide();
+           // frmGame2.ShowDialog();
         }
     }
 }
