@@ -62,6 +62,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -74,6 +75,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -86,6 +88,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,6 +101,7 @@
             // 
             // lblPlayerName
             // 
+            this.lblPlayerName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPlayerName.AutoSize = true;
             this.lblPlayerName.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerName.ForeColor = System.Drawing.Color.White;
@@ -110,6 +114,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,6 +127,7 @@
             // 
             // lblPlayerScore
             // 
+            this.lblPlayerScore.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPlayerScore.AutoSize = true;
             this.lblPlayerScore.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerScore.ForeColor = System.Drawing.Color.White;
@@ -146,6 +152,7 @@
             // 
             // ListBoxName
             // 
+            this.ListBoxName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ListBoxName.BackColor = System.Drawing.Color.Black;
             this.ListBoxName.ForeColor = System.Drawing.Color.White;
             this.ListBoxName.FormattingEnabled = true;
@@ -157,6 +164,7 @@
             // 
             // ListBoxScore
             // 
+            this.ListBoxScore.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ListBoxScore.BackColor = System.Drawing.Color.Black;
             this.ListBoxScore.ForeColor = System.Drawing.Color.White;
             this.ListBoxScore.FormattingEnabled = true;
@@ -167,6 +175,7 @@
             // 
             // lblMessage1
             // 
+            this.lblMessage1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMessage1.AutoSize = true;
             this.lblMessage1.BackColor = System.Drawing.Color.Transparent;
             this.lblMessage1.ForeColor = System.Drawing.Color.White;
@@ -177,6 +186,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -189,6 +199,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,6 +212,7 @@
             // 
             // lblPlayerName2
             // 
+            this.lblPlayerName2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPlayerName2.AutoSize = true;
             this.lblPlayerName2.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerName2.ForeColor = System.Drawing.Color.White;
@@ -212,6 +224,7 @@
             // 
             // lblPlayerScore2
             // 
+            this.lblPlayerScore2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblPlayerScore2.AutoSize = true;
             this.lblPlayerScore2.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayerScore2.ForeColor = System.Drawing.Color.White;
@@ -233,6 +246,7 @@
             // 
             // lblMessage2
             // 
+            this.lblMessage2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblMessage2.AutoSize = true;
             this.lblMessage2.BackColor = System.Drawing.Color.Transparent;
             this.lblMessage2.ForeColor = System.Drawing.Color.White;

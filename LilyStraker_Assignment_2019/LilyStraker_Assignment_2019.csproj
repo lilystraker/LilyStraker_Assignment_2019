@@ -175,5 +175,11 @@
   <ItemGroup>
     <None Include="bin\Debug\jellyfish.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playerone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\playertwo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

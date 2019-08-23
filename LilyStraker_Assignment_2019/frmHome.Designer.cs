@@ -125,7 +125,7 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel1.Location = new System.Drawing.Point(163, 78);
+            this.panel1.Location = new System.Drawing.Point(165, 78);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(671, 142);
             this.panel1.TabIndex = 6;
@@ -155,7 +155,7 @@
             this.btnInstructions1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.instructions;
             this.btnInstructions1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnInstructions1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInstructions1.Location = new System.Drawing.Point(385, 409);
+            this.btnInstructions1.Location = new System.Drawing.Point(377, 409);
             this.btnInstructions1.Name = "btnInstructions1";
             this.btnInstructions1.Size = new System.Drawing.Size(247, 64);
             this.btnInstructions1.TabIndex = 10;
@@ -168,7 +168,7 @@
             this.btnPlay1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
             this.btnPlay1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnPlay1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPlay1.Location = new System.Drawing.Point(439, 312);
+            this.btnPlay1.Location = new System.Drawing.Point(432, 312);
             this.btnPlay1.Name = "btnPlay1";
             this.btnPlay1.Size = new System.Drawing.Size(138, 60);
             this.btnPlay1.TabIndex = 9;
@@ -183,7 +183,7 @@
             this.btnPlay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.ForeColor = System.Drawing.Color.Transparent;
-            this.btnPlay.Location = new System.Drawing.Point(451, 312);
+            this.btnPlay.Location = new System.Drawing.Point(443, 312);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(126, 49);
             this.btnPlay.TabIndex = 0;
