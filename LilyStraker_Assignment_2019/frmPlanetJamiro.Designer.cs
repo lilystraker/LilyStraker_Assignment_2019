@@ -36,8 +36,6 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Panel();
-            this.btnPlay1 = new System.Windows.Forms.PictureBox();
-            this.btnPlay = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtLives1 = new System.Windows.Forms.TextBox();
@@ -55,6 +53,8 @@
             this.labelName2 = new System.Windows.Forms.Label();
             this.labelScore2 = new System.Windows.Forms.Label();
             this.pnlBottomBar = new System.Windows.Forms.Panel();
+            this.lblCharge2 = new System.Windows.Forms.Label();
+            this.lblCharge1 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lblBubbletime2 = new System.Windows.Forms.Label();
             this.lblBubbleCount2 = new System.Windows.Forms.Label();
@@ -78,17 +78,17 @@
             this.tmrBubble2 = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Recharge = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Use = new System.Windows.Forms.Timer(this.components);
-            this.lblCharge1 = new System.Windows.Forms.Label();
-            this.lblCharge2 = new System.Windows.Forms.Label();
+            this.btnPlay = new System.Windows.Forms.Button();
+            this.btnPlay1 = new System.Windows.Forms.PictureBox();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.lblTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlBottomBar.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuStrip
@@ -154,29 +154,6 @@
             this.lblTitle.Size = new System.Drawing.Size(326, 90);
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
-            // 
-            // btnPlay1
-            // 
-            this.btnPlay1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
-            this.btnPlay1.Location = new System.Drawing.Point(123, 12);
-            this.btnPlay1.Name = "btnPlay1";
-            this.btnPlay1.Size = new System.Drawing.Size(100, 50);
-            this.btnPlay1.TabIndex = 2;
-            this.btnPlay1.TabStop = false;
-            // 
-            // btnPlay
-            // 
-            this.btnPlay.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(122, 13);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(101, 49);
-            this.btnPlay.TabIndex = 1;
-            this.btnPlay.Text = "Play";
-            this.btnPlay.UseVisualStyleBackColor = false;
-            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // panel1
             // 
@@ -391,6 +368,28 @@
             this.pnlBottomBar.TabIndex = 3;
             this.pnlBottomBar.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlBottomBar_Paint);
             // 
+            // lblCharge2
+            // 
+            this.lblCharge2.AutoSize = true;
+            this.lblCharge2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCharge2.ForeColor = System.Drawing.Color.White;
+            this.lblCharge2.Location = new System.Drawing.Point(677, 29);
+            this.lblCharge2.Name = "lblCharge2";
+            this.lblCharge2.Size = new System.Drawing.Size(87, 24);
+            this.lblCharge2.TabIndex = 13;
+            this.lblCharge2.Text = "Charging";
+            // 
+            // lblCharge1
+            // 
+            this.lblCharge1.AutoSize = true;
+            this.lblCharge1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCharge1.ForeColor = System.Drawing.Color.White;
+            this.lblCharge1.Location = new System.Drawing.Point(233, 29);
+            this.lblCharge1.Name = "lblCharge1";
+            this.lblCharge1.Size = new System.Drawing.Size(87, 24);
+            this.lblCharge1.TabIndex = 11;
+            this.lblCharge1.Text = "Charging";
+            // 
             // panel8
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -596,27 +595,28 @@
             this.tmrBubble2Use.Interval = 500;
             this.tmrBubble2Use.Tick += new System.EventHandler(this.tmrBubble2Use_Tick);
             // 
-            // lblCharge1
+            // btnPlay
             // 
-            this.lblCharge1.AutoSize = true;
-            this.lblCharge1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCharge1.ForeColor = System.Drawing.Color.White;
-            this.lblCharge1.Location = new System.Drawing.Point(233, 29);
-            this.lblCharge1.Name = "lblCharge1";
-            this.lblCharge1.Size = new System.Drawing.Size(87, 24);
-            this.lblCharge1.TabIndex = 11;
-            this.lblCharge1.Text = "Charging";
+            this.btnPlay.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.Color.White;
+            this.btnPlay.Location = new System.Drawing.Point(122, 13);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(101, 49);
+            this.btnPlay.TabIndex = 1;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
-            // lblCharge2
+            // btnPlay1
             // 
-            this.lblCharge2.AutoSize = true;
-            this.lblCharge2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCharge2.ForeColor = System.Drawing.Color.White;
-            this.lblCharge2.Location = new System.Drawing.Point(677, 29);
-            this.lblCharge2.Name = "lblCharge2";
-            this.lblCharge2.Size = new System.Drawing.Size(87, 24);
-            this.lblCharge2.TabIndex = 13;
-            this.lblCharge2.Text = "Charging";
+            this.btnPlay1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
+            this.btnPlay1.Location = new System.Drawing.Point(123, 12);
+            this.btnPlay1.Name = "btnPlay1";
+            this.btnPlay1.Size = new System.Drawing.Size(100, 50);
+            this.btnPlay1.TabIndex = 2;
+            this.btnPlay1.TabStop = false;
             // 
             // frmPlanetJamiro
             // 
@@ -641,7 +641,6 @@
             this.mnuStrip.PerformLayout();
             this.pnlTopBar.ResumeLayout(false);
             this.lblTitle.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -652,6 +651,7 @@
             this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -705,10 +705,10 @@
         private System.Windows.Forms.Timer tmrBubble2Recharge;
         private System.Windows.Forms.Timer tmrBubble2Use;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.Button btnPlay;
-        private System.Windows.Forms.PictureBox btnPlay1;
         private System.Windows.Forms.Label lblCharge2;
         private System.Windows.Forms.Label lblCharge1;
+        private System.Windows.Forms.PictureBox btnPlay1;
+        private System.Windows.Forms.Button btnPlay;
     }
 }
 

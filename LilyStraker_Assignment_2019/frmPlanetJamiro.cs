@@ -524,7 +524,7 @@ namespace LilyStraker_Assignment_2019
             if (txtName2.Text.Equals(null) == true || txtName2.Text.Equals("") == true)
             {
                 txtName2.Text = "Player2's name";
-                txtName2.ForeColor = Color.Gray;
+                
             }
         }
 
@@ -852,7 +852,6 @@ namespace LilyStraker_Assignment_2019
                 tmrBubble2.Enabled = true;
                 tmrBubble2Recharge.Enabled = true;
                 tmrBubble2Use.Enabled = true;
-
 
                 txtName1.Enabled = false;
                 txtName2.Enabled = false;
