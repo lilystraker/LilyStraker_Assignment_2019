@@ -36,6 +36,8 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Panel();
+            this.btnPlay1 = new System.Windows.Forms.PictureBox();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtLives1 = new System.Windows.Forms.TextBox();
@@ -78,17 +80,15 @@
             this.tmrBubble2 = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Recharge = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Use = new System.Windows.Forms.Timer(this.components);
-            this.btnPlay = new System.Windows.Forms.Button();
-            this.btnPlay1 = new System.Windows.Forms.PictureBox();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.lblTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlBottomBar.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuStrip
@@ -154,6 +154,29 @@
             this.lblTitle.Size = new System.Drawing.Size(326, 90);
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
+            // 
+            // btnPlay1
+            // 
+            this.btnPlay1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
+            this.btnPlay1.Location = new System.Drawing.Point(123, 12);
+            this.btnPlay1.Name = "btnPlay1";
+            this.btnPlay1.Size = new System.Drawing.Size(100, 50);
+            this.btnPlay1.TabIndex = 2;
+            this.btnPlay1.TabStop = false;
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.Color.White;
+            this.btnPlay.Location = new System.Drawing.Point(122, 13);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(101, 49);
+            this.btnPlay.TabIndex = 1;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // panel1
             // 
@@ -375,9 +398,9 @@
             this.lblCharge2.ForeColor = System.Drawing.Color.White;
             this.lblCharge2.Location = new System.Drawing.Point(677, 29);
             this.lblCharge2.Name = "lblCharge2";
-            this.lblCharge2.Size = new System.Drawing.Size(87, 24);
+            this.lblCharge2.Size = new System.Drawing.Size(83, 24);
             this.lblCharge2.TabIndex = 13;
-            this.lblCharge2.Text = "Charging";
+            this.lblCharge2.Text = "Charged";
             // 
             // lblCharge1
             // 
@@ -386,9 +409,9 @@
             this.lblCharge1.ForeColor = System.Drawing.Color.White;
             this.lblCharge1.Location = new System.Drawing.Point(233, 29);
             this.lblCharge1.Name = "lblCharge1";
-            this.lblCharge1.Size = new System.Drawing.Size(87, 24);
+            this.lblCharge1.Size = new System.Drawing.Size(83, 24);
             this.lblCharge1.TabIndex = 11;
-            this.lblCharge1.Text = "Charging";
+            this.lblCharge1.Text = "Charged";
             // 
             // panel8
             // 
@@ -560,13 +583,11 @@
             // 
             // tmrBubbleRecharge
             // 
-            this.tmrBubbleRecharge.Enabled = true;
             this.tmrBubbleRecharge.Interval = 1000;
             this.tmrBubbleRecharge.Tick += new System.EventHandler(this.tmrBubbleRecharge_Tick);
             // 
             // tmrBubbleUse
             // 
-            this.tmrBubbleUse.Enabled = true;
             this.tmrBubbleUse.Interval = 500;
             this.tmrBubbleUse.Tick += new System.EventHandler(this.tmrBubbleUse_Tick);
             // 
@@ -595,29 +616,6 @@
             this.tmrBubble2Use.Interval = 500;
             this.tmrBubble2Use.Tick += new System.EventHandler(this.tmrBubble2Use_Tick);
             // 
-            // btnPlay
-            // 
-            this.btnPlay.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(122, 13);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(101, 49);
-            this.btnPlay.TabIndex = 1;
-            this.btnPlay.Text = "Play";
-            this.btnPlay.UseVisualStyleBackColor = false;
-            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
-            // 
-            // btnPlay1
-            // 
-            this.btnPlay1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
-            this.btnPlay1.Location = new System.Drawing.Point(123, 12);
-            this.btnPlay1.Name = "btnPlay1";
-            this.btnPlay1.Size = new System.Drawing.Size(100, 50);
-            this.btnPlay1.TabIndex = 2;
-            this.btnPlay1.TabStop = false;
-            // 
             // frmPlanetJamiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -641,6 +639,7 @@
             this.mnuStrip.PerformLayout();
             this.pnlTopBar.ResumeLayout(false);
             this.lblTitle.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -651,7 +650,6 @@
             this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
