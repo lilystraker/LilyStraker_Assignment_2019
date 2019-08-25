@@ -34,7 +34,7 @@ namespace LilyStraker_Assignment_2019
         List<Bubble2> bubbles2 = new List<Bubble2>();
         List<Egg> eggs = new List<Egg>();
 
-        bool left, right, up, down, left2, right2, up2, down2, shoot1, shoot2;
+        bool left, right, up, down, left2, right2, up2, down2, shoot2;
         int score1, lives1, score2, lives2;
         string move1;
         string move2;
@@ -347,7 +347,7 @@ namespace LilyStraker_Assignment_2019
             if (e.KeyData == Keys.W) { up2 = true; }
             if (e.KeyData == Keys.S) { down2 = true; }
             if (e.KeyData == Keys.Space) { shoot2 = true; }
-            if (e.KeyData == Keys.Enter) { shoot1 = true; }
+   
 
 
             if (bubblenumber2 == 0)
@@ -369,23 +369,6 @@ namespace LilyStraker_Assignment_2019
         
             
 
-           if (bubbleuse == 0)
-            {
-                tmrBubbleUse.Start();
-            }
-
-            if (bubblenumber == 0)
-            {
-                tmrBubbleRecharge.Start();
-            }
-
-            if (shoot1 && bubblenumber > 0 && bubbleuse > 0)
-            {
-                bubblenumber--;
-                bubbleuse -= 1;
-                lblBubbleCount.Text = bubblenumber.ToString();
-                bubbles.Add(new Bubble(jf1.jf1Rec));
-            }
 
     
     
@@ -629,19 +612,15 @@ namespace LilyStraker_Assignment_2019
 
         private void pnlBG_MouseDown(object sender, MouseEventArgs e)
         {
-             //   if (e.Button == MouseButtons.Left)
-             //    {
-            //         bubbles.Add(new Bubble(jf1.jf1Rec));
-            //     }
-
-         /*   if (tmrBubbleUse.Enabled == true || tmrBubble2Use.Enabled == true)
+            
+            if (tmrBubbleUse.Enabled == true || tmrBubble2Use.Enabled == true)
             {
                 if (bubblenumber == 0)
                 {
                     tmrBubbleRecharge.Start();
                 }
 
-                if (shoot1 && bubblenumber > 0 && bubbleuse > 0)
+                if (bubblenumber > 0 && bubbleuse > 0)
                 {
                     bubblenumber--;
                     bubbleuse -= 1;
@@ -653,7 +632,7 @@ namespace LilyStraker_Assignment_2019
                     tmrBubbleUse.Start();
                 }
             }
-            */
+            
         }
 
         private void tmrBubble_Tick(object sender, EventArgs e)
@@ -979,7 +958,7 @@ namespace LilyStraker_Assignment_2019
             if (e.KeyData == Keys.W) { up2 = false; }
             if (e.KeyData == Keys.S) { down2 = false; }
             if (e.KeyData == Keys.Space) { shoot2 = false; }
-            if (e.KeyData == Keys.Enter) { shoot1 = false; }
+         
         }
 
         private void TmrJf1_Tick(object sender, EventArgs e)
