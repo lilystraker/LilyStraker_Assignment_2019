@@ -379,8 +379,6 @@ namespace LilyStraker_Assignment_2019
             if (e.KeyData == Keys.W) { up2 = true; }
             if (e.KeyData == Keys.S) { down2 = true; }
             if (e.KeyData == Keys.Space) { shoot2 = true; }
-   
-
 
             if (bubblenumber2 == 0)
             {
@@ -394,17 +392,15 @@ namespace LilyStraker_Assignment_2019
                 lblBubbleCount2.Text = bubblenumber2.ToString();
                 bubbles2.Add(new Bubble2(jf2.jf2Rec));
             }
+            if (bubblenumber2 == 0)
+            {
+                tmrBubble2Recharge.Start();
+            }
             if (bubbleuse2 == 0)
             {
                 tmrBubble2Use.Start();
             }
-        
-            
 
-
-    
-    
-    
         }
 
         private void mnuStart_Click(object sender, EventArgs e)
@@ -482,7 +478,7 @@ namespace LilyStraker_Assignment_2019
 
             btnPlay.Visible = false;
             lblTitle.Visible = true;
-            
+            //
 
         }
 
@@ -644,27 +640,24 @@ namespace LilyStraker_Assignment_2019
 
         private void pnlBG_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            
+            if (tmrBubbleUse.Enabled == true || tmrBubble2Use.Enabled == true)
             {
-
-                if (tmrBubbleUse.Enabled == true || tmrBubble2Use.Enabled == true)
+                if (bubblenumber == 0)
                 {
-                    if (bubblenumber == 0)
-                    {
-                        tmrBubbleRecharge.Start();
-                    }
+                    tmrBubbleRecharge.Start();
+                }
 
-                    if (bubblenumber > 0 && bubbleuse > 0)
-                    {
-                        bubblenumber--;
-                        bubbleuse -= 1;
-                        lblBubbleCount.Text = bubblenumber.ToString();
-                        bubbles.Add(new Bubble(jf1.jf1Rec));
-                    }
-                    if (bubbleuse == 0)
-                    {
-                        tmrBubbleUse.Start();
-                    }
+                if (bubblenumber > 0 && bubbleuse > 0)
+                {
+                    bubblenumber--;
+                    bubbleuse -= 1;
+                    lblBubbleCount.Text = bubblenumber.ToString();
+                    bubbles.Add(new Bubble(jf1.jf1Rec));
+                }
+                if (bubbleuse == 0)
+                {
+                    tmrBubbleUse.Start();
                 }
             }
             
@@ -993,7 +986,6 @@ namespace LilyStraker_Assignment_2019
             if (e.KeyData == Keys.W) { up2 = false; }
             if (e.KeyData == Keys.S) { down2 = false; }
             if (e.KeyData == Keys.Space) { shoot2 = false; }
-         
         }
 
         private void TmrJf1_Tick(object sender, EventArgs e)
@@ -1163,8 +1155,8 @@ namespace LilyStraker_Assignment_2019
                 lives1 = 0;
            //     tmrJf1.Enabled = false;
                 tmrBubble.Enabled = false;
-                tmrBubbleRecharge.Enabled = false;
-                tmrBubbleUse.Enabled = false;
+             //   tmrBubbleRecharge.Enabled = false;
+            //    tmrBubbleUse.Enabled = false;
                 txtLives1.Text = lives1.ToString();
                 alive = false;
                 lblScore1.Enabled = false;
