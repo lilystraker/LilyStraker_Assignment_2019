@@ -138,6 +138,38 @@ namespace LilyStraker_Assignment_2019
                 int yrndmspeed = yspeed.Next(5, 10);
                 enemy[i].y += yrndmspeed;
                 enemy[i].drawEnemy(g);
+
+                if ((score1 >= 0 && score1 < 30) || (score2 >= 0 && score2 < 30)) //If either player1 or player2's scores is between 0 and 30
+                {
+                    int rspeed = yspeed.Next(1, 5); //set the speed of each planet to a random value between 5 and 20
+                    enemy[i].y += rspeed;
+                }
+
+                if ((score1 >= 30 && score1 < 50) || (score2 >= 30 && score2 < 50))//If either player1 or player2's scores is between 30 and 50
+                {
+                    int rspeed = yspeed.Next(5, 10);//set the speed of each planet to a random value between 10 and 30
+                    enemy[i].y += rspeed;
+                }
+
+
+                if ((score2 >= 50 && score2 < 100) || (score1 >= 50 && score1 < 100))//If either player1 or player2's scores is between 50 and 100
+                {
+                    int rspeed = yspeed.Next(10, 20);//set the speed of each planet to a random value between 15 and 35
+                    enemy[i].y += rspeed;
+                }
+
+                if ((score2 >= 100 && score2 < 200) || (score1 >= 100 && score1 < 200))//If either player1 or player2's scores is between 100 and 200
+                {
+                    int rspeed = yspeed.Next(20, 40);//set the speed of each planet to a random value between 20 and 40
+                    enemy[i].y += rspeed;
+                }
+
+                if ((score2 >= 200) || (score1 >= 200)) //If either player1 or player2's scores is greater than 200
+                {
+                    int rspeed = yspeed.Next(30, 50);//set the speed of each planet to a random value between 30 and 50
+                    enemy[i].y += rspeed;
+                }
+
             }
             for (int i = 0; i < 2; i++)
             {
@@ -608,11 +640,7 @@ namespace LilyStraker_Assignment_2019
 
         private void pnlBG_MouseDown(object sender, MouseEventArgs e)
         {
-            //    if (e.Button == MouseButtons.Left)
-            //     {
-            //         bubbles.Add(new Bubble(jf1.jf1Rec));
-            //     }
-
+            
             if (tmrBubbleUse.Enabled == true || tmrBubble2Use.Enabled == true)
             {
                 if (bubblenumber == 0)
@@ -620,22 +648,19 @@ namespace LilyStraker_Assignment_2019
                     tmrBubbleRecharge.Start();
                 }
 
-                if ((e.Button == MouseButtons.Left) && bubblenumber > 0 && bubbleuse > 0)
+                if (bubblenumber > 0 && bubbleuse > 0)
                 {
                     bubblenumber--;
                     bubbleuse -= 1;
                     lblBubbleCount.Text = bubblenumber.ToString();
                     bubbles.Add(new Bubble(jf1.jf1Rec));
                 }
-                if (bubblenumber == 0)
-                {
-                    tmrBubbleRecharge.Start();
-                }
                 if (bubbleuse == 0)
                 {
                     tmrBubbleUse.Start();
                 }
             }
+            
         }
 
         private void tmrBubble_Tick(object sender, EventArgs e)
