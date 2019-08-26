@@ -36,7 +36,6 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Panel();
-            this.btnPlay1 = new System.Windows.Forms.PictureBox();
             this.btnPlay = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -85,7 +84,6 @@
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.lblTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlBottomBar.SuspendLayout();
@@ -151,7 +149,6 @@
             this.lblTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.PlanetJamiro_Logo;
-            this.lblTitle.Controls.Add(this.btnPlay1);
             this.lblTitle.Controls.Add(this.btnPlay);
             this.lblTitle.Location = new System.Drawing.Point(333, 3);
             this.lblTitle.Name = "lblTitle";
@@ -159,27 +156,19 @@
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
             // 
-            // btnPlay1
-            // 
-            this.btnPlay1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
-            this.btnPlay1.Location = new System.Drawing.Point(123, 12);
-            this.btnPlay1.Name = "btnPlay1";
-            this.btnPlay1.Size = new System.Drawing.Size(100, 50);
-            this.btnPlay1.TabIndex = 2;
-            this.btnPlay1.TabStop = false;
-            // 
             // btnPlay
             // 
             this.btnPlay.BackColor = System.Drawing.Color.CornflowerBlue;
             this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(122, 13);
+            this.btnPlay.Location = new System.Drawing.Point(119, 12);
             this.btnPlay.Name = "btnPlay";
             this.btnPlay.Size = new System.Drawing.Size(101, 49);
             this.btnPlay.TabIndex = 1;
             this.btnPlay.Text = "Play";
             this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Visible = false;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
             // 
             // panel1
@@ -669,7 +658,6 @@
             this.mnuStrip.PerformLayout();
             this.pnlTopBar.ResumeLayout(false);
             this.lblTitle.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -737,7 +725,6 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.Label lblCharge2;
         private System.Windows.Forms.Label lblCharge1;
-        private System.Windows.Forms.PictureBox btnPlay1;
         private System.Windows.Forms.Button btnPlay;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;

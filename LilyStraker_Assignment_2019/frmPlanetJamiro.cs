@@ -426,7 +426,7 @@ namespace LilyStraker_Assignment_2019
             alive = true;
             alive2 = true;
 
-            //If nothing has been entered for player one's name, player two's name, or player one's score
+            //If nothing has been entered for player one's name, player two's name, or player one's lives
             if (txtName1.Text == "" || txtName2.Text == "" || txtLives1.Text == "")
             {
                 //Show error message box
@@ -470,8 +470,8 @@ namespace LilyStraker_Assignment_2019
                 txtLives1.Enabled = false;
                 txtLives2.Enabled = false;
 
-                btnPlay.Visible = false;
-                lblTitle.Visible = true;
+            //    btnPlay.Visible = true;
+             //   lblTitle.Visible = false;
             }
         }
 
@@ -498,7 +498,7 @@ namespace LilyStraker_Assignment_2019
             //Can only enter alpabet, enter key, backspace key into player one's name
             if (e.KeyChar == 8 || e.KeyChar > 64 && e.KeyChar < 91 || e.KeyChar > 96 && e.KeyChar < 123 || e.KeyChar == 13) 
             {
-                mnuStart.Visible = true;
+              //  mnuStart.Visible = true;
             }
             else
             {
@@ -507,7 +507,7 @@ namespace LilyStraker_Assignment_2019
                 MessageBox.Show("Please only enter alphabetical characters", "Error");
                 e.Handled = true;
                 txtName1.Focus();
-                btnPlay.Visible = false;
+              //  btnPlay.Visible = false;
             }
 
             //If enter key is pressed, focus on player two's name
@@ -523,6 +523,7 @@ namespace LilyStraker_Assignment_2019
             //Can only enter alpabet, enter key, backspace key into player two's name
             if (e.KeyChar == 8 || e.KeyChar > 64 && e.KeyChar < 91 || e.KeyChar > 96 && e.KeyChar < 123 || e.KeyChar == 13)
             { 
+
             }
             else
             {
@@ -598,6 +599,7 @@ namespace LilyStraker_Assignment_2019
             if (e.KeyChar == 13 && txtLives1.Text != "")
             {
                 btnPlay.Visible = true;
+                btnPlay.Focus();
              
             }
             else
@@ -905,6 +907,52 @@ namespace LilyStraker_Assignment_2019
                 lblTitle.Visible = true;
 
 
+            }
+        }
+
+        private void BtnPlay1_Click(object sender, EventArgs e)
+        {
+            //If there is nothing set for player1's name, player2's name, or the lives
+            if (txtName1.Text == "" || txtName2.Text == "" || txtLives1.Text == "")
+            {
+                MessageBox.Show("Check that both names have been entered and the lives have been set.", "Error!"); //Show error message
+
+                tmrEnemy.Enabled = false;
+                tmrJf1.Enabled = false;
+                tmrJf2.Enabled = false;
+
+                tmrBubble.Enabled = false;
+                tmrBubbleRecharge.Enabled = false;
+                tmrBubbleUse.Enabled = false;
+
+                tmrBubble2.Enabled = false;
+                tmrBubble2Recharge.Enabled = false;
+                tmrBubble2Use.Enabled = false;
+
+                btnPlay.Visible = false; //Do not show play button
+
+
+            }
+            else
+            {
+                lives1 = int.Parse(txtLives1.Text); //Display the number of player1's lives in the textbox
+                lives2 = int.Parse(txtLives2.Text);//Display the number of player2's lives in the textbox
+
+                tmrEnemy.Enabled = true;
+                tmrJf1.Enabled = true;
+                tmrJf2.Enabled = true;
+
+                tmrBubble.Enabled = true;
+
+                tmrBubble2.Enabled = true;
+
+                txtName1.Enabled = false;
+                txtName2.Enabled = false;
+                txtLives1.Enabled = false;
+                txtLives2.Enabled = false;
+
+                btnPlay.Visible = false; //Do not show play button
+                lblTitle.Visible = true; //Show title
             }
         }
 

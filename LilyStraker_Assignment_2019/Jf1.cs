@@ -79,9 +79,9 @@ namespace LilyStraker_Assignment_2019
             //Same thing (restricting jellyfish1 from leaving the game panel) when he moves
             if (move1 == "up")
             {
-                if (jf1Rec.Location.Y < 50)
+                if (jf1Rec.Location.Y < 10)
                 {
-                    y = 40;
+                    y = 0;
                     jf1Rec.Location = new Point(x, y);
                 }
                 else
