@@ -640,24 +640,27 @@ namespace LilyStraker_Assignment_2019
 
         private void pnlBG_MouseDown(object sender, MouseEventArgs e)
         {
-            
-            if (tmrBubbleUse.Enabled == true || tmrBubble2Use.Enabled == true)
-            {
-                if (bubblenumber == 0)
-                {
-                    tmrBubbleRecharge.Start();
-                }
 
-                if (bubblenumber > 0 && bubbleuse > 0)
+            if (e.Button == MouseButtons.Left)
+            {
+                if (tmrBubbleUse.Enabled == true || tmrBubble2Use.Enabled == true)
                 {
-                    bubblenumber--;
-                    bubbleuse -= 1;
-                    lblBubbleCount.Text = bubblenumber.ToString();
-                    bubbles.Add(new Bubble(jf1.jf1Rec));
-                }
-                if (bubbleuse == 0)
-                {
-                    tmrBubbleUse.Start();
+                    if (bubblenumber == 0)
+                    {
+                        tmrBubbleRecharge.Start();
+                    }
+
+                    if (bubblenumber > 0 && bubbleuse > 0)
+                    {
+                        bubblenumber--;
+                        bubbleuse -= 1;
+                        lblBubbleCount.Text = bubblenumber.ToString();
+                        bubbles.Add(new Bubble(jf1.jf1Rec));
+                    }
+                    if (bubbleuse == 0)
+                    {
+                        tmrBubbleUse.Start();
+                    }
                 }
             }
             
