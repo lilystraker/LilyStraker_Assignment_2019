@@ -29,19 +29,21 @@ namespace LilyStraker_Assignment_2019
 
         public void drawJf2(Graphics g)
         {
+            //If jellyfish2 is alive
             if (alivePriv2 == true)
             {
                 jf2Rec = new Rectangle(x, y, width, height);
-                g.DrawImage(jf2, jf2Rec);
+                g.DrawImage(jf2, jf2Rec);//Draw jellyfish2
             }
         }
 
         public void moveJf2(string move2)
         {
             jf2Rec.Location = new Point(x, y);
+
+            //When jellyfish2 moves, don't let them leave the panel
             if (move2 == "right2")
             {
-
                 if (jf2Rec.Location.X > 925)
                 {
                     x = 935;
@@ -78,7 +80,7 @@ namespace LilyStraker_Assignment_2019
                 }
                 else
                 {
-                    y -= 10;//change back to lower number
+                    y -= 10;
                     jf2Rec.Location = new Point(x, y);
                 }
             }
@@ -92,7 +94,7 @@ namespace LilyStraker_Assignment_2019
                 }
                 else
                 {
-                    y += 10;//change back to lower number
+                    y += 10;
                     jf2Rec.Location = new Point(x, y);
                 }
             }

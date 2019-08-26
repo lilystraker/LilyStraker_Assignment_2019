@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 
-//Version One
+//Player One's bubbles
 
 namespace LilyStraker_Assignment_2019
 {
@@ -14,11 +14,9 @@ namespace LilyStraker_Assignment_2019
     {
         public int x, y, width, height;
         public double xSpeed, ySpeed;
-        public Image bubble;//variable for the missile's image
-        public Rectangle bubbleRec;//variable for a rectangle to place our image in
-        Point centreBubble;//centre of missile
-        public int rotationAngle;
-        public Matrix matrix;
+        public Image bubble;
+        public Rectangle bubbleRec;
+        Point centreBubble;
 
        public int bubbleRotate;
 
@@ -26,48 +24,33 @@ namespace LilyStraker_Assignment_2019
         {
             width = 20;
             height = 20;
-            rotationAngle = 0;
             bubble = Image.FromFile("bubble.png");
             bubbleRec = new Rectangle(x, y, width, height);
 
-            //calculate x,y to move missile to middle of spaceship in drawMissile method
+            //Centre of jf1
             x = Jf1Rec.X + Jf1Rec.Width / 2;
             y = Jf1Rec.Y + Jf1Rec.Height / 2;
 
-            xSpeed = 30 * (Math.Cos((bubbleRotate - 90) * Math.PI / 180));
-            ySpeed = 30 * (Math.Sin((bubbleRotate + 90) * Math.PI / 180));
-
-
-
+            //Sets value of xspeed and yspeed
+            xSpeed = 30 * (Math.Cos((bubbleRotate - 90) * Math.PI / 180)); //Rotates bubble
+            ySpeed = 30;
         }
 
         public void drawBubble(Graphics g)
         {
-            //centre missile 
-            centreBubble = new Point(x, y);
-
-            //find the centre point of spaceRec
+            //Draws bubbles in the centre of jf1
+            centreBubble = new Point(x, y); 
             centreBubble = new Point(bubbleRec.X + width / 2, bubbleRec.Y + width / 2);
-            //instantiate a Matrix object called matrix
-         //   matrix = new Matrix();
-            //rotate the matrix (spaceRec) about its centre
-         //   matrix.RotateAt(rotationAngle, centreBubble);
-            //Set the current draw location to the rotated matrix point
-        //    g.Transform = matrix;
-            //draw the spaceship
 
-
-
-
-            g.DrawImage(bubble, bubbleRec);
+            g.DrawImage(bubble, bubbleRec); //draw the bubble
 
         }
         public void moveBubble(Graphics g)
         {
-            x += (int)xSpeed;//cast double to an integer value
-            y -= (int)ySpeed;
+            x += (int)xSpeed; //add xspeed to x value
+            y -= (int)ySpeed; //minus yspeed from yvalue (move up the screen)
 
-            bubbleRec.Location = new Point(x, y);//missiles new location
+            bubbleRec.Location = new Point(x, y);
 
         }
     }

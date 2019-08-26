@@ -13,10 +13,9 @@ namespace LilyStraker_Assignment_2019
 
         public int x, y, width, height;
         public double xSpeed, ySpeed;
-        public Image egg;//variable for the missile's image
-        public Rectangle eggRec;//variable for a rectangle to place our image in
-        Point centreEgg;//centre of missile
-
+        public Image egg;
+        public Rectangle eggRec;
+        Point centreEgg;
 
         public int eggRotate;
 
@@ -27,10 +26,11 @@ namespace LilyStraker_Assignment_2019
             egg = Image.FromFile("egg.png");
             eggRec = new Rectangle(x, y, width, height);
 
-            //calculate x,y to move missile to middle of spaceship in drawMissile method
+            //Centre of turtle
             x = turtleRec.X + turtleRec.Width / 2;
             y = turtleRec.Y + turtleRec.Height / 2;
 
+            //Rotate eggs
             ySpeed = 20 * (Math.Cos((eggRotate - 90) * Math.PI / 180));
             xSpeed = 20 * (Math.Sin((eggRotate + 90) * Math.PI / 180));
 
@@ -40,20 +40,9 @@ namespace LilyStraker_Assignment_2019
 
         public void drawEgg(Graphics g)
         {
-            //centre missile 
+            //Shoot eggs from centre of turtle
             centreEgg = new Point(x, y);
-
-            //find the centre point of spaceRec
             centreEgg = new Point(eggRec.X + width / 2, eggRec.Y + width / 2);
-            //instantiate a Matrix object called matrix
-            //rotate the matrix (spaceRec) about its centre
-    
-            //Set the current draw location to the rotated matrix point
-   
-            //draw the spaceship
-
-
-
 
             g.DrawImage(egg, eggRec);
 
@@ -61,10 +50,10 @@ namespace LilyStraker_Assignment_2019
         }
         public void moveEgg(Graphics g)
         {
-            x += (int)xSpeed;//cast double to an integer value
-            y += (int)ySpeed;
+            x += (int)xSpeed;//add xspeed to x value (move to the right)
+            y += (int)ySpeed;//add yspeed to y value
 
-            eggRec.Location = new Point(x, y);//missiles new location
+            eggRec.Location = new Point(x, y);
 
         }
     }

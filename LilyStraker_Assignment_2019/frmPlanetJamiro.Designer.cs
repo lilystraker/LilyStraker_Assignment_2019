@@ -122,8 +122,8 @@
             // mnuStop
             // 
             this.mnuStop.Name = "mnuStop";
-            this.mnuStop.Size = new System.Drawing.Size(43, 20);
-            this.mnuStop.Text = "Stop";
+            this.mnuStop.Size = new System.Drawing.Size(50, 20);
+            this.mnuStop.Text = "Pause";
             this.mnuStop.Click += new System.EventHandler(this.mnuStop_Click);
             // 
             // exitToolStripMenuItem
@@ -137,9 +137,9 @@
             // 
             this.pnlTopBar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlTopBar.BackColor = System.Drawing.Color.Navy;
-            this.pnlTopBar.Controls.Add(this.lblTitle);
             this.pnlTopBar.Controls.Add(this.panel1);
             this.pnlTopBar.Controls.Add(this.panel2);
+            this.pnlTopBar.Controls.Add(this.lblTitle);
             this.pnlTopBar.Location = new System.Drawing.Point(0, 27);
             this.pnlTopBar.Name = "pnlTopBar";
             this.pnlTopBar.Size = new System.Drawing.Size(985, 90);

@@ -5,30 +5,24 @@ using System.Text;
 using System.Drawing;
 using System.Threading.Tasks;
 
+//Enemy class
+//For planets
 
 namespace LilyStraker_Assignment_2019
 {
     class Enemy
     {
-
         public int x, y, width, height;
         public Image enemyImage;
         public Rectangle enemyRec;
-        public int score1;
-        public int score2;
-
         public Enemy(int spacing)
         {
-            x = spacing;
+            x = spacing;//Set amount of space between planets so that they are spread evenly across the panel
             y = 0;
             width = 50;
             height = 50;
             enemyImage = Image.FromFile("Planet.png");  
             enemyRec = new Rectangle(x, y, width, height);
-
-         //   Enemy enemyImage1 = new Enemy();
-         //   enemyImage.ImageLocation = paths[random.Next(0, images.Count - 1)];
-
         }
 
         public void drawEnemy(Graphics g)
@@ -39,10 +33,7 @@ namespace LilyStraker_Assignment_2019
 
         public void moveEnemy()
         {
-          
-            enemyRec.Location = new Point(x, y);
-
-          
+            enemyRec.Location = new Point(x, y);          
         }
     }
 }

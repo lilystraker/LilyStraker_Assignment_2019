@@ -13,7 +13,8 @@ namespace LilyStraker_Assignment_2019
             Name = name;
             Score = score;
         }
-        //set properties so we can access the name and score
+        
+        //able to access name and score
         public string Name { get; set; }
 
         public int Score { get; set; }

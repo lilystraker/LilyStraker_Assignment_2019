@@ -16,8 +16,7 @@ namespace LilyStraker_Assignment_2019
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            new frmHome().Show();
-            // Application.Run(new frmPlanetJamiro());
+            new frmHome().Show(); //When game starts, frmHome appears
             Application.Run();
         }
     }

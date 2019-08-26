@@ -24,16 +24,10 @@ namespace LilyStraker_Assignment_2019
 
         }
 
-
-     
-    
-    //  frmHome homeForm = new frmHome();
         private void BtnPlay_Click(object sender, EventArgs e)
         {
             
         }
-
-  
 
         private void PnlHomeBG_Paint(object sender, PaintEventArgs e)
         {
@@ -57,6 +51,7 @@ namespace LilyStraker_Assignment_2019
 
         private void frmHome_KeyDown(object sender, KeyEventArgs e)
         {
+            //If the ESC key is pressed, show a confirmation message to allow the player to say whether they want to leave the game or stay on it 
             if (e.KeyData == Keys.Escape)
             {
                 Cursor.Show();
@@ -65,15 +60,12 @@ namespace LilyStraker_Assignment_2019
                    MessageBoxButtons.YesNo,
                   MessageBoxIcon.Warning,
                   MessageBoxDefaultButton.Button2);
+
+                //If the player clicks yes, the game will close
                 if (result1 == DialogResult.Yes)
                 {
-                   // frmHome homeform = new frmHome();
-                    //Application.Exit();
                     this.Close();
-                 //   homeform.Show();
                 }
-
-
             }
         }
 
@@ -84,31 +76,31 @@ namespace LilyStraker_Assignment_2019
 
         private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //Same code for leaving the game as when the ESC key is pressed
             DialogResult result1 = MessageBox.Show("Are you sure you want to exit the game?",
                   "Already going?",
                    MessageBoxButtons.YesNo,
                   MessageBoxIcon.Warning,
                   MessageBoxDefaultButton.Button2);
+
             if (result1 == DialogResult.Yes)
             {
-               // frmHome homeform = new frmHome();
-                //Application.Exit();
                 this.Close();
-              //  homeform.Show();
             }
-          //  Application.Exit();
         }
 
         private void BtnPlay1_Click(object sender, EventArgs e)
         {
-            frmPlanetJamiro playForm = new frmPlanetJamiro();
-            this.Close();
-            playForm.Show();
+            //When the play button is pressed
+            frmPlanetJamiro playForm = new frmPlanetJamiro(); //Create an object that is for the game form
+            this.Close(); //Close the menu screen
+            playForm.Show(); //Show the game
 
         }
 
         private void BtnInstructions1_Click(object sender, EventArgs e)
         {
+            //When the instruction button is pressed, the instructions will be shown in a message box
             MessageBox.Show("You are trying to colonise planet Jamiro, but the alien race Jamirons have a solid defense and won't let you in easily. When you start the game, you enter your name, the other player's name, and amount of lives for both of you. After pressing start, you and the other player will be able to control the 2 main aliens whose goal is to dodge and shoot as many aliens as they can. Try to score the most points so you can get on the leaderboard before you die. \n\nPlayer One \nMOVE: Arrow keys \nSHOOT: Left click \n\nPlayer Two \nMOVE: WASD keys \nSHOOT: Spacebar", "Instructions");
         }
 

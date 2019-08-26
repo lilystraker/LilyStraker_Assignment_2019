@@ -5,6 +5,7 @@ using System.Text;
 using System.Drawing;
 using System.Threading.Tasks;
 
+//Stars (background)
 namespace LilyStraker_Assignment_2019
 {
     class Stars
@@ -12,7 +13,6 @@ namespace LilyStraker_Assignment_2019
         public int x, y, width, height;
         public Image starImage;
         public Rectangle starRec;
-
 
         public Stars()
         {
@@ -27,13 +27,14 @@ namespace LilyStraker_Assignment_2019
 
         public void drawStars(Graphics g)
         {
+            //Draw stars and rectangle
             starRec = new Rectangle(x, y, width, height);
             g.DrawImage(starImage, starRec);
         }
 
         public void moveStar(string move1)
         {
-
+            //Restricts the stars from continuously moving
             starRec.Location = new Point(x, y);
             if (move1 == "right")
             {
