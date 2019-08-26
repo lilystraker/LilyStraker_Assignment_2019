@@ -116,10 +116,10 @@ namespace LilyStraker_Assignment_2019
             txtLives2.SelectionLength = 0;
             txtLives2.ForeColor = Color.White;
 
-            jf1.x = 523;
+            jf1.x = 443;
             jf1.y = 350;
 
-            jf2.x = 443;
+            jf2.x = 523;
             jf2.y = 350;
 
         }

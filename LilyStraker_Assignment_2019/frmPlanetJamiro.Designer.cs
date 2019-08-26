@@ -36,6 +36,8 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTopBar = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Panel();
+            this.btnPlay1 = new System.Windows.Forms.PictureBox();
+            this.btnPlay = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtLives1 = new System.Windows.Forms.TextBox();
@@ -78,17 +80,19 @@
             this.tmrBubble2 = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Recharge = new System.Windows.Forms.Timer(this.components);
             this.tmrBubble2Use = new System.Windows.Forms.Timer(this.components);
-            this.btnPlay = new System.Windows.Forms.Button();
-            this.btnPlay1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mnuStrip.SuspendLayout();
             this.pnlTopBar.SuspendLayout();
             this.lblTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlBottomBar.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuStrip
@@ -155,9 +159,33 @@
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTitle_Paint);
             // 
+            // btnPlay1
+            // 
+            this.btnPlay1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
+            this.btnPlay1.Location = new System.Drawing.Point(123, 12);
+            this.btnPlay1.Name = "btnPlay1";
+            this.btnPlay1.Size = new System.Drawing.Size(100, 50);
+            this.btnPlay1.TabIndex = 2;
+            this.btnPlay1.TabStop = false;
+            // 
+            // btnPlay
+            // 
+            this.btnPlay.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.Color.White;
+            this.btnPlay.Location = new System.Drawing.Point(122, 13);
+            this.btnPlay.Name = "btnPlay";
+            this.btnPlay.Size = new System.Drawing.Size(101, 49);
+            this.btnPlay.TabIndex = 1;
+            this.btnPlay.Text = "Play";
+            this.btnPlay.UseVisualStyleBackColor = false;
+            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.txtLives1);
             this.panel1.Controls.Add(this.lblScore1);
@@ -167,13 +195,13 @@
             this.panel1.Controls.Add(this.labelScore1);
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 84);
+            this.panel1.Size = new System.Drawing.Size(324, 84);
             this.panel1.TabIndex = 6;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Silver;
-            this.panel3.Location = new System.Drawing.Point(58, 1);
+            this.panel3.Location = new System.Drawing.Point(189, 1);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1, 90);
             this.panel3.TabIndex = 1;
@@ -182,7 +210,7 @@
             // 
             this.txtLives1.BackColor = System.Drawing.Color.Black;
             this.txtLives1.ForeColor = System.Drawing.Color.White;
-            this.txtLives1.Location = new System.Drawing.Point(67, 61);
+            this.txtLives1.Location = new System.Drawing.Point(198, 61);
             this.txtLives1.Name = "txtLives1";
             this.txtLives1.Size = new System.Drawing.Size(33, 20);
             this.txtLives1.TabIndex = 10;
@@ -197,7 +225,7 @@
             this.lblScore1.AutoSize = true;
             this.lblScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore1.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.lblScore1.Location = new System.Drawing.Point(65, 32);
+            this.lblScore1.Location = new System.Drawing.Point(196, 32);
             this.lblScore1.Name = "lblScore1";
             this.lblScore1.Size = new System.Drawing.Size(16, 18);
             this.lblScore1.TabIndex = 9;
@@ -207,7 +235,7 @@
             // 
             this.txtName1.BackColor = System.Drawing.Color.Black;
             this.txtName1.ForeColor = System.Drawing.Color.White;
-            this.txtName1.Location = new System.Drawing.Point(67, 3);
+            this.txtName1.Location = new System.Drawing.Point(198, 3);
             this.txtName1.Name = "txtName1";
             this.txtName1.Size = new System.Drawing.Size(122, 20);
             this.txtName1.TabIndex = 8;
@@ -222,7 +250,7 @@
             this.labelName1.BackColor = System.Drawing.Color.Transparent;
             this.labelName1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName1.ForeColor = System.Drawing.Color.White;
-            this.labelName1.Location = new System.Drawing.Point(3, 1);
+            this.labelName1.Location = new System.Drawing.Point(134, 1);
             this.labelName1.Name = "labelName1";
             this.labelName1.Size = new System.Drawing.Size(55, 20);
             this.labelName1.TabIndex = 0;
@@ -234,7 +262,7 @@
             this.labelLives1.BackColor = System.Drawing.Color.Transparent;
             this.labelLives1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLives1.ForeColor = System.Drawing.Color.White;
-            this.labelLives1.Location = new System.Drawing.Point(3, 60);
+            this.labelLives1.Location = new System.Drawing.Point(134, 60);
             this.labelLives1.Name = "labelLives1";
             this.labelLives1.Size = new System.Drawing.Size(50, 20);
             this.labelLives1.TabIndex = 4;
@@ -246,7 +274,7 @@
             this.labelScore1.BackColor = System.Drawing.Color.Transparent;
             this.labelScore1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScore1.ForeColor = System.Drawing.Color.White;
-            this.labelScore1.Location = new System.Drawing.Point(3, 30);
+            this.labelScore1.Location = new System.Drawing.Point(134, 30);
             this.labelScore1.Name = "labelScore1";
             this.labelScore1.Size = new System.Drawing.Size(56, 20);
             this.labelScore1.TabIndex = 2;
@@ -256,6 +284,7 @@
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.txtLives2);
             this.panel2.Controls.Add(this.lblScore2);
@@ -263,16 +292,16 @@
             this.panel2.Controls.Add(this.labelLives2);
             this.panel2.Controls.Add(this.labelName2);
             this.panel2.Controls.Add(this.labelScore2);
-            this.panel2.Location = new System.Drawing.Point(779, 3);
+            this.panel2.Location = new System.Drawing.Point(665, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 84);
+            this.panel2.Size = new System.Drawing.Size(316, 84);
             this.panel2.TabIndex = 7;
             // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel4.BackColor = System.Drawing.Color.Silver;
-            this.panel4.Location = new System.Drawing.Point(143, 3);
+            this.panel4.Location = new System.Drawing.Point(136, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1, 90);
             this.panel4.TabIndex = 2;
@@ -282,7 +311,7 @@
             this.txtLives2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtLives2.BackColor = System.Drawing.Color.Black;
             this.txtLives2.ForeColor = System.Drawing.Color.White;
-            this.txtLives2.Location = new System.Drawing.Point(99, 60);
+            this.txtLives2.Location = new System.Drawing.Point(92, 60);
             this.txtLives2.Name = "txtLives2";
             this.txtLives2.Size = new System.Drawing.Size(33, 20);
             this.txtLives2.TabIndex = 11;
@@ -296,7 +325,7 @@
             this.lblScore2.AutoSize = true;
             this.lblScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScore2.ForeColor = System.Drawing.Color.LemonChiffon;
-            this.lblScore2.Location = new System.Drawing.Point(112, 32);
+            this.lblScore2.Location = new System.Drawing.Point(105, 32);
             this.lblScore2.Name = "lblScore2";
             this.lblScore2.Size = new System.Drawing.Size(16, 18);
             this.lblScore2.TabIndex = 11;
@@ -307,7 +336,7 @@
             this.txtName2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName2.BackColor = System.Drawing.Color.Black;
             this.txtName2.ForeColor = System.Drawing.Color.White;
-            this.txtName2.Location = new System.Drawing.Point(10, 3);
+            this.txtName2.Location = new System.Drawing.Point(5, 3);
             this.txtName2.Name = "txtName2";
             this.txtName2.Size = new System.Drawing.Size(122, 20);
             this.txtName2.TabIndex = 11;
@@ -322,7 +351,7 @@
             this.labelLives2.BackColor = System.Drawing.Color.Transparent;
             this.labelLives2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLives2.ForeColor = System.Drawing.Color.White;
-            this.labelLives2.Location = new System.Drawing.Point(150, 60);
+            this.labelLives2.Location = new System.Drawing.Point(143, 60);
             this.labelLives2.Name = "labelLives2";
             this.labelLives2.Size = new System.Drawing.Size(50, 20);
             this.labelLives2.TabIndex = 5;
@@ -335,7 +364,7 @@
             this.labelName2.BackColor = System.Drawing.Color.Transparent;
             this.labelName2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName2.ForeColor = System.Drawing.Color.White;
-            this.labelName2.Location = new System.Drawing.Point(147, 1);
+            this.labelName2.Location = new System.Drawing.Point(143, 3);
             this.labelName2.Name = "labelName2";
             this.labelName2.Size = new System.Drawing.Size(55, 20);
             this.labelName2.TabIndex = 1;
@@ -348,7 +377,7 @@
             this.labelScore2.BackColor = System.Drawing.Color.Transparent;
             this.labelScore2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelScore2.ForeColor = System.Drawing.Color.White;
-            this.labelScore2.Location = new System.Drawing.Point(147, 30);
+            this.labelScore2.Location = new System.Drawing.Point(140, 30);
             this.labelScore2.Name = "labelScore2";
             this.labelScore2.Size = new System.Drawing.Size(56, 20);
             this.labelScore2.TabIndex = 3;
@@ -595,28 +624,27 @@
             this.tmrBubble2Use.Interval = 500;
             this.tmrBubble2Use.Tick += new System.EventHandler(this.tmrBubble2Use_Tick);
             // 
-            // btnPlay
+            // pictureBox1
             // 
-            this.btnPlay.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnPlay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnPlay.Font = new System.Drawing.Font("Eras Medium ITC", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlay.ForeColor = System.Drawing.Color.White;
-            this.btnPlay.Location = new System.Drawing.Point(122, 13);
-            this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(101, 49);
-            this.btnPlay.TabIndex = 1;
-            this.btnPlay.Text = "Play";
-            this.btnPlay.UseVisualStyleBackColor = false;
-            this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.playerone;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Location = new System.Drawing.Point(7, 15);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(124, 49);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
-            // btnPlay1
+            // pictureBox2
             // 
-            this.btnPlay1.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.play;
-            this.btnPlay1.Location = new System.Drawing.Point(123, 12);
-            this.btnPlay1.Name = "btnPlay1";
-            this.btnPlay1.Size = new System.Drawing.Size(100, 50);
-            this.btnPlay1.TabIndex = 2;
-            this.btnPlay1.TabStop = false;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::LilyStraker_Assignment_2019.Properties.Resources.playertwo;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox2.Location = new System.Drawing.Point(200, 17);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(114, 48);
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
             // 
             // frmPlanetJamiro
             // 
@@ -641,6 +669,7 @@
             this.mnuStrip.PerformLayout();
             this.pnlTopBar.ResumeLayout(false);
             this.lblTitle.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -651,7 +680,8 @@
             this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnPlay1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -709,6 +739,8 @@
         private System.Windows.Forms.Label lblCharge1;
         private System.Windows.Forms.PictureBox btnPlay1;
         private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
